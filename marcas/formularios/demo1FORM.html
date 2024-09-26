@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo1Form</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            padding: 0;
+            background-color: rgb(93, 155, 134);
+            text-align: center;
+        }
+        .layout{
+            margin: 0 auto;
+            display: flex;
+            height: 100vh;
+            width: 50%;
+            background-color: aliceblue;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="layout">
+        <p>Mi primer formulario</p>
+        <form action="zz.php" method="post" enctype="multipart/form-data">
+            Nombre <br>
+            <input type="text" name="nombre" placeholder="nombre"><br>
+            Contraseña <br>
+            <input type="password" name="password" maxlength="8"><br>
+            Puestos de trabajo buscados <br>
+            <input type="checkbox" name="it1" checked> FRONT-END
+            <input type="checkbox" name="it2"> BACK-END
+            <input type="checkbox" name="it3"> FULL-STACK <br>
+            Sexo <br>
+            <input type="radio" name="sexo" value="hombre">hombre
+            <input type="radio" name="sexo" value="mujer">mujer <br>
+            <input type="file" name="fichero"><br>
+
+            <fieldset>
+                <legend>Datos usuario</legend>
+                <label for="dni">DNI</label>
+                <input type="text" name="dni" placeholder="DNI" id="dni"><br>
+            </fieldset>
+            <input type="submit" name="buscar" value="enviar">
+            <input type="reset">
+            <br>
+        </form>
+        <button onclick="alert('hola')">Pulsame</button>
+    </div>
+
+</body>
+</html>

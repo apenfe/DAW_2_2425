@@ -1,0 +1,21 @@
+/* pone el texto centrado y de color azul para cada parrafo */
+p {
+    text-align: center;
+    color: blue;
+}
+
+/* pone el parrafo de color rojo */
+#rojo {
+    color: red;
+}
+
+/* pone todos los elementos con la clase azul con el texto de color azul */
+.azul {
+    color: blue;
+}
+
+/* los encabezados h1 y h2 con el texto centrado */
+h1,
+h2 {
+    text-align: center;
+}

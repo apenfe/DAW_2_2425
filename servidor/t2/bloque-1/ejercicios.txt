@@ -1,0 +1,19 @@
+1 Dado un valor en pesetas, convertirlo a euros. La solución deberá tener dos decimales.
+
+2 Dada una temperatura en grados Celsius, convertirla a Fahrenheit, mostrando por pantalla un mensaje del tipo "xxx.xx grados Celsius son yyy.yy grados Fahrenheit”
+
+3 Dado el radio de una circunferencia, calcular su longitud así como su área.
+
+4 Crear un programa que calcule la fuerza de atracción gravitacional entre dos masas M1 y M2 situadas a una distancia R, donde las masas se expresan en kilogramos y la distancia en metros y la constante de gravitación universal es G=6.67x10^(-11) Nw*m^2/Kg^2
+
+5 Escribir un programa que pregunte el año actual y la edad de una persona y calcule la edad de esa persona en el año 2020.
+
+6 Escribir un programa que calcule el número de billetes de 500, 200, 100, 50, 20, 10 y 5 así como de monedas de 2, 1, 0'5, 0'20, 0'10, 0'05, 0'02 y 0'01 para desglosar una cantidad C de forma que se necesite la menor cantidad de cada tipo.
+
+7 Crear un programa que pida un número real y muestre la tabla de multiplicar correspondiente a dicho número perfectamente formateada y con una precisión de dos dígitos.
+
+8 Mostrar en una tabla el cuadrado y el cubo de los cinco primeros números enteros que siguen a uno previamente introducido. Los datos deben aparecer encolumnados.
+
+9 Escribir un programa que lea el valor de un ángulo en radianes y muestre su valor en grados, minutos y segundos.
+
+10 Calcular la edad de una persona introduciendo la fecha actual y su fecha de nacimiento.

@@ -1,0 +1,22 @@
+1. Escribir un programa que dados tres números, si el primero es negativo, calcule el producto de los tres y, en caso contrario, calcular la suma.
+2. Sea un sistema de ecuaciones de la forma:
+ax+by=c
+dx+ey=f
+que puede resolverse usando las siguientes fórmulas
+x=(ce-bf)/(ae-bd)      ---       y=(af-cd)/(ae-bd)
+Escribir un programa que dados los coeficientes resuelva el sistema. El programa deberá indicar los casos en los que el sistema de ecuaciones no tenga solución.
+3. Escribir un programa que calcule las raíces, bien reales o imaginarias, de una ecuación de segundo grado. El programa también debe ser capaz de operar con valores nulos para el coeficiente de orden 2.
+4. Escribir un programa que diga si un año es bisiesto.
+5. La fecha de cualquier Domingo de Pascua se calcula de la siguiente forma:
+    Sea X el año para el que quiere calcularse la fecha.
+    Sea A el resto de la división de X entre 19
+    Sea B el resto de la división de X entre 4
+    Sea C el resto de la división de X entre 7
+    Sea D el resto de la división de (19*A+24) entre 30
+    Sea E el resto de la división de (2B+4C+6D+5) entre 7
+La fecha para el Domingo de Pascua es el día (22+D+E) de Marzo (tener en cuenta que puede ser de Abril).
+Escribir un programa que dado un año obtenga por pantalla la fecha del Domingo de Pascua de ese año.
+6. Escribir un programa que escriba los números del 1 al 100 en líneas de 10 números. Después del 100 el programa debe escribir "Fin de Programa" en una línea nueva.
+7. Programa que calcule el valor de elevar un número real a (base) a un número entero b (exponente).
+8. Programa que calcule el factorial de un número.
+9. Programa que calcule los números primos del 1 al 100 y los saque por pantalla.

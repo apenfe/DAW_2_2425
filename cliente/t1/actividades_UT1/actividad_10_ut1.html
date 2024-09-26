@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 10</title>
+    <script>
+        function cambio1(){
+            texto= document.getElementById("negrita").value;
+            document.getElementById("parrafo").style.fontWeight = texto;
+        }
+
+        function cambio2(){
+            texto= document.getElementById("cursiva").value;
+            document.getElementById("parrafo").style.fontStyle = texto;
+        }
+    </script>
+</head>
+<body>
+
+    <!-- 10. Crear una página con un texto y dos listas plegables, una indica que el 
+    texto se ponga en negrita o no, y la otra si el texto se pone en cursiva o no.   -->
+    <p id="parrafo">ESte es el texto de prueba</p>
+
+    <select name="neg" id="negrita" onchange="cambio1()">
+        <option value="bold">en negrita</option>
+        <option value="normal">sin negrita</option>
+    </select>
+
+    <select name="cur" id="cursiva" onchange="cambio2()">
+        <option value="italic">en cursiva</option>
+        <option value="normal">sin cursiva</option>
+    </select>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 9</title>
+    <script>
+        function cambio(){
+            nombreImagen= document.getElementById("idImagen").value;
+            document.getElementById("imagen").src=nombreImagen;
+        }
+    </script>
+</head>
+<body>
+
+    <!-- 9. Cargar una lista plegable con nombres de 
+    imágenes que tengas guardadas en el disco y cuando se seleccione una de la lista, visualice esa imagen. -->
+
+    <img id="imagen" src="I1.png"/>
+
+    <select name="img" id="idImagen" onchange="cambio()">
+        <option value="./I1.png">1</option>
+        <option value="./I2.png">2</option>
+        <option value="./I3.png">3</option>
+    </select>
+    
+</body>
+</html>

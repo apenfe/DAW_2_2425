@@ -1,0 +1,47 @@
+body {
+    background-image: url("./imagen2.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+
+#uno {
+    color: aqua;
+}
+
+#dos {
+    color: #333;
+}
+
+#tres {
+    color: rgb(0, 0, 0);
+}
+
+#cuatro {
+    color: rgb(255, 255, 255);
+    background-color: #333;
+}
+
+#cinco {
+    color: rgba(255, 255, 0, 0.8);
+}
+
+#seis {
+    color: rgba(100, 100, 100, 1);
+}
+
+#siete {
+    color: rgba(100, 100, 100, 0.2);
+}
+
+#ocho {
+    color: brown;
+}
+
+#nueve {
+    color: rgb(0, 255, 0);
+}
+
+#diez {
+    color: rgb(0, 0, 255);
+}

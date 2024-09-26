@@ -1,0 +1,7 @@
+# Ignorar carpetas de configuración de IDEs
+.idea/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro - Mi web</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 5px;
+            transition: all 3000ms ease-in-out;
+            cursor: pointer;
+        }
+        h1:hover{
+            color: #333;
+            transform: scale(1.1);
+            transform: rotate(360deg)
+        }
+        .layout{
+            margin: 0 auto;
+            margin-top: 150px;
+            width: 60%;
+            height: 300px;
+            background-color: rgb(177, 240, 219);
+            border-radius: 20px;
+            box-shadow: 1px 5px 18px gray;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="layout">
+
+        <h1>Formulario de registro</h1>
+
+        <form action="" method="post">
+
+            <label for="name">Nombre:</label>
+            <input type="text" name="name" id="name" maxlength="50">
+            <br>
+
+            <label for="apellido">Apellidos:</label>
+            <input type="text" name="apellido" id="apellido" maxlength="50">
+            <br>
+
+            <label for="sexo">Sexo:</label>
+            <input type="radio" name="hombre" id="sexo" checked> HOMBRE
+            <input type="radio" name="hombre" id="sexo"> MUJER
+            <br>
+
+            <label for="email">Correo:</label>
+            <input type="text" name="email" id="email">
+            <br>
+
+            <input type="checkbox" name="info" id="info" checked>Deseo recibir información sobre novedades y ofertas
+            <br>
+            <input type="checkbox" name="info" id="info">Declaro haber leido y aceptar las condiciones generales del programa y la normativa sobre protección de datos
+            <br>
+
+            <input type="submit" value="Enviar">
+        </form>
+
+        <a href="formulario2.html">A formulario 2</a>
+
+    </div>
+    
+</body>
+</html>
