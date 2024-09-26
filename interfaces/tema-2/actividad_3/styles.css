@@ -1,0 +1,167 @@
+/* Estilo para el cuerpo de la página */
+body {
+    background-image: url("./imagen2.jpg");
+    /* Imagen de fondo */
+    background-repeat: no-repeat;
+    /* No repetir la imagen de fondo */
+    background-position: bottom right;
+    /* Posición de la imagen de fondo en la esquina inferior derecha */
+    background-repeat: no-repeat;
+    /* No repetir la imagen de fondo (duplicado) */
+}
+
+/* Estilos para el elemento con ID 'uno':
+ * - Establece el color del texto a aqua.
+ * - Añade un borde negro sólido de 2px. */
+#uno {
+    color: aqua;
+    /* Color del texto */
+    border: 2px solid black;
+    /* Borde negro sólido de 2px */
+}
+
+/* Estilos para el elemento con ID 'dos':
+ * - Establece el color del texto a #333.
+ * - Añade un borde rojo discontinuo de 4px. */
+#dos {
+    color: #333;
+    /* Color del texto */
+    border: 4px dashed red;
+    /* Borde rojo discontinuo de 4px */
+}
+
+/* Estilos para el elemento con ID 'tres':
+ * - Establece el color del texto a negro.
+ * - Añade un borde azul con estilo 'groove' de 4px. */
+#tres {
+    color: rgb(0, 0, 0);
+    /* Color del texto */
+    border: 4px;
+    /* Ancho del borde */
+    border-color: rgb(0, 0, 255);
+    /* Color del borde */
+    border-style: groove;
+    /* Estilo del borde */
+}
+
+/* Estilos para el elemento con ID 'cuatro':
+ * - Establece el color del texto a blanco.
+ * - Añade un fondo gris oscuro.
+ * - Añade un borde azul con estilo 'dotted' de 4px. */
+#cuatro {
+    color: rgb(255, 255, 255);
+    /* Color del texto */
+    background-color: #333;
+    /* Color de fondo */
+    border: 4px;
+    /* Ancho del borde */
+    border-color: rgb(0, 0, 255);
+    /* Color del borde */
+    border-style: dotted;
+    /* Estilo del borde */
+}
+
+/* Estilos para el elemento con ID 'cinco':
+ * - Establece el color del texto a amarillo con opacidad de 0.8.
+ * - Añade un borde azul con estilo 'double' de 4px. */
+#cinco {
+    color: rgba(255, 255, 0, 0.8);
+    /* Color del texto */
+    border: 4px;
+    /* Ancho del borde */
+    border-color: rgb(0, 0, 255);
+    /* Color del borde */
+    border-style: double;
+    /* Estilo del borde */
+}
+
+/* Estilos para el elemento con ID 'seis':
+ * - Establece el color del texto a gris con opacidad de 1.
+ * - Añade un borde azul con estilo 'inset' de 4px. */
+#seis {
+    color: rgba(100, 100, 100, 1);
+    /* Color del texto */
+    border: 4px;
+    /* Ancho del borde */
+    border-color: rgb(0, 0, 255);
+    /* Color del borde */
+    border-style: inset;
+    /* Estilo del borde */
+}
+
+/* Estilos para el elemento con ID 'siete':
+ * - Establece el color del texto a gris con opacidad de 0.2.
+ * - Añade un borde azul con estilo 'outset' de 4px.
+ * - Añade un margen inferior de 50px. */
+#siete {
+    color: rgba(100, 100, 100, 0.2);
+    /* Color del texto */
+    border: 4px;
+    /* Ancho del borde */
+    border-color: rgb(0, 0, 255);
+    /* Color del borde */
+    border-style: outset;
+    /* Estilo del borde */
+    margin-bottom: 50px;
+    /* Margen inferior */
+}
+
+/* Estilos para el elemento con ID 'ocho':
+ * - Establece el color del texto a marrón.
+ * - Añade un borde azul con estilo 'dotted' de 4px.
+ * - Añade un margen de 20px.
+ * - Añade un relleno de 10px arriba y abajo, y 5px a los lados. */
+#ocho {
+    color: brown;
+    /* Color del texto */
+    border: 4px;
+    /* Ancho del borde */
+    border-color: rgb(0, 0, 255);
+    /* Color del borde */
+    border-style: dotted;
+    /* Estilo del borde */
+    margin: 20px;
+    /* Margen */
+    padding: 10px 5px;
+    /* Relleno */
+}
+
+/* Estilos para el elemento con ID 'nueve':
+ * - Establece el color del texto a verde.
+ * - Añade un borde azul con estilo 'dotted' de 10px.
+ * - Añade un margen de 20px.
+ * - Añade un relleno de 10px. */
+#nueve {
+    color: rgb(0, 255, 0);
+    /* Color del texto */
+    border: 10px;
+    /* Ancho del borde */
+    border-color: cadetblue;
+    /* Color del borde */
+    border-style: dotted;
+    /* Estilo del borde */
+    margin: 20px;
+    /* Margen */
+    padding: 10px;
+    /* Relleno */
+}
+
+/* Estilos para el elemento con ID 'diez':
+ * - Establece el color del texto a azul.
+ * - Añade un borde azul con estilo 'dotted' de 4px.
+ * - Añade un margen de 20px.
+ * - Añade un relleno inferior de 20px. */
+#diez {
+    color: rgb(0, 0, 255);
+    /* Color del texto */
+    border: 4px;
+    /* Ancho del borde */
+    border-color: rgb(0, 0, 255);
+    /* Color del borde */
+    border-style: dotted;
+    /* Estilo del borde */
+    margin: 20px;
+    /* Margen */
+    padding-bottom: 20px;
+    /* Relleno inferior */
+}
