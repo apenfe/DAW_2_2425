@@ -1,0 +1,100 @@
+<!-- Crea una página web que contenga un formulario con los siguientes campos de información:
+
+Nombre, con un control de tipo texto obligatorio y con autofoco.
+Correo electrónico, con un control de tipo email obligatorio.
+URL, con un control de tipo url que muestre la ayuda "Escribe la URL de tu página web personal".
+Fecha, con un control de tipo date.
+Tiempo, con un control de tipo time.
+Fecha y hora, con un control de tipo datetime.
+Mes, con un control de tipo month.
+Semana, con un control de tipo week.
+Número, con un control de tipo number que limite la entrada a un valor entre -10 y 10.
+Teléfono, con un control de tipo tel.
+Término de búsqueda, con un control de tipo search.
+Color favorito, con un control de tipo color.
+Un botón de envío.
+Además, tienes que tener en cuenta los siguientes requisitos:
+
+El título de la página debe ser Formulario de prueba de HTML5.
+El método de envío del formulario debe ser POST.
+El destino del envío del formulario debe ser "".
+Nota: si al validar el código HTML de tu página web con el validador del W3C se muestran mensajes de advertencia como The date input type is not supported in all browsers. Please be sure to test, and consider using a polyfill. no te preocupes, el validador te está avisando de que lleves cuidado al usar una característica de HTML5 que no está admitida por todos los navegadores actuales.
+
+Nota: por lo anterior, cuando realices esta actividad y compruebes cómo se visualiza tu página web en distintos navegadores es muy probable que obtengas diferentes resultados. -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de prueba de HTML5</title>
+    
+</head>
+
+<body>
+    
+        <div class="layout">
+    
+            <h1>Formulario de prueba de HTML5</h1>
+    
+            <form action="" method="post">
+    
+                <label for="name">Nombre:</label>
+                <input type="text" name="name" id="name" required autofocus>
+                <br>
+    
+                <label for="email">Correo:</label>
+                <input type="email" name="email" id="email" required>
+                <br>
+    
+                <label for="url">URL:</label>
+                <input type="url" name="url" id="url" placeholder="Escribe la URL de tu página web personal">
+                <br>
+    
+                <label for="date">Fecha:</label>
+                <input type="date" name="date" id="date">
+                <br>
+    
+                <label for="time">Tiempo:</label>
+                <input type="time" name="time" id="time">
+                <br>
+
+                <label for="datetime">Fecha y hora:</label>
+                <input type="datetime-local" name="datetime" id="datetime">
+                <br>
+
+                <label for="month">Mes:</label>
+                <input type="month" name="month" id="month">
+                <br>
+    
+                <label for="week">Semana:</label>
+                <input type="week" name="week" id="week">
+                <br>
+    
+                <label for="number">Número:</label>
+                <input type="number" name="number" id="number" min="-10" max="10" value="0">
+                <br>
+    
+                <label for="tel">Teléfono:</label>
+                <input type="tel" name="tel" id="tel">
+                <br>
+    
+                <label for="search">Término de búsqueda:</label>
+                <input type="search" name="search" id="search">
+                <br>
+    
+                <label for="color">Color favorito:</label>
+                <input type="color" name="color" id="color">
+                <br>
+    
+                <input type="submit" value="Enviar">
+    
+            </form>
+    
+            <a href="index.html">Volver al menú</a>
+    
+        </div>
+</body>
+
+
+</html>
