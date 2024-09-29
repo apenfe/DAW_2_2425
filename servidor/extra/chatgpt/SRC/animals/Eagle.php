@@ -1,6 +1,6 @@
 <?php
 
-namespace SRC\animals;
+namespace chatgpt\SRC\animals;
 
 class Eagle extends Bird {
 

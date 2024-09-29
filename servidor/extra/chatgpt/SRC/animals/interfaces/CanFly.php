@@ -1,5 +1,5 @@
 <?php
-namespace SRC\animals\interfaces;
+namespace chatgpt\SRC\animals\interfaces;
 
 interface CanFly
 {

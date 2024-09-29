@@ -1,10 +1,10 @@
 <?php
 
-namespace SRC\animals\traits;
+namespace chatgpt\SRC\animals\traits;
 
 trait Flyable {
 
-    public function fly() {
+    public function fly(): void {
         echo "{$this->getName()} está volando.<br>";
     }
 

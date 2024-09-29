@@ -1,7 +1,7 @@
 <?php
-namespace SRC\zooManagement;
+namespace chatgpt\SRC\zooManagement;
 
-use SRC\animals\Animal;
+use chatgpt\SRC\animals\Animal;
 
 class ZooKeeper
 {
