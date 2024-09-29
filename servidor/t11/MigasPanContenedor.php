@@ -1,5 +1,7 @@
 <?php
 
+require_once 'MigasPan.php';
+
 class MigasPanContenedor extends MigasPan {
 
     private $contedor;
@@ -10,7 +12,7 @@ class MigasPanContenedor extends MigasPan {
     }
 
     public function mostrar() {
-        return $this->contedor->mostrar(parent::showMigas());
+        return $this->contedor->mostrar(parent::mostrar());
     }
 
 }

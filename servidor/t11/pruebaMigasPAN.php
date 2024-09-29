@@ -1,14 +1,14 @@
 <?php
 
-include 'MigasPan.php';
-include 'MigasPanContenedor.php';
-include 'Etiqueta.php';
-include "Enlace.php";
+require_once 'MigasPan.php';
+require_once 'MigasPanContenedor.php';
+require_once 'Etiqueta.php';
+require_once 'Enlace.php';
 
-$migas = new MigasPanContenedor('>', 'nav');
-$migas->addMiga('Inicio', 'index.php');
-$migas->addMiga('Productos', 'productos.php');
-$migas->addMiga('Producto 1', 'producto1.php');
-$migas->addMiga('Producto 2', 'producto2.php');
+$migas = new MigasPanContenedor('>', 'div');
+$migas->addMiga('Inicio', 'https://www.google.es');
+$migas->addMiga('Productos', 'https://www.google.es');
+$migas->addMiga('Producto 1', 'https://www.google.es');
+$migas->addMiga('Producto 2', 'https://www.google.es');
 
 echo $migas->mostrar();

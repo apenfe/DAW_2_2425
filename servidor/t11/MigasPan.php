@@ -17,7 +17,7 @@ class MigasPan
         $this->migas[] = $enlace;
     }
 
-    public function showMigas() {
+    public function mostrar() {
         $html = '';
         foreach ($this->migas as $key => $miga) {
 
