@@ -6,7 +6,7 @@ class Etiqueta {
     public $contenido;
     public $atributos;
 
-    public function __construct($etiqueta, $contenido = "", $atributos="") {
+    public function __construct($etiqueta="div", $contenido = "", $atributos="") {
         $this->etiqueta = $etiqueta;
         $this->contenido = $contenido;
         $this->atributos = $atributos;
