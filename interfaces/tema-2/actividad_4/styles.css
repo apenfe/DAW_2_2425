@@ -1,0 +1,22 @@
+.block1 {
+    width: 100px;
+    background-color: #FFA8C0;
+    border: 16px solid #0E410C;
+    padding: 30px;
+    margin: 50px;
+}
+
+.block2 h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.block2 p {
+    margin: 0;
+    border: 25px dotted #FD0100;
+}
+
+.block3 h1 {
+    width: 120px;
+    background-color: #ADD9E6;
+}
