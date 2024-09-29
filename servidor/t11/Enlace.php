@@ -1,17 +1,12 @@
 <?php
 
-class Enlace
+class Enlace extends Etiqueta
 {
-    public $href;
+
     public $etiqueta;
 
     public function __construct($href, $etiqueta) {
-        $this->href = $href;
-        $this->etiqueta = $etiqueta;
-    }
-
-    public function mostrar() {
-        return "<a href='$this->href'>$this->etiqueta</a>";
+        parent::__construct('a', $etiqueta, 'href="'.$href.'"');
     }
 
 }

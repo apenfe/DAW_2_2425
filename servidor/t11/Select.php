@@ -10,7 +10,7 @@ class Select
         $this->options = $options;
     }
 
-    public function imprimete(){
+    public function imprime(){
         $html = "<select name='$this->name'>";
         foreach ($this->options as $value => $text) {
             $html .= "<option value='$value'>$text</option>";
@@ -19,13 +19,3 @@ class Select
         return $html;
     }
 }
-
-$select = new Select('paises', [
-    'es' => 'España',
-    'fr' => 'Francia',
-    'it' => 'Italia',
-    'uk' => 'Reino Unido',
-    'us' => 'Estados Unidos',
-]);
-
-echo $select->imprimete();

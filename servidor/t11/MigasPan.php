@@ -35,8 +35,4 @@ class MigasPan
 
 }
 
-$migas = new MigasPan();
-$migas->addMiga('google',"https://www.google.es" );
-$migas->addMiga('mi web',"https://www.apenfe.es" );
-$migas->addMiga('bropincel',"https://www.bropincel.es" );
-echo $migas->showMigas();
+?>
