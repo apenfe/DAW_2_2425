@@ -1,3 +1,10 @@
+body {
+    background-image: url('https://www.ocu.org/-/media/ocu/images/home/tecnologia/ordenador/portatil_600.jpg?rev=6dd43916-6bd8-44a8-926b-db6771c63df4&hash=62BE4CBE85051FEF37600832B735F378&mw=960');
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
 /* Estilos para el elemento con ID 'c1':
  * - Fondo rojo
  * - Texto blanco
@@ -462,7 +469,56 @@ a {
     -o-transition: all 300ms ease-in;
 }
 
+button a {
+    color: white;
+    text-decoration: none;
+}
+
 a:hover {
     color: blue;
 
+}
+
+.btn {
+    background-color: gray;
+    color: black;
+    outline: none;
+    border: none;
+    padding: 10px 25px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.btn:hover a {
+    color: white;
+}
+
+.derecha {
+    text-align: right;
+}
+
+.btn-blue {
+    background-color: blue;
+    color: white;
+}
+
+.btn-red {
+    background-color: red;
+    color: white;
+}
+
+.btn-texture {
+    background-image: url('https://www.transparenttextures.com/patterns/45-degree-fabric-light.png');
+    background-color: #3498db;
 }
