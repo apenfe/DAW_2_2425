@@ -1,17 +1,26 @@
 window.addEventListener("DOMContentLoaded", function () {
 
+    let num = 9;
+
     document.write("<pre>");
-    for (let i = 0; i < 5; i++) {
 
-        for (let j = 0; j < 5; j++) {
+    for (let i = 0; i < (num - 1) / 2; i++) {
 
-            if (i == 0 || i == 4 || j == 0 || j == 4) {
-                document.write("*");
-            } else {
-                document.write(" ");
-            }
+        document.write(" ".repeat(((num - 1) / 2) - i));
+        document.write("*".repeat(1 + (i * 2)));
+        document.write(" ".repeat(((num - 1) / 2) - i));
 
-        }
+        document.write("<br>");
+    }
+
+    document.write("*".repeat(num));
+    document.write("<br>");
+    8
+    for (let i = ((num - 1) / 2) - 1; i >= 0; i--) {
+
+        document.write(" ".repeat(((num - 1) / 2) - i));
+        document.write("*".repeat(1 + (i * 2)));
+        document.write(" ".repeat(((num - 1) / 2) - i));
 
         document.write("<br>");
     }
