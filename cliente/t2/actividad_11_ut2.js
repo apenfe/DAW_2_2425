@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     var num = 25;
-
+    // aqui se ejecuta el case default
     switch (true) {
         case num < 0:
             alert("Menor que 0.");
