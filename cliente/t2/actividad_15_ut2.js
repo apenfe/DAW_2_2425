@@ -1,17 +1,19 @@
 window.addEventListener("DOMContentLoaded", function () {
 
-    for (let i = 1; i <= 10; i++) {
+    let texto = this.prompt("Introduce un texto");
 
+    if (isNaN(texto) && texto != null && typeof texto === "string") {
         let h2 = document.createElement("h2");
-        h2.innerHTML = "Tabla del " + i;
+        h2.innerHTML = "Se ha introducido un texto: " + texto;
         document.body.appendChild(h2);
-
-        for (let j = 0; j <= 10; j++) {
-            let h5 = document.createElement("h5");
-            h5.innerHTML = i + " x " + j + " = " + (i * j);
-            document.body.appendChild(h5);
-        }
-
+    } else if (!isNaN(texto) && texto != null && texto != "") {
+        let h2 = document.createElement("h2");
+        h2.innerHTML = "Se ha introducido un numero: " + texto;
+        document.body.appendChild(h2);
+    } else {
+        let h2 = document.createElement("h2");
+        h2.innerHTML = "No se ha introducido nada";
+        document.body.appendChild(h2);
     }
 
 });
