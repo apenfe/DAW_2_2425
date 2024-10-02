@@ -1,0 +1,109 @@
+{
+    "contenedores": [
+        {
+            "tipo": "grande",
+            "envases_aceptados": [
+                "grande ancho",
+                "grande alto"
+            ]
+        },
+        {
+            "tipo": "mediano",
+            "envases_aceptados": [
+                "mediano ancho",
+                "mediano alto",
+                "pequeño"
+            ]
+        },
+        {
+            "tipo": "vertical",
+            "envases_aceptados": [
+                "grande alto",
+                "mediano alto"
+            ]
+        }
+    ],
+    "envases": [
+        {
+            "grande ancho": {
+                "capacidad": "grande",
+                "tipo": "ancho",
+                "liquidos_aceptados": [
+                    "agua",
+                    "leche",
+                    "aceite",
+                    "vinagre"
+                ],
+                "uso": "alimentos"
+            }
+        },
+        {
+            "grande alto": {
+                "capacidad": "grande",
+                "tipo": "alto",
+                "liquidos_aceptados": [
+                    "agua",
+                    "leche",
+                    "aceite",
+                    "vinagre"
+                ],
+                "uso": "alimentos"
+            }
+        },
+        {
+            "mediano ancho": {
+                "capacidad": "mediano",
+                "tipo": "ancho",
+                "liquidos_aceptados": [
+                    "agua",
+                    "leche",
+                    "vinagre",
+                    "aceite"
+                ],
+                "uso": "alimentos"
+            }
+        },
+        {
+            "mediano alto": {
+                "capacidad": "mediano",
+                "tipo": "alto",
+                "liquidos_aceptados": [
+                    "lejía",
+                    "amoníaco",
+                    "gasolina",
+                    "aguarrás",
+                    "alcohol",
+                    "jabon"
+                ],
+                "uso": "resistente a sustancias corrosivas"
+            }
+        },
+        {
+            "pequeño": {
+                "capacidad": "pequeño",
+                "tipo": "pequeño",
+                "liquidos_aceptados": [
+                    "lejía",
+                    "amoníaco",
+                    "gasolina",
+                    "aguarrás",
+                    "alcohol",
+                    "jabon"
+                ],
+                "uso": "resistente a sustancias corrosivas"
+            }
+        }
+    ],
+    "liquidos": [
+        "agua",
+        "leche",
+        "lejía",
+        "amoníaco",
+        "jabón",
+        "aguarrás",
+        "gasolina",
+        "aceite",
+        "vinagre",
+        "alcohol"
+    ]
+}
