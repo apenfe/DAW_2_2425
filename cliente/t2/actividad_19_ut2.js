@@ -1,35 +1,31 @@
 window.addEventListener("DOMContentLoaded", function () {
 
-    let numero = this.prompt("Introduce un numero:");
-    let numero2 = this.prompt("Introduce otro numero:");
+    let notas = [];
 
-    if (isNaN(numero) || isNaN(numero2)) {
-        this.alert("No has introducido un numero");
-        return;
+    while (notas.length < 5) {
+
+        let nota = prompt("Introduce una nota: ");
+        notas.push(parseFloat(nota));
+
+        if (isNaN(nota)) {
+            alert("No has introducido un numero");
+            notas.pop();
+        }
+
+    }
+
+    let suma = 0;
+    for (let i = 0; i < notas.length; i++) {
+        suma += notas[i];
+    }
+
+    let media = suma / notas.length;
+    alert("La media de las notas es: " + media);
+
+    if (media >= 5) {
+        alert("Aprobado");
     } else {
-
-        let operacion = prompt("Introduce una operacion (+ - * /): ");
-
-        if (operacion == "+") {
-            let suma = parseFloat(numero) + parseFloat(numero2);
-            this.alert("La suma de los numero es: " + (suma));
-        }
-        else if (operacion == "-") {
-            let resta = parseFloat(numero) - parseFloat(numero2);
-            this.alert("La resta de los numero es: " + (resta));
-        }
-        else if (operacion == "*") {
-            let multiplicacion = parseFloat(numero) * parseFloat(numero2);
-            this.alert("La multiplicacion de los numero es: " + (multiplicacion));
-        }
-        else if (operacion == "/") {
-            let division = parseFloat(numero) / parseFloat(numero2);
-            this.alert("La division de los numero es: " + (division));
-        }
-        else {
-            alert("Operacion no valida");
-        }
-
+        alert("Suspenso");
     }
 
 });
