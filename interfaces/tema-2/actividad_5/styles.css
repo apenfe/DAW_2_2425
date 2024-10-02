@@ -1,0 +1,468 @@
+/* Estilos para el elemento con ID 'c1':
+ * - Fondo rojo
+ * - Texto blanco
+ * - Tamaño de fuente de 20px
+ * - Relleno de 10px
+ * - Margen de 10px
+ * - Bordes redondeados de 10px
+ * - Alineación de texto centrada */
+#c1 {
+    background-color: #f00;
+    /* Fondo rojo */
+    color: #fff;
+    /* Texto blanco */
+    font-size: 30px;
+    /* Tamaño de fuente de 20px */
+    padding: 10px;
+    /* Relleno de 10px */
+    margin: 10px;
+    /* Margen de 10px */
+    border-radius: 10px;
+    /* Bordes redondeados de 10px */
+    text-align: center;
+    /* Alineación de texto centrada */
+}
+
+/* Estilos para el elemento con ID 'c2':
+ * - Fondo verde
+ * - Texto blanco
+ * - Tamaño de fuente de 20px
+ * - Relleno de 10px
+ * - Margen de 10px
+ * - Bordes redondeados de 10px
+ * - Alineación de texto a la izquierda */
+#c2 {
+    background-color: #0f0;
+    /* Fondo verde */
+    color: #fff;
+    /* Texto blanco */
+    font-size: 20px;
+    /* Tamaño de fuente de 20px */
+    padding: 10px;
+    /* Relleno de 10px */
+    margin: 10px;
+    /* Margen de 10px */
+    border-radius: 10px;
+    /* Bordes redondeados de 10px */
+    text-align: left;
+    /* Alineación de texto a la izquierda */
+}
+
+/* Estilos para el elemento con ID 'c3':
+ * - Fondo azul
+ * - Texto blanco
+ * - Tamaño de fuente de 20px
+ * - Relleno de 10px
+ * - Margen de 10px
+ * - Bordes redondeados de 10px
+ * - Alineación de texto a la derecha */
+#c3 {
+    background-color: #00f;
+    /* Fondo azul */
+    color: #fff;
+    /* Texto blanco */
+    font-size: 20px;
+    /* Tamaño de fuente de 20px */
+    padding: 10px;
+    /* Relleno de 10px */
+    margin: 10px;
+    /* Margen de 10px */
+    border-radius: 10px;
+    /* Bordes redondeados de 10px */
+    text-align: right;
+    /* Alineación de texto a la derecha */
+}
+
+/* Estilos para el elemento con ID 'c4':
+ * - Fondo amarillo
+ * - Texto blanco
+ * - Tamaño de fuente de 20px
+ * - Relleno de 10px
+ * - Margen de 10px
+ * - Bordes redondeados de 10px
+ * - Alineación de texto justificada */
+#c4 {
+    background-color: #ff0;
+    /* Fondo amarillo */
+    color: #fff;
+    /* Texto blanco */
+    font-size: 20px;
+    /* Tamaño de fuente de 20px */
+    padding: 10px;
+    /* Relleno de 10px */
+    margin: 10px;
+    /* Margen de 10px */
+    border-radius: 10px;
+    /* Bordes redondeados de 10px */
+    text-align: justify;
+    /* Alineación de texto justificada */
+}
+
+/* Estilos para el elemento con ID 'c5':
+ * - Fondo magenta
+ * - Texto blanco
+ * - Tamaño de fuente de 20px
+ * - Relleno de 10px
+ * - Margen de 10px
+ * - Bordes redondeados de 10px
+ * - Sin decoración de texto */
+#c5 {
+    background-color: #f0f;
+    /* Fondo magenta */
+    color: #fff;
+    /* Texto blanco */
+    font-size: 20px;
+    /* Tamaño de fuente de 20px */
+    padding: 10px;
+    /* Relleno de 10px */
+    margin: 10px;
+    /* Margen de 10px */
+    border-radius: 10px;
+    /* Bordes redondeados de 10px */
+    text-decoration: none;
+    /* Sin decoración de texto */
+}
+
+/* Estilos para el elemento con ID 'c6':
+ * - Fondo cian
+ * - Texto blanco
+ * - Tamaño de fuente de 25px
+ * - Relleno de 10px
+ * - Margen de 10px
+ * - Bordes redondeados de 10px
+ * - Texto con línea superior */
+#c6 {
+    background-color: #0ff;
+    /* Fondo cian */
+    color: #fff;
+    /* Texto blanco */
+    font-size: 25px;
+    /* Tamaño de fuente de 25px */
+    padding: 10px;
+    /* Relleno de 10px */
+    margin: 10px;
+    /* Margen de 10px */
+    border-radius: 10px;
+    /* Bordes redondeados de 10px */
+    text-decoration: overline;
+    /* Texto con línea superior */
+}
+
+/* Estilos para el elemento con ID 'c7':
+ * - Fondo negro
+ * - Texto blanco
+ * - Tamaño de fuente de 20px
+ * - Relleno de 10px
+ * - Margen de 10px
+ * - Bordes redondeados de 10px
+ * - Texto tachado */
+#c7 {
+    background-color: #000;
+    /* Fondo negro */
+    color: #fff;
+    /* Texto blanco */
+    font-size: 20px;
+    /* Tamaño de fuente de 20px */
+    padding: 10px;
+    /* Relleno de 10px */
+    margin: 10px;
+    /* Margen de 10px */
+    border-radius: 10px;
+    /* Bordes redondeados de 10px */
+    text-decoration: line-through;
+    /* Texto tachado */
+}
+
+/* Estilos para el elemento con ID 'c8':
+ * - Fondo blanco
+ * - Texto negro
+ * - Tamaño de fuente de 20px
+ * - Relleno de 10px
+ * - Margen de 10px
+ * - Bordes redondeados de 10px
+ * - Texto subrayado */
+#c8 {
+    background-color: #fff;
+    /* Fondo blanco */
+    color: #000;
+    /* Texto negro */
+    font-size: 20px;
+    /* Tamaño de fuente de 20px */
+    padding: 10px;
+    /* Relleno de 10px */
+    margin: 10px;
+    /* Margen de 10px */
+    border-radius: 10px;
+    /* Bordes redondeados de 10px */
+    text-decoration: underline;
+    /* Texto subrayado */
+}
+
+/* Estilos para el elemento con ID 'c9':
+ * - Fondo rojo
+ * - Texto blanco
+ * - Tamaño de fuente de 20px
+ * - Relleno de 10px
+ * - Margen de 10px
+ * - Bordes redondeados de 10px
+ * - Texto en mayúsculas */
+#c9 {
+    background-color: #f00;
+    /* Fondo rojo */
+    color: #fff;
+    /* Texto blanco */
+    font-size: 20px;
+    /* Tamaño de fuente de 20px */
+    padding: 10px;
+    /* Relleno de 10px */
+    margin: 10px;
+    /* Margen de 10px */
+    border-radius: 10px;
+    /* Bordes redondeados de 10px */
+    text-transform: uppercase;
+    /* Texto en mayúsculas */
+}
+
+/* Estilos para el elemento con ID 'c10':
+ * - Fondo verde
+ * - Texto blanco
+ * - Tamaño de fuente de 20px
+ * - Relleno de 10px
+ * - Margen de 10px
+ * - Bordes redondeados de 10px
+ * - Texto con la primera letra en mayúscula */
+#c10 {
+    background-color: #0f0;
+    /* Fondo verde */
+    color: #fff;
+    /* Texto blanco */
+    font-size: 20px;
+    /* Tamaño de fuente de 20px */
+    padding: 10px;
+    /* Relleno de 10px */
+    margin: 10px;
+    /* Margen de 10px */
+    border-radius: 10px;
+    /* Bordes redondeados de 10px */
+    text-transform: capitalize;
+    /* Texto con la primera letra en mayúscula */
+}
+
+/* Estilos para el elemento con ID 'p1':
+ * - Tamaño de fuente de 20px
+ * - Relleno de 10px
+ * - Margen de 10px
+ * - Bordes redondeados de 10px
+ * - Fondo de color rgb(253, 112, 112)
+ * - Borde discontinuo de 2px de color negro
+ * - Sangría de texto de 30px
+ * - Texto en negrita */
+#p1 {
+    font-size: 20px;
+    /* Tamaño de fuente de 20px */
+    padding: 10px;
+    /* Relleno de 10px */
+    margin: 10px;
+    /* Margen de 10px */
+    border-radius: 10px;
+    /* Bordes redondeados de 10px */
+    background-color: rgb(253, 112, 112);
+    /* Fondo de color rgb(253, 112, 112) */
+    border: 2px dashed rgb(0, 0, 0);
+    /* Borde discontinuo de 2px de color negro */
+    text-indent: 30px;
+    /* Sangría de texto de 30px */
+    font-weight: 800;
+    /* Texto en negrita */
+}
+
+/* Estilos para el elemento con ID 'p2':
+ * - Tamaño de fuente de 20px
+ * - Relleno de 10px
+ * - Margen de 10px
+ * - Bordes redondeados de 10px
+ * - Espaciado entre letras de 2px
+ * - Altura de línea de 0.8 */
+#p2 {
+    font-size: 20px;
+    /* Tamaño de fuente de 20px */
+    padding: 10px;
+    /* Relleno de 10px */
+    margin: 10px;
+    /* Margen de 10px */
+    border-radius: 10px;
+    /* Bordes redondeados de 10px */
+    letter-spacing: 2px;
+    /* Espaciado entre letras de 2px */
+    line-height: 0.8;
+    /* Altura de línea de 0.8 */
+}
+
+/* Estilos para el elemento con ID 'p3':
+ * - Tamaño de fuente de 20px
+ * - Relleno de 10px
+ * - Margen de 10px
+ * - Bordes redondeados de 10px
+ * - Altura de línea de 0.8 */
+#p3 {
+    font-size: 20px;
+    /* Tamaño de fuente de 20px */
+    padding: 10px;
+    /* Relleno de 10px */
+    margin: 10px;
+    /* Margen de 10px */
+    border-radius: 10px;
+    /* Bordes redondeados de 10px */
+    line-height: 0.8;
+    /* Altura de línea de 0.8 */
+}
+
+/* Estilos para el elemento con ID 'p4':
+ * - Tamaño de fuente de 20px
+ * - Relleno de 10px
+ * - Margen de 10px
+ * - Bordes redondeados de 10px
+ * - Dirección del texto de derecha a izquierda
+ * - Texto en negrita */
+#p4 {
+    font-size: 20px;
+    /* Tamaño de fuente de 20px */
+    padding: 10px;
+    /* Relleno de 10px */
+    margin: 10px;
+    /* Margen de 10px */
+    border-radius: 10px;
+    /* Bordes redondeados de 10px */
+    direction: rtl;
+    /* Dirección del texto de derecha a izquierda */
+    font-weight: bold;
+    /* Texto en negrita */
+}
+
+/* Estilos para el elemento con ID 'p5':
+ * - Tamaño de fuente de 20px
+ * - Relleno de 10px
+ * - Margen de 10px
+ * - Bordes redondeados de 10px
+ * - Espaciado entre palabras de 3px */
+#p5 {
+    font-size: 20px;
+    /* Tamaño de fuente de 20px */
+    padding: 10px;
+    /* Relleno de 10px */
+    margin: 10px;
+    /* Margen de 10px */
+    border-radius: 10px;
+    /* Bordes redondeados de 10px */
+    word-spacing: 3px;
+    /* Espaciado entre palabras de 3px */
+}
+
+/* Estilos para el elemento con ID 'p6':
+ * - Tamaño de fuente de 20px
+ * - Relleno de 10px
+ * - Margen de 10px
+ * - Bordes redondeados de 10px
+ * - Sombra de texto de 3px 2px de color rojo */
+#p6 {
+    font-size: 20px;
+    /* Tamaño de fuente de 20px */
+    padding: 10px;
+    /* Relleno de 10px */
+    margin: 10px;
+    /* Margen de 10px */
+    border-radius: 10px;
+    /* Bordes redondeados de 10px */
+    text-shadow: 3px 2px red;
+    /* Sombra de texto de 3px 2px de color rojo */
+}
+
+/* Estilos para el elemento con ID 'p7':
+ * - Tamaño de fuente de 20px
+ * - Relleno de 10px
+ * - Margen de 10px
+ * - Bordes redondeados de 10px
+ * - Fuente 'Lucida Sans' */
+#p7 {
+    font-size: 20px;
+    /* Tamaño de fuente de 20px */
+    padding: 10px;
+    /* Relleno de 10px */
+    margin: 10px;
+    /* Margen de 10px */
+    border-radius: 10px;
+    /* Bordes redondeados de 10px */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* Fuente 'Lucida Sans' */
+}
+
+/* Estilos para el elemento con ID 'p8':
+ * - Tamaño de fuente de 20px
+ * - Relleno de 10px
+ * - Margen de 10px
+ * - Bordes redondeados de 10px
+ * - Fuente Arial */
+#p8 {
+    font-size: 20px;
+    /* Tamaño de fuente de 20px */
+    padding: 10px;
+    /* Relleno de 10px */
+    margin: 10px;
+    /* Margen de 10px */
+    border-radius: 10px;
+    /* Bordes redondeados de 10px */
+    font-family: Arial, Helvetica, sans-serif;
+    /* Fuente Arial */
+}
+
+/* Estilos para el elemento con ID 'p9':
+ * - Tamaño de fuente de 20px
+ * - Relleno de 10px
+ * - Margen de 10px
+ * - Bordes redondeados de 10px
+ * - Texto en cursiva */
+#p9 {
+    font-size: 20px;
+    /* Tamaño de fuente de 20px */
+    padding: 10px;
+    /* Relleno de 10px */
+    margin: 10px;
+    /* Margen de 10px */
+    border-radius: 10px;
+    /* Bordes redondeados de 10px */
+    font-style: italic;
+    /* Texto en cursiva */
+}
+
+/* Estilos para el elemento con ID 'p10':
+ * - Tamaño de fuente de 20px
+ * - Relleno de 10px
+ * - Margen de 10px
+ * - Bordes redondeados de 10px
+ * - Texto oblicuo */
+#p10 {
+    font-size: 20px;
+    /* Tamaño de fuente de 20px */
+    padding: 10px;
+    /* Relleno de 10px */
+    margin: 10px;
+    /* Margen de 10px */
+    border-radius: 10px;
+    /* Bordes redondeados de 10px */
+    font-style: oblique;
+    /* Texto oblicuo */
+}
+
+a {
+    color: red;
+    transition: all 300ms ease-in;
+    -webkit-transition: all 300ms ease-in;
+    -moz-transition: all 300ms ease-in;
+    -ms-transition: all 300ms ease-in;
+    -o-transition: all 300ms ease-in;
+}
+
+a:hover {
+    color: blue;
+
+}
