@@ -1,0 +1,83 @@
+body {
+    /* Fondo principal */
+    background:
+        /* Fondo superior con opacidad ajustada */
+        url('https://img.freepik.com/foto-gratis/carton-blanco-arrugado_95678-119.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1727827200&semt=ais_hybrid') no-repeat center/80%,
+        /* Segundo fondo en la esquina inferior izquierda */
+        url('https://www.academiataure.com/wp-content/uploads/2023/07/textura.jpg') no-repeat right bottom;
+    background-color: #f0f0f0;
+    /* Color de fondo de respaldo */
+    height: 100vh;
+    /* Asegura que el fondo ocupe toda la altura de la ventana */
+    margin: 0;
+    /* Eliminar márgenes del body */
+}
+
+
+#primero {
+    max-width: 650px;
+    width: 300px;
+    background-color: #333;
+    opacity: 1;
+    margin: 10px;
+    padding: 10px;
+    color: white;
+    transition: all 300ms linear;
+    -webkit-transition: all 300ms linear;
+    -moz-transition: all 300ms linear;
+    -ms-transition: all 300ms linear;
+    -o-transition: all 300ms linear;
+    box-shadow: 0 2px 5px inset white;
+    word-break: break-word;
+    /* Permite romper las palabras largas */
+}
+
+#segundo {
+    max-width: 650px;
+    width: 300px;
+    background-color: #333;
+    opacity: 0.5;
+    margin: 10px;
+    padding: 10px;
+    color: white;
+    transition: all 300ms linear;
+    -webkit-transition: all 300ms linear;
+    -moz-transition: all 300ms linear;
+    -ms-transition: all 300ms linear;
+    -o-transition: all 300ms linear;
+    box-shadow: 1px 2px 5px black;
+    white-space: nowrap;
+    /* Evita el salto de línea */
+    overflow: hidden;
+    /* Oculta el contenido que desborda */
+    text-overflow: clip;
+    /* Corta el texto sin mostrar nada adicional */
+}
+
+#tercero {
+    max-width: 650px;
+    width: 300px;
+    background-color: #333;
+    opacity: 0.1;
+    margin: 10px;
+    padding: 10px;
+    color: white;
+    transition: all 300ms linear;
+    -webkit-transition: all 300ms linear;
+    -moz-transition: all 300ms linear;
+    -ms-transition: all 300ms linear;
+    -o-transition: all 300ms linear;
+    box-shadow: 0px 0px 10px black;
+    white-space: nowrap;
+    /* Evita el salto de línea */
+    overflow: hidden;
+    /* Oculta el contenido que desborda */
+    text-overflow: ellipsis;
+    /* Corta el texto y añade puntos suspensivos */
+}
+
+#primero:hover,
+#segundo:hover,
+#tercero:hover {
+    opacity: 1;
+}
