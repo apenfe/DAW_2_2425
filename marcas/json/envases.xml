@@ -1,88 +1,95 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<root>
-  <contenedores>
-    <tipo>grande</tipo>
-    <envases_aceptados>grande ancho</envases_aceptados>
-    <envases_aceptados>grande alto</envases_aceptados>
-  </contenedores>
-  <contenedores>
-    <tipo>mediano</tipo>
-    <envases_aceptados>mediano ancho</envases_aceptados>
-    <envases_aceptados>mediano alto</envases_aceptados>
-    <envases_aceptados>pequeño</envases_aceptados>
-  </contenedores>
-  <contenedores>
-    <tipo>vertical</tipo>
-    <envases_aceptados>grande alto</envases_aceptados>
-    <envases_aceptados>mediano alto</envases_aceptados>
-  </contenedores>
-  <envases>
-    <grande ancho>
-      <capacidad>grande</capacidad>
-      <tipo>ancho</tipo>
-      <liquidos_aceptados>agua</liquidos_aceptados>
-      <liquidos_aceptados>leche</liquidos_aceptados>
-      <liquidos_aceptados>aceite</liquidos_aceptados>
-      <liquidos_aceptados>vinagre</liquidos_aceptados>
-      <uso>alimentos</uso>
-    </grande ancho>
-  </envases>
-  <envases>
-    <grande alto>
-      <capacidad>grande</capacidad>
-      <tipo>alto</tipo>
-      <liquidos_aceptados>agua</liquidos_aceptados>
-      <liquidos_aceptados>leche</liquidos_aceptados>
-      <liquidos_aceptados>aceite</liquidos_aceptados>
-      <liquidos_aceptados>vinagre</liquidos_aceptados>
-      <uso>alimentos</uso>
-    </grande alto>
-  </envases>
-  <envases>
-    <mediano ancho>
-      <capacidad>mediano</capacidad>
-      <tipo>ancho</tipo>
-      <liquidos_aceptados>agua</liquidos_aceptados>
-      <liquidos_aceptados>leche</liquidos_aceptados>
-      <liquidos_aceptados>vinagre</liquidos_aceptados>
-      <liquidos_aceptados>aceite</liquidos_aceptados>
-      <uso>alimentos</uso>
-    </mediano ancho>
-  </envases>
-  <envases>
-    <mediano alto>
-      <capacidad>mediano</capacidad>
-      <tipo>alto</tipo>
-      <liquidos_aceptados>lejía</liquidos_aceptados>
-      <liquidos_aceptados>amoníaco</liquidos_aceptados>
-      <liquidos_aceptados>gasolina</liquidos_aceptados>
-      <liquidos_aceptados>aguarrás</liquidos_aceptados>
-      <liquidos_aceptados>alcohol</liquidos_aceptados>
-      <liquidos_aceptados>jabon</liquidos_aceptados>
-      <uso>resistente a sustancias corrosivas</uso>
-    </mediano alto>
-  </envases>
-  <envases>
-    <pequeño>
-      <capacidad>pequeño</capacidad>
-      <tipo>pequeño</tipo>
-      <liquidos_aceptados>lejía</liquidos_aceptados>
-      <liquidos_aceptados>amoníaco</liquidos_aceptados>
-      <liquidos_aceptados>gasolina</liquidos_aceptados>
-      <liquidos_aceptados>aguarrás</liquidos_aceptados>
-      <liquidos_aceptados>alcohol</liquidos_aceptados>
-      <liquidos_aceptados>jabon</liquidos_aceptados>
-      <uso>resistente a sustancias corrosivas</uso>
-    </pequeño>
-  </envases>
-  <liquidos>agua</liquidos>
-  <liquidos>leche</liquidos>
-  <liquidos>lejía</liquidos>
-  <liquidos>amoníaco</liquidos>
-  <liquidos>jabón</liquidos>
-  <liquidos>aguarrás</liquidos>
-  <liquidos>gasolina</liquidos>
-  <liquidos>aceite</liquidos>
-  <liquidos>vinagre</liquidos>
-  <liquidos>alcohol</liquidos>
-</root>
+ <root>
+     <contenedores>
+         <tipo>grande</tipo>
+         <envases_aceptados>
+             <grande ancho>
+                 <capacidad>grande</capacidad>
+                 <tipo>ancho</tipo>
+                 <liquidos_aceptados>agua</liquidos_aceptados>
+                 <liquidos_aceptados>leche</liquidos_aceptados>
+                 <liquidos_aceptados>aceite</liquidos_aceptados>
+                 <liquidos_aceptados>vinagre</liquidos_aceptados>
+                 <uso>alimentos</uso>
+             </grande ancho>
+         </envases_aceptados>
+         <envases_aceptados>
+             <grande alto>
+                 <capacidad>grande</capacidad>
+                 <tipo>alto</tipo>
+                 <liquidos_aceptados>agua</liquidos_aceptados>
+                 <liquidos_aceptados>leche</liquidos_aceptados>
+                 <liquidos_aceptados>aceite</liquidos_aceptados>
+                 <liquidos_aceptados>vinagre</liquidos_aceptados>
+                 <uso>alimentos</uso>
+             </grande alto>
+         </envases_aceptados>
+     </contenedores>
+     <contenedores>
+         <tipo>mediano</tipo>
+         <envases_aceptados>
+             <mediano ancho>
+                 <capacidad>mediano</capacidad>
+                 <tipo>ancho</tipo>
+                 <liquidos_aceptados>agua</liquidos_aceptados>
+                 <liquidos_aceptados>leche</liquidos_aceptados>
+                 <liquidos_aceptados>vinagre</liquidos_aceptados>
+                 <liquidos_aceptados>aceite</liquidos_aceptados>
+                 <uso>alimentos</uso>
+             </mediano ancho>
+         </envases_aceptados>
+         <envases_aceptados>
+             <mediano alto>
+                 <capacidad>mediano</capacidad>
+                 <tipo>alto</tipo>
+                 <liquidos_aceptados>lejía</liquidos_aceptados>
+                 <liquidos_aceptados>amoníaco</liquidos_aceptados>
+                 <liquidos_aceptados>gasolina</liquidos_aceptados>
+                 <liquidos_aceptados>aguarrás</liquidos_aceptados>
+                 <liquidos_aceptados>alcohol</liquidos_aceptados>
+                 <liquidos_aceptados>jabon</liquidos_aceptados>
+                 <uso>resistente a sustancias corrosivas</uso>
+             </mediano alto>
+         </envases_aceptados>
+         <envases_aceptados>
+             <pequeño>
+                 <capacidad>pequeño</capacidad>
+                 <tipo>pequeño</tipo>
+                 <liquidos_aceptados>lejía</liquidos_aceptados>
+                 <liquidos_aceptados>amoníaco</liquidos_aceptados>
+                 <liquidos_aceptados>gasolina</liquidos_aceptados>
+                 <liquidos_aceptados>aguarrás</liquidos_aceptados>
+                 <liquidos_aceptados>alcohol</liquidos_aceptados>
+                 <liquidos_aceptados>jabon</liquidos_aceptados>
+                 <uso>resistente a sustancias corrosivas</uso>
+             </pequeño>
+         </envases_aceptados>
+     </contenedores>
+     <contenedores>
+         <tipo>vertical</tipo>
+         <envases_aceptados>
+             <grande alto>
+                 <capacidad>grande</capacidad>
+                 <tipo>alto</tipo>
+                 <liquidos_aceptados>agua</liquidos_aceptados>
+                 <liquidos_aceptados>leche</liquidos_aceptados>
+                 <liquidos_aceptados>aceite</liquidos_aceptados>
+                 <liquidos_aceptados>vinagre</liquidos_aceptados>
+                 <uso>alimentos</uso>
+             </grande alto>
+         </envases_aceptados>
+         <envases_aceptados>
+             <mediano alto>
+                 <capacidad>mediano</capacidad>
+                 <tipo>alto</tipo>
+                 <liquidos_aceptados>lejía</liquidos_aceptados>
+                 <liquidos_aceptados>amoníaco</liquidos_aceptados>
+                 <liquidos_aceptados>gasolina</liquidos_aceptados>
+                 <liquidos_aceptados>aguarrás</liquidos_aceptados>
+                 <liquidos_aceptados>alcohol</liquidos_aceptados>
+                 <liquidos_aceptados>jabon</liquidos_aceptados>
+                 <uso>resistente a sustancias corrosivas</uso>
+             </mediano alto>
+         </envases_aceptados>
+     </contenedores>
+ </root>
