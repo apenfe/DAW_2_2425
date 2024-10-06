@@ -6,12 +6,12 @@ window.addEventListener("DOMContentLoaded", function () {
     defecto (utiliza el operador Nullish para esto)
     */
     let estado = true;
-    let mensaje = estado ?? "No molestar";
+    let mensaje = estado ? "Disponible" : "No molestar";
 
     console.log(mensaje);
 
     estado = false;
-    mensaje = estado ?? "No molestar";
+    mensaje = estado ? "Disponible" : "No molestar";
 
     console.log(mensaje);
 
