@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #D3D3D3;
+    font-family: sans-serif;
+}
+
+h1 {
+    display: block;
+    background-color: #000000;
+    color: white;
+    text-align: right;
+    padding: 5px;
+}
+
+h2 {
+    margin: 0 auto;
+    width: 80%;
+    border-bottom: 3px solid white;
+    margin-bottom: 20px;
+}
+
+p {
+    margin: 0 auto;
+    width: 80%;
+    text-align: justify;
+}
+
+.fecha {
+    width: 150px;
+    display: block;
+    background-color: #808080;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 25px;
+    margin: 10px auto;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.cargo {
+    background-color: white;
+    color: red;
+    font-weight: 600;
+}
+
+q {
+    font-style: italic;
+    text-decoration: underline;
+    text-decoration-color: red;
+    -moz-text-decoration-color: red;
+}
+
+.lugar {
+    color: blue;
+}
+
+strong {
+    font-weight: 600;
+    font-size: 22px;
+    font-variant: versalitas;
+}
