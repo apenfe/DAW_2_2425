@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Modificar el código fuente del fichero C03_19.html para que visualice en el 
+navegador, la fecha con el día de la semana, con el siguiente formato:
+Miércoles 9 de octubre de 2024 20:02 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 1</title>
+</head>
+
+<body>
+    <div id="Hora"></div>
+    <script>
+        function crono() {
+
+            // Miércoles 9 de octubre de 2024 20:02
+            let elCrono;
+            let miFecha = new Date();
+            horas = miFecha.getHours();
+            min = miFecha.getMinutes();
+            year = miFecha.getFullYear();
+            diaSemana = miFecha.getDay();
+            dia = miFecha.getDate();
+
+            let dias = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+            let meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre",
+                "Octubre", "Noviembre", "Diciembre"
+            ];
+        
+            if (horas < 10) horas = "0" + horas;
+            if (min < 10) min = "0" + min;
+           
+            document.getElementById("Hora").innerHTML = `${dias[diaSemana]} ${dia} de ${meses[miFecha.getMonth()]} de ${year} ${horas}:${min}`;	
+        }
+        window.onload = function () {
+            elCrono = setInterval(crono, 1000);
+        }
+    </script>
+</body>
+
+
+</html>
