@@ -27,9 +27,17 @@ p {
     margin: 0 auto;
     width: 80%;
     text-align: justify;
+    margin-bottom: 25px;
 }
 
 .fecha {
+    width: 60%;
+    padding: 5px;
+    margin: -4px auto;
+    border-top: 4px solid black;
+}
+
+time {
     width: 150px;
     display: block;
     background-color: #808080;
