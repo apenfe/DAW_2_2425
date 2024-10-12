@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'righteous';
+    src: url('../font/righteous.woff') format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'righteous';
+}
+
+body {
+    background-color: #B4D2F7;
+    font-family: 'righteous';
+}
+
+h1 {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 75px;
+    margin-bottom: 20px;
+}
+
+h1 i {
+    color: red;
+}
+
+p {
+    padding: 8px;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+}
+
+div {
+    display: block;
+    float: left;
+    border: 5px solid black;
+    border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    -ms-border-radius: 10px 10px 0 0;
+    -o-border-radius: 10px 10px 0 0;
+    width: 16%;
+    margin: 1.6%;
+    overflow: hidden;
+}
+
+.dia {
+    background-color: #C7C7C7;
+    color: black;
+    font-size: 50px;
+}
+
+.icono {
+    padding: 20px;
+    background-color: white;
+    font-size: 60px;
+    color: black;
+}
+
+.maximo_alto {
+    background-color: #F40000;
+}
+
+.maximo_medio {
+    background-color: #ED5350;
+}
+
+.maximo_bajo {
+    background-color: #E56F60;
+}
+
+.minimo_alto {
+    background-color: #35B4EA;
+}
+
+.minimo_medio {
+    background-color: #0769BF;
+}
+
+.minimo_bajo {
+    background-color: #0300C1;
+}
