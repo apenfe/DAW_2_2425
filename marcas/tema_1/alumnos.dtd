@@ -1,0 +1,6 @@
+<!ELEMENT alumnos (alumno+)>
+<!ELEMENT alumno (nombre, edad)>
+<!ATTLIST alumno
+          dni CDATA #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT edad (#PCDATA)>

@@ -28,6 +28,4 @@ window.addEventListener("DOMContentLoaded", () => {
 
     });
 
-
-
 });

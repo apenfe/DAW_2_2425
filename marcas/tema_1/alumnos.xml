@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE alumnos SYSTEM "file:/C:/Users/adria/Desktop/alumnos.dtd">
+<alumnos>
+<alumno dni="1234">
+<nombre>adrian</nombre>
+<edad>28</edad>
+</alumno>
+<alumno dni="1234">
+<nombre>maria</nombre>
+<edad>21</edad>
+</alumno>
+<alumno dni="1234">
+<nombre>mario</nombre>
+<edad>20</edad>
+</alumno>
+</alumnos>

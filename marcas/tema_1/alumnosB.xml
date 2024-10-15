@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<alumnos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:/C:/Users/adria/Desktop/alumnos.xsd">
+<alumno dni="1234">
+<nombre>adrian</nombre>
+<edad>28</edad>
+</alumno>
+<alumno dni="1234">
+<nombre>maria</nombre>
+<edad>21</edad>
+</alumno>
+<alumno dni="1234">
+<nombre>mario</nombre>
+<edad>20</edad>
+</alumno>
+</alumnos>
