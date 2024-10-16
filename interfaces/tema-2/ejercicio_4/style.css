@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2 {
+    margin: 15px;
+}
+
+p {
+    margin: 20px 5px;
+}
+
+body {
+    background-color: #FFECB9;
+    font-family: sans-serif;
+}
+
+ul,
+ol {
+    margin-left: 45px;
+    margin-bottom: 25px;
+}
+
+#dos li {
+    display: inline;
+    margin: 0 10px;
+    background-color: #FFFFE0;
+}
+
+#tres li {
+    display: inline;
+    margin: 0 5px;
+    padding: 5px 25px;
+    background-color: #C8FFE3;
+    border: 2px dashed #8F3B8E;
+    color: #8F3B8E;
+}
+
+#cuatro {
+    display: flex;
+    align-items: baseline;
+}
+
+#cuatro li {
+    text-align: center;
+    display: inline-block;
+    width: 80px;
+    padding: 3px 15px;
+}
+
+.cuatro--azul {
+    background-color: #3366CC;
+    color: white;
+}
+
+.cuatro--blanco {
+    background-color: #FFFFE0;
+    color: #3366CC;
+}
+
+#cinco {
+    display: flex;
+    align-items: baseline;
+}
+
+#cinco li {
+    display: flex;
+    justify-content: top;
+    text-align: center;
+    display: inline-block;
+    width: 80px;
+
+    padding: 3px 15px;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+#cinco li:first-child {
+    border-left: 3px solid black;
+}
+
+#cinco li:last-child {
+    border-right: 3px solid black;
+}
+
+.cinco--azul {
+    background-color: #ADD8E6;
+    color: black;
+}
+
+.cinco--blanco {
+    background-color: #FFFFE0;
+    color: black;
+}
+
+#seis {
+    display: flex;
+    align-items: baseline;
+}
+
+#seis li {
+    display: flex;
+    justify-content: top;
+    text-align: center;
+    display: inline-block;
+    padding: 3px 15px;
+    border-left: 3px solid black;
+}
+
+.abajo {
+    border-bottom: 3px solid black;
+}
+
+.arriba {
+    border-top: 3px solid black;
+}
+
+#siete {
+    display: flex;
+    align-items: baseline;
+}
+
+#siete li {
+    display: flex;
+    justify-content: top;
+    text-align: center;
+    display: inline-block;
+    padding: 3px 15px;
+    border-left: 3px solid black;
+}
+
+#ocho {
+    display: flex;
+    flex-direction: column;
+}
+
+#ocho li {
+    list-style: none;
+    background-color: #FFFFE0;
+    width: 130px;
+    margin: 3px;
+    padding: 2px;
+}
+
+#nueve {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    padding: 5px;
+    width: 150px;
+}
+
+#nueve li {
+    list-style: none;
+    background-color: #FFFFE0;
+    width: 130px;
+    margin: 3px;
+    padding: 2px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#diez {
+    display: flex;
+    flex-direction: row;
+}
+
+#diez li {
+    list-style: none;
+    background-color: #FFFFE0;
+    width: auto;
+    margin: 6px;
+    padding: 4px;
+    text-align: center;
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
+}
+
+#footer {
+    text-align: center;
+    display: block;
+    padding-top: 8px;
+    border-top: 3px dashed black;
+}
