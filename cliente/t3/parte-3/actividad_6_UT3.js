@@ -26,7 +26,6 @@ window.addEventListener("DOMContentLoaded", () => {
         iframe.style.width = "100%";
         iframe.style.height = "90vh";
 
-
         frame.appendChild(iframe);
     });
 
