@@ -1,0 +1,149 @@
+/* PUNTOS EN VERTICAL */
+#verticales {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#verticales li {
+    background-color: #C29BC2;
+    color: #E8D9E8;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#verticales ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#verticales ul>li {
+    background-color: #E8D9E8;
+    color: #C29BC2;
+    margin: 0;
+    padding: 5px;
+    font-size: 17px;
+}
+
+/* PUNTOS EN HORIZONTAL */
+#horizontales {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+#horizontales>li {
+    background-color: #C29BC2;
+    color: #E8D9E8;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+#horizontales ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+#horizontales ul>li {
+    background-color: #E8D9E8;
+    color: #C29BC2;
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+/* PENULTIMO */
+#penultimo {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 20%;
+}
+
+#penultimo li {
+    background-color: #C29BC2;
+    color: #E8D9E8;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    width: auto;
+}
+
+#penultimo ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#penultimo ul>li {
+    background-color: #E8D9E8;
+    color: #C29BC2;
+    margin: 0;
+    padding: 3px;
+    font-size: 17px;
+    width: 100%;
+}
+
+/* ULTIMO */
+#ultimo {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    height: 120px;
+}
+
+#ultimo li {
+    background-color: #C29BC2;
+    color: #E8D9E8;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+    height: 25px;
+}
+
+#ultimo ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#ultimo ul>li {
+    background-color: #E8D9E8;
+    color: #C29BC2;
+    margin: 0;
+    padding: 3px;
+    font-size: 17px;
+    height: 25px;
+}

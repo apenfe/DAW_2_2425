@@ -5,15 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>EJERCICIO 13</title>
-        <script defer>
-            let boton = document.getElementById("enviar");
-            let texto = document.getElementById("texto");
-
-            boton.addEventListener("click", function() {
-                // enviar mensaje a la ventana padre
-                window.opener.postMessage(texto.value, window.location.origin);
-            });
-        </script>
+       
     </head>
 
     <body>
@@ -24,6 +16,16 @@
         <input type="text" name="texto" id="texto">
 
         <button id="enviar">Enviar texto a la ventana padre</button>
+
+        <script>
+            let boton = document.getElementById("enviar");
+            let texto = document.getElementById("texto");
+
+            boton.addEventListener("click", function() {
+                // enviar mensaje a la ventana padre
+                window.opener.postMessage(texto.value, window.location.origin);
+            });
+        </script>
 
     </body>
 
