@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(36, 36, 36);
+}
+
+.layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.caja {
+    text-align: center;
+    color: white;
+    width: 80%;
+    height: 100px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#caja1 {
+    border: 1px solid white;
+    border-radius: 999px;
+    -webkit-border-radius: 999px;
+    -moz-border-radius: 999px;
+    -ms-border-radius: 999px;
+    -o-border-radius: 999px;
+    background-color: #333;
+    box-shadow: 2px 3px 28px inset rgb(160, 160, 160);
+}
+
+#caja1 h1 {
+    font-size: 40px;
+    letter-spacing: 2px;
+    text-shadow: 2px 4px 8px black;
+}
+
+#caja2 {
+    border: none;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    background-color: #333;
+    transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+}
+
+#caja2:hover {
+    box-shadow: 2px 3px 28px rgb(160, 160, 160);
+}
+
+#caja2 h1 {
+    font-size: 40px;
+    letter-spacing: 2px;
+    text-shadow: 2px 4px 8px black;
+    word-spacing: 15px;
+}
+
+#caja3 {
+    border: none;
+    border-radius: 20px 0 20px 0;
+    -webkit-border-radius: 20px 0 20px 0;
+    -moz-border-radius: 20px 0 20px 0;
+    -ms-border-radius: 20px 0 20px 0;
+    -o-border-radius: 20px 0 20px 0;
+    background-color: #333;
+    box-shadow: -4px 3px 28px rgb(72, 248, 36);
+    color: #ccc;
+    transition: all 300ms linear;
+    -webkit-transition: all 300ms linear;
+    -moz-transition: all 300ms linear;
+    -ms-transition: all 300ms linear;
+    -o-transition: all 300ms linear;
+}
+
+#caja3:hover {
+    box-shadow: -4px 3px 28px rgb(109, 255, 80);
+    border-radius: 0px 20px 0px 20px;
+    -webkit-border-radius: 0px 20px 0px 20px;
+    -moz-border-radius: 0px 20px 0px 20px;
+    -ms-border-radius: 0px 20px 0px 20px;
+    -o-border-radius: 0px 20px 0px 20px;
+}
+
+#caja3 h1 {
+    font-size: 40px;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 8px green;
+}
