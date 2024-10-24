@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C03_44</title>
+</head>
+
+<body>
+    <script>
+
+        let uri = "https://www.google.com";
+        let uriencoded = encodeURIComponent(uri);
+        console.log(uriencoded); // https%3A%2F%2Fwww.google.com
+        let uridecoded = decodeURIComponent(uriencoded);
+        console.log(uridecoded); // https://www.google.com
+
+
+    </script>
+</body>
+
+</html>

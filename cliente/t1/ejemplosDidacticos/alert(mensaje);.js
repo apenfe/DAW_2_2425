@@ -1,0 +1,2 @@
+alert(mensaje);
+alert("hola")

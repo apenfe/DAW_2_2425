@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C03_34</title>
+</head>
+
+<body>
+    <script>
+
+        const texto = "Hay tres tristes tigres.";
+        const expreg = /tr.../g; //busca la subcadena 'tr' más otros tres caracteres cualquiera en todo el contenido de texto.
+
+        console.log(texto.search(expreg)); //4 -> La primera coincidencia 
+        let vector = texto.match(expreg);
+        console.log(vector);    // ["tres ","trist"], las dos coincidencias encontradas
+
+        console.log(vector[0]); // "tres "
+        console.log(vector[1]); // "trist"
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C03_12</title>
+</head>
+
+<body>
+    <script>
+        let dd = new Date("2024/10/7 07:03:12.564");
+
+        dd.setDate(15); console.log(dd);
+        //Tue Oct 15 2024 07:03:12 GMT+0200 (hora de verano de Europa central)
+        dd.setMonth(1); console.log(dd);
+        //Thu Feb 15 2024 07:03:12 GMT+0100 (hora estándar de Europa central)
+        dd.setFullYear(2025); console.log(dd);
+        //Sat Feb 15 2025 07:03:12 GMT+0100 (hora estándar de Europa central)
+        dd.setFullYear(2024, 11, 15); console.log(dd);
+        //Sun Dec 15 2024 07:03:12 GMT+0100 (hora estándar de Europa central)
+        dd.setHours(22); console.log(dd);
+        //Sun Dec 15 2024 22:03:12 GMT+0100 (hora estándar de Europa central)
+        dd.setMinutes(4); console.log(dd);
+        //Sun Dec 15 2024 22:04:12 GMT+0100 (hora estándar de Europa central)
+        dd.setSeconds(16); console.log(dd);
+        //Sun Dec 15 2024 22:04:16 GMT+0100 (hora estándar de Europa central)
+        dd.setMilliseconds(345); console.log(dd);
+        //Sun Dec 15 2024 22:04:16 GMT+0100 (hora estándar de Europa central)
+        dd.setTime(852817240000); console.log(dd);
+        //Thu Jan 09 1997 14:40:40 GMT+0100 (hora estándar de Europa central)
+
+
+    </script>
+
+
+</body>
+
+</html>

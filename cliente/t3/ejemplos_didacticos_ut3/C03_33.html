@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C03_33</title>
+</head>
+
+<body>
+    <script>
+
+        const texto = "Marcos";
+
+        console.log(texto.startsWith("M"));     // true  ('Marcos' empieza por 'M')
+        console.log(texto.startsWith("a", 1));  // true  ('arcos' empieza por 'a')
+        console.log(texto.endsWith("r"));       // false ('Marcos' no acaba en 'r')
+        console.log(texto.endsWith("r", 3));    // true  ('Mar' acaba en 'r')
+        console.log(texto.includes("rs"));      // true  ('Marcos' incluye 'rc')
+        console.log(texto.includes("M", 1));    // false ('arcos' no incluye 'M')
+        
+    </script>
+</body>
+
+</html>

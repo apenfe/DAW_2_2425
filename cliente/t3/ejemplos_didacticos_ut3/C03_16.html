@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C03_16</title>
+</head>
+
+<body>
+    <script>
+        var miFecha = new Date();
+        horas = miFecha.getHours();
+        min = miFecha.getMinutes();
+        seg = miFecha.getSeconds();
+        if (horas > 12) {
+            momento = "pm";
+            horas -= 12;
+        }
+        else {
+            momento = "am";
+        }
+
+        if (horas < 10) horas = "0" + horas;
+        if (min < 10) min = "0" + min;
+        if (seg < 10) seg = "0" + seg;
+        console.log(horas + ":" + min + ":" + seg + " " + momento);
+
+    </script>
+
+
+</body>
+
+</html>

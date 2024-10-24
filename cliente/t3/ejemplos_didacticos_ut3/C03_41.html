@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C03_41</title>
+</head>
+
+<body>
+    <script>
+
+        let cadena = "Marcos";
+
+        console.log(cadena[0]);                            // "M (En la posición 0 está la "M")
+        console.log(cadena.codePointAt(0));                // 77 (77 es el número decimal de la "M")
+        console.log(cadena.codePointAt(0).toString(16));   // "4d" (0x004d es el número hexadecimal de la "M")
+
+        console.log(cadena.codePointAt(3));                // 99
+        console.log(cadena.codePointAt(6));                // undefined (no hay carácter en esta posición)
+
+        console.log(String.fromCodePoint(105));             // "i"
+        console.log(String.fromCodePoint(75));             // "K"
+        console.log(String.fromCodePoint(0x004d));         // "M"
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C03_35</title>
+</head>
+
+<body>
+    <script>
+
+        const texto = "Laura, Rosa y Marcos se van a la piscina";
+
+        // Reemplazar la primera ocurrencia
+        console.log(texto.replace("r", "m"));                     // "Lauma, Rosa y Marcos se van a la piscina"
+        console.log(texto.replace("r", "m").replace("a", "e"));   // "Leuma, Rosa y Marcos se van a la piscina"
+        // Reemplazar todas las ocurrencias
+        console.log(texto.replaceAll("os", "XX"));                // "Laura, RXXa y MarcXX se van a la piscina"
+        console.log(texto.replace(/.\,./g, "XXX"));               // "LaurXXXRosa y Marcos se van a la piscina"
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C03_15</title>
+</head>
+
+<body>
+    <script>
+        let miFecha = new Date();
+        if (miFecha.getHours() < 10) horas = "0" + miFecha.getHours(); else horas = miFecha.getHours();
+        if (miFecha.getMinutes() < 10) min = "0" + miFecha.getMinutes(); else min = miFecha.getMinutes();
+        if (miFecha.getSeconds() < 10) seg = "0" + miFecha.getSeconds(); else seg = miFecha.getSeconds();
+        console.log(horas + ":" + min + ":" + seg);
+    </script>
+
+
+</body>
+
+</html>

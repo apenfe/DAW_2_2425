@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C03_01</title>
+</head>
+
+<body>
+    <script>
+        // tipos primitivos (preferida)
+        var number = 4;
+        var decimal = 15.8;
+        var numeroGrande = 5_000_000;
+
+        // Notación con objetos (evitar)
+        var number = new Number(4);
+        var decimal = new Number(15.8);
+        var numeroGrande2 = new Number(5000000);
+
+        if (numeroGrande == numeroGrande2)
+            alert("Son iguales")
+        else
+            alert("Son diferentes")
+
+        if (numeroGrande === numeroGrande2)
+            alert("Son iguales")
+        else
+            alert("Son diferentes")
+
+
+    </script>
+
+
+</body>
+
+</html>

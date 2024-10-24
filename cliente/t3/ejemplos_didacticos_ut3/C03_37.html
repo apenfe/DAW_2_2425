@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C03_37</title>
+</head>
+
+<body>
+    <script>
+
+        let dia = "1"
+        dia = dia.padStart(2, "0");
+        console.log(`dia: ${dia}`); 			//dia: 01
+
+        let dia2 = "12"
+        dia2 = dia2.padStart(2, "0");
+        console.log(`dia2: ${dia2}`); 			//dia2: 12
+
+        const cadena = "46";
+        console.log(cadena.padStart(5, "0"));    	// "00046"
+        console.log(cadena.padStart(3, "0"));    	// "046"
+        console.log(cadena.padStart(2, "0"));    	// "46"
+        console.log(cadena.padEnd(3, "0"));    	// "460"
+        console.log(cadena.padEnd(5, "0"));    	// "46000"
+
+
+
+    </script>
+</body>
+
+</html>

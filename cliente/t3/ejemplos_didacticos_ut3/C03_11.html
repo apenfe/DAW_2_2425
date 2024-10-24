@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C03_11</title>
+</head>
+
+<body>
+    <script>
+        let fecha = new Date("2024/10/5 12:15:23:234");
+
+        let f = fecha.getDay();
+        console.log(f); //6 -> significa sábado
+
+        f = fecha.getDate();
+        console.log(f); //5
+
+        f = fecha.getMonth();
+        console.log(f); //9 -> significa octubre
+
+        f = fecha.getFullYear();
+        console.log(f); //2024
+
+        f = fecha.getHours();
+        console.log(f); //12
+
+        f = fecha.getMinutes();
+        console.log(f); //15
+
+        f = fecha.getSeconds();
+        console.log(f); //23
+
+        f = fecha.getMilliseconds();
+        console.log(f); //234
+
+        f = fecha.getTime();
+        console.log(f); //1728123323234
+
+
+    </script>
+
+
+</body>
+
+</html>

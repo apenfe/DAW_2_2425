@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de estilo</title>
+    <script>
+        function nuevoEstilo(){
+            tamano= document.getElementById("idRango").value;
+            color = document.getElementById("idColor").value;
+
+            document.getElementById("idNumero").innerHTML = tamano;
+
+            texto=document.getElementById("idTexto");
+            texto.style.fontSize=tamano+"px";
+            texto.style.color=color;
+        }
+    </script>
+</head>
+<body>
+
+    <div id="idTexto">Texto de prueba</div>
+
+
+    <input type="range" id="idRango" min="8" max = "50" value="12" oninput="nuevoEstilo()">
+    <span id="idNumero">12</span>
+    <select name="color" id="idColor" onchange="nuevoEstilo()">
+        <option value="black">Negro</option>
+        <option value="red">Rojo</option>
+        <option value="blue">Azul</option>
+        <option value="green">Verde</option>
+      </select>
+
+</body>
+</html>

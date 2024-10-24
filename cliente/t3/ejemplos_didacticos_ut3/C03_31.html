@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C03_31</title>
+</head>
+
+<body>
+    <script>
+
+        let str = "abcdefghi";
+
+        // usando slice()
+        console.log(str.slice(1, 4));    // devuelve "bcd"
+        console.log(str.slice(-3, -1)); // devuelve "gh" (9 - 3, 9 - 1) excluye pos final
+        console.log(str.slice(4));      // devuelve "efghi"
+
+        // usando substring()
+        console.log(str.substring(1, 4));    // devuelve "bcd"
+        console.log(str.substring(-3, -1)); // devuelve "" (trata los índices negativos como cero)
+        console.log(str.substring(4));      // devuelve "efghi"
+        console.log(str.substring(4, 1));   // devuelve "bcd" (intercambia los índices)
+
+
+
+
+    </script>
+</body>
+
+</html>

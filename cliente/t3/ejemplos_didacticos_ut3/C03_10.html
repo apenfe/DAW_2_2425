@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C03_10</title>
+</head>
+
+<body>
+    <script>
+        b = Date.now();
+        console.log(b); //1728150864676
+
+        var a = new Date();
+        console.log(a); //Sat Oct 05 2024 19:54:24 GMT+0200 (hora de verano de Europa central)
+
+        a = new Date("2024/10/09 7:23:43");
+        console.log(a); //Wed Oct 09 2024 07:23:43 GMT+0200 (hora de verano de Europa central)
+
+        a = new Date(1893584654389);
+        console.log(a); //Wed Jan 02 2030 12:44:14 GMT+0100 (hora estándar de Europa central)
+
+        a = new Date(2024, 10);
+        console.log(a); //Sat Nov 09 2024 07:23:43 GMT+0100 (hora estándar de Europa central)
+
+        a = Date.now();
+        console.log(a); //1728150864678
+
+        c = a - b
+        console.log(c) //2
+    </script>
+
+
+</body>
+
+</html>
