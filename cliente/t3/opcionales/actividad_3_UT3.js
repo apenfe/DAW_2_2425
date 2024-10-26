@@ -1,20 +1,24 @@
 window.addEventListener("DOMContentLoaded", () => {
 
-    let text1 = document.getElementById("text1").textContent;
-    let text2 = document.getElementById("text2").textContent;
+    let btn = document.getElementById("boton");
 
-    let resul = "";
-    if (text1.localeCompare(text2) === 0) {
-        alert("Los textos son iguales");
-        resul = "Los textos son iguales";
-    } else if (text1.localeCompare(text2) > 0) {
-        alert("El texto 1 es mayor que el texto 2");
-        resul = "El texto 1 es mayor que el texto 2";
-    } else {
-        alert("El texto 2 es mayor que el texto 1");
-        resul = "El texto 2 es mayor que el texto 1";
-    }
+    btn.addEventListener("click", () => {
+        let num1 = parseInt(document.getElementById("num1").value);
+        let num2 = parseInt(document.getElementById("num2").value);
+        let resultado = document.getElementById("resultado");
 
-    document.getElementById("resultado").textContent = resul;
+        if (isNaN(num1) || isNaN(num2)) {
+            resultado.textContent = "Por favor, ingrese números válidos.";
+            return;
+        }
+
+        // Validar que num1 sea mayor que num2 para evitar raíz cuadrada de un número negativo
+        if (num1 <= num2) {
+            resultado.textContent = "El primer número debe ser mayor que el segundo.";
+            return;
+        }
+
+        resultado.textContent = parseFloat((Math.sqrt((num1 * num1) - (num2 * num2))) / 2.54);
+    });
 
 });
