@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.container div {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+.inline {
+    display: inline;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.block {
+    display: block;
+}
+
+.overflow {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+.overflow-auto {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    overflow: auto;
+}
+
+.overflow-scroll {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    overflow: scroll;
+}
+
+.overflow-visible {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    overflow: visible;
+}
