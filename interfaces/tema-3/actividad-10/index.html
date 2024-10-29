@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 10</title>
+        
+    </head>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #D3D3D3;
+        }
+
+        .layout{
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+        }
+
+        h1{
+            font-size: 2em;
+            margin: 20px 0;
+        }
+
+        p{
+            font-size: 1.5em;
+            margin: 20px 0;
+            width: 35%;
+            height: 200px;
+        }
+
+        #superior{
+            background-color: #DBC9A6;
+            padding: 10px;
+            width: 80%;
+            margin: 0 auto;
+            border: 1px solid #000;
+            height: 50px;
+        }
+
+        #superior__izquierda{
+            background-color: #FFFFB3;
+            padding: 10px;
+            width: 30%;
+            border: 1px solid #000;
+            position: absolute;
+            top: 130px;
+            left: 50px;
+            text-align: left;
+        }
+
+        #superior__derecha{
+            background-color: #C6FFFF;
+            padding: 10px;
+            width: 30%;
+            border: 1px solid #000;
+            position: absolute;
+            top: 130px;
+            right: 50px;
+            text-align: right;
+        }
+
+        #centro{
+            background-color: #91FF91;
+            padding: 10px;
+            width: 35%;
+            margin: 0 auto;
+            border: 1px solid #000;
+            position: absolute;
+            top: 300px;
+            left: 32%;
+            z-index: 1;
+        }
+
+        #inferior__izquierda{
+            background-color: #FFE5FF;
+            padding: 10px;
+            width: 30%;
+            border: 1px solid #000;
+            position: absolute;
+            top: 450px;
+            left: 50px;
+            text-align: left;
+        }
+
+        #inferior__derecha{
+            background-color: #FFB4B4;
+            padding: 10px;
+            width: 30%;
+            border: 1px solid #000;
+            position: absolute;
+            top: 450px;
+            right: 50px;
+            text-align: right;
+        }
+
+
+    </style>
+    <body>
+
+        <div class="layout">
+
+            <h1>Leyes de Murphy</h1>
+
+            <p id="superior">Cualquier cosa que pueda ir mal, ... irá mal</p>
+
+            <p id="superior__izquierda">Si sabes que una cosa puede ir mal y tomas todas las precauciones, irá mal otra cosa</p>
+
+            <p id="superior__derecha">No hay nada que vaya tan mal que no pueda ir peor</p>
+
+            <p id="centro">Todo aquello que comienza bien acaba mal. Todo aquello que comienza mal, acaba peor</p>
+
+            <p id="inferior__izquierda">Todo va mal a la vez</p>
+
+            <p id="inferior__derecha">Murphy era un optimista</p>
+
+        </div>
+        
+    </body>
+</html>
