@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformaciones CSS</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .elemento {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            color: white;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .rotacion {
+            background-color: #FF6B6B;
+        }
+        .rotacion:hover {
+            transform: rotate(-180deg);
+        }
+
+        .movimiento {
+            background-color: #4ECDC4;
+        }
+        .movimiento:hover {
+            transform: translate(100px, 20px);
+        }
+
+        .deformacion {
+            background-color: #45B7D1;
+        }
+        .deformacion:hover {
+            transform: skewX(30deg);
+        }
+
+        .escala {
+            background-color: #96CEB4;
+        }
+        .escala:hover {
+            transform: scale(2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="elemento rotacion">
+            Rotación 180°
+        </div>
+        <div class="elemento movimiento">
+            Movimiento 100px, 20px
+        </div>
+        <div class="elemento deformacion">
+            Deformación 30°
+        </div>
+        <div class="elemento escala">
+            Escala x2
+        </div>
+    </div>
+</body>
+</html>
