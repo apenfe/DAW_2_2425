@@ -4,19 +4,23 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>EJERCICIO 8</title>
-        <script src="./actividad_8_UT4.js"></script>
+        <title>EJERCICIO 9</title>
+        <script src="./actividad_9_UT4.js"></script>
     </head>
 
     <body>
 
-        <label for="texto">Introduce texto: </label>
-        <input type="text" id="texto" name="texto" placeholder="texto">
+        <h4>Introduce elementos separados por comas:</h4>
+    
+        <input type="text" id="palabras" name="palabras" placeholder="palabras">
         <br>
-        <label for="busqueda">Cadena a buscar para sustituir: </label>
+        <label for="busqueda">Valor a buscar: </label>
         <input type="text" id="busqueda" name="busqueda" placeholder="Busqueda">
         <br>
-        <button id="sustituir">Sustituir</button>
+        <button id="filtrar">Filtrar</button>
+        <button id="reiniciar">Reiniciar</button>
+
+        <div id="resultado"></div>
 
     </body>
 

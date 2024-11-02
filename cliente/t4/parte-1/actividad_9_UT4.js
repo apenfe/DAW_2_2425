@@ -1,18 +1,31 @@
 window.addEventListener("DOMContentLoaded", () => {
 
-    let sustituir = document.getElementById("sustituir");
+    let filtrar = document.getElementById("filtrar");
+    let reiniciar = document.getElementById("reiniciar");
 
-    sustituir.addEventListener("click", () => {
+    filtrar.addEventListener("click", () => {
 
-        let texto = document.getElementById("texto").value;
+        let palabras = document.getElementById("palabras").value.split(",");
         let busqueda = document.getElementById("busqueda").value;
 
-        let reemplazo = "X".repeat(busqueda.length);
+        let salida = [];
 
-        let resultado = texto.replace(busqueda, reemplazo);
+        palabras.forEach((palabra) => {
+            if (palabra.includes(busqueda)) {
+                salida.push(palabra);
+            }
+        });
 
-        document.getElementById("texto").value = resultado;
+        salida.forEach((palabra, index) => {
+            document.getElementById("resultado").innerHTML += "Pos: " + index + " Elemento: " + palabra + "<br>";
+        });
 
+    });
+
+    reiniciar.addEventListener("click", () => {
+        document.getElementById("palabras").value = "";
+        document.getElementById("busqueda").value = "";
+        document.getElementById("resultado").innerHTML = "";
     });
 
 });
