@@ -1,23 +1,32 @@
 window.addEventListener("DOMContentLoaded", () => {
 
-    let ordenar = document.getElementById("ordenar");
+    let array = document.getElementById("array");
+
+    let insertar = document.getElementById("insertar");
     let reiniciar = document.getElementById("reiniciar");
 
-    ordenar.addEventListener("click", () => {
+    insertar.addEventListener("click", () => {
 
-        let palabras = document.getElementById("valor").value.split(",");
+        let valor = document.getElementById("valor").value;
+        let posicion = document.getElementById("posicion").value;
 
-        palabras.sort();
+        if (valor === "" || posicion === "") {
+            alert("Debes rellenar los campos");
+            return;
+        }
 
-        palabras.forEach((palabra, index) => {
-            document.getElementById("resultado").innerHTML += "Pos: " + index + " Elemnto: " + palabra + "<br>";
-        });
+        let salida = array.value.split(",");
+
+        salida[posicion] = valor;
+
+        array.value = salida;
 
     });
 
     reiniciar.addEventListener("click", () => {
         document.getElementById("valor").value = "";
-        document.getElementById("resultado").innerHTML = "";
+        document.getElementById("posicion").value = "";
+        array.value = "";
     });
 
 });
