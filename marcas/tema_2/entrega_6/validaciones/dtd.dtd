@@ -1,0 +1,4 @@
+<!ELEMENT noticia (lugar, fecha, desc)>
+<!ELEMENT lugar (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT desc (#PCDATA)>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE noticia SYSTEM "file:/C:/Users/adria/Desktop/dtd.dtd">
+<noticia>
+  <lugar>Madrid</lugar>
+  <fecha>27/08/2010</fecha>
+  <desc>Se ha inaugurado una estación de tren</desc>
+</noticia>

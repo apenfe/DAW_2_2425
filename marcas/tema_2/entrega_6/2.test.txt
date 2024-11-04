@@ -1,0 +1,4 @@
+2.Decir si las siguientes reglas son verdaderas o falsas:
+a.Los nombres de los elementos y de sus atributos pueden contener espacios. (F)
+b.Los valores de los atributos están entre comillas. (V)
+c.Las etiquetas de cierre coinciden con las de apertura (es indiferente si están en mayúsculas o minúsculas) (F)
