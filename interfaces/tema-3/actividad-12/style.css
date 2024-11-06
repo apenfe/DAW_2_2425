@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+div {
+    width: 50%;
+    height: 100px;
+    text-align: center;
+    border: 1px solid #000;
+    margin: 5px auto;
+    line-height: 100px;
+}
+
+.gradiente--1 {
+    background: linear-gradient(yellow, blue);
+}
+
+.gradiente--2 {
+    background: linear-gradient(to right, yellow, blue);
+}
+
+.gradiente--3 {
+    background: linear-gradient(45deg, yellow, blue);
+}
+
+.gradiente--4 {
+    background: radial-gradient(yellow 10%, purple 25%, blue 65%);
+}
+
+.gradiente--5 {
+    background: repeating-radial-gradient(circle, yellow 10%, purple 25%, blue 65%);
+}
+
+.gradiente--6 {
+    background: repeating-linear-gradient(yellow 10%, purple 25%, blue 65%);
+}
