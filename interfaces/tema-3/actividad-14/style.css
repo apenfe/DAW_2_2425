@@ -1,0 +1,58 @@
+table {
+
+    width: 500px;
+    margin: 20px auto;
+}
+
+table {
+    border: 1px solid black;
+}
+
+table,
+th,
+td {
+    border: 1px solid green;
+}
+
+th,
+td {
+    padding: 8px 15px;
+    text-align: left;
+}
+
+.header {
+    background-color: #ffff00;
+}
+
+tr:not(.header):not(.total):not(.alt) {
+    background-color: #009879;
+    color: white;
+}
+
+.alt {
+    background-color: white;
+}
+
+.total {
+    background: linear-gradient(90deg, white 60%, #87ceeb);
+}
+
+.total td {
+    border-top: 2px solid black;
+}
+
+td:last-child {
+    text-align: right;
+}
+
+.black {
+    background-color: black;
+    color: white;
+}
+
+.caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+}

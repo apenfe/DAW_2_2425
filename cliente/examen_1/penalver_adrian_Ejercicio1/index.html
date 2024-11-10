@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 1</title>
+</head>
+<body>
+
+    <script>
+
+        // funcion para solicitar un numero y verificar que este sea correcto y en un rango adecuado
+        function pedirNum(){
+
+            let numero;
+
+            while(true){
+                // se solicita al usuario que introduzca un numero entre 1 y 50.
+                numero = parseInt(prompt("Introduce un número entre 1 y 50", 0));
+
+                // mientras la cadena sea diferente de un numero po bien este fuera del rango, se seguirá pidiendo
+                if(numero == 0 || numero>50 || isNaN(numero)){
+                    alert("No has introducido ningún número o no está entre 1 y 50");
+                }else{
+                    // si es un numero adecuado se devuelve este
+                    return numero;
+                }
+
+            }
+        }
+
+        // se genera un numero aleatorio entre 1 y 50
+        let numero = Math.floor(Math.random() * 50) + 1;
+
+        // se solicita al usuario que introduzca un numero entre 1 y 50
+        let actual = pedirNum();
+        let intentos = 0;
+
+        // mientras no se adivine el número aleatorio se repite lo siguiente
+        while(true){
+
+            // se sompara el numero introducido con el numero aleatorio
+            if(actual < numero){
+                // tanto si es mayor o menor se informa al usuario
+                // y se aumenta el contador de intentos
+                alert("El número es mayor");
+                intentos++;
+            }else if(actual > numero){
+                // tanto si es mayor o menor se informa al usuario
+                // y se aumenta el contador de intentos
+                alert("El número es menor");
+                intentos++;
+            } else if(actual == numero){
+                // en caso de ser el numero, se informa al usuario y se contabiliza el ultimo intento
+                alert("Has acertado el número");
+                intentos++;
+                // se rompe el bucle y se muestra el numero de intentos
+                break;
+            }
+
+            // se vuelve a solicitar un numero al usuario
+            actual = pedirNum();
+        }
+
+        // se muestra el numero de intentos al usuario
+        alert("El numero de intentos ha sido: "+intentos);
+
+    </script>
+    
+</body>
+</html>

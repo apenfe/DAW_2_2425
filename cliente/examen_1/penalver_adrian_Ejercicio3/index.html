@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen ut1-ut3 - Ejercicio 3</title>
+</head>
+
+<script type="text/javaScript">
+
+        // funcion muevereloj que se ejecta en la carga
+        function mueveReloj(){
+
+            // se obetiene la fecha
+            let fecha = new Date();
+
+            // se obtiene la hora
+            let hora = fecha.getHours();
+
+            // se obyienen los minutos
+            let minutos = fecha.getMinutes();
+
+            // se obtienen los segundos
+            let segundos = fecha.getSeconds();
+
+            // si la hora es menor que 10 se le añade un 0
+            if(hora < 10){
+                hora = "0"+hora;
+            }
+
+            // si los minutos son menores que 10 se le añade un 0
+            if(minutos < 10){
+                minutos = "0"+minutos;
+            }
+
+            // si los segundos son menores que 10 se le añade un 0
+            if(segundos < 10){
+                segundos = "0"+segundos;
+            }
+
+            // se asigna el valor al input de id reloj
+            document.getElementById("reloj").value = hora+":"+minutos+":"+segundos;
+
+        }
+
+        // se ejecuta la funcion cada segundo mediante el uso de un setInterval
+        let intervalo = setInterval(mueveReloj, 1000);
+		
+</script>
+
+</head>
+
+<body onload="mueveReloj()">
+
+    Reloj funcionando...
+
+    <input type="text"
+        id="reloj" 
+        name="reloj" size="10"
+        style="background-color : Black; color : White; font-family : Verdana, Arial, Helvetica; font-size : 8pt; text-align : center;">
+
+</body>
+
+</html>

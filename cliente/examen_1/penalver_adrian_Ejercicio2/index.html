@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 2</title>
+</head>
+<body>
+
+    <script>
+
+        let cadenaTexto;
+
+        // Pedimos al usuario que introduzca una cadena de texto
+        while(true){
+
+            cadenaTexto = prompt("Introduce una cadena de texto", "");
+
+            // mientras la cadena sea vacia, se seguirá pidiendo al usuario que introduzca una cadena de texto
+            if(cadenaTexto == ""){
+                alert("No has introducido ningún texto");
+            }else{
+                break;
+            }
+
+        }
+
+        // Separamos la cadena de texto por comas para poder obtenr un array con los nuemros
+        let numeros = cadenaTexto.split(",");
+        let suma = 0;
+
+        // Recorremos el array de números para tarta de sumarlos
+        for (let i = 0; i < numeros.length; i++) {
+
+            // Si el elemento no es un número, se le informa al usuario y no se suma nada
+            if(isNaN(numeros[i])){
+                alert("El elemento " + i + " no es un número: "+numeros[i]);
+                continue;
+            }else{
+                // Si el elemento es un número, se suma
+                suma += parseInt(numeros[i]);
+            }
+        }
+
+        // Se muestra la suma de los números
+        alert("La suma de los números es: "+suma);
+
+    </script>
+
+</body>
+</html>
