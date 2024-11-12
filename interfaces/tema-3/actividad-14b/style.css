@@ -47,6 +47,7 @@ body {
 
 .tabla__enero {
     margin-bottom: 10px;
+    border-collapse: collapse;
 }
 
 .tabla__enero tr td {
@@ -61,6 +62,7 @@ body {
 
 .tabla__febrero {
     margin-bottom: 10px;
+    border-collapse: collapse;
 }
 
 .tabla__febrero tr td {
@@ -85,4 +87,24 @@ body {
     width: 30px;
     text-align: right;
     border-right: 1px solid gray;
+}
+
+.tabla__marzo {
+    margin-bottom: 10px;
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+.tabla__marzo tr td {
+    text-align: left;
+    border: 1px solid gray;
+    width: 30px;
+    padding: 3px;
+}
+
+.tabla__marzo tr th {
+    width: 30px;
+    padding: 3px;
+    text-align: center;
+    border: 1px solid gray;
 }
