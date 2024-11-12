@@ -25,23 +25,29 @@
             <p><label for="estudios">Estudios</label>
                 <select id="estudios" name="estudios">
                     <option value="">Estudios</option>
-                    <option value=0>Web</option>
-                    <option value=1>Sistemas</option>
+                    <option value="0">Web</option>
+                    <option value="1">Sistemas</option>
                 </select>
             </p>
-            <button onclick="creaObj();">Carga</button>
-            <button onclick="muestraObj();">Muestra</button>
-            <button onclick="iniciar();">Inicializa</button>
+            <button id="creaObjeto">Carga</button>
+            <button id="muestraObjeto">Muestra</button>
+            <button id="inicializa">Inicializa</button>
 
         </div>
-        <div style="width: 50%;">
-            <p><span id="linea">
-
-                </span>
-            </p>
-        </div>
+        <table id="tabla">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Estudios</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
     </div>
-<script type="text/javascript" src=""></script>
+<script type="text/javascript" src="./actividad_16_ut4.js"></script>
 
 </body>
 
