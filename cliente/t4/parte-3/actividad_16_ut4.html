@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIDAD 4 - ACTIVIDAD 16</title>
+</head>
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
+</style>
+
+<body>
+    <div style="display: flex;">
+        <div style="width: 50%;">
+            <p><label for="nombre">Nombre: </label> <input type="text" id="nombre" name="nombre"
+                    placeholder="Nombre de ejemplo"> </p>
+            <p><label for="apellidos">Apellidos: </label> <input type="text" id="apellidos" name="apellidos"
+                    placeholder="Apellido de ejemplo"></p>
+            <p><label for="estudios">Estudios</label>
+                <select id="estudios" name="estudios">
+                    <option value="">Estudios</option>
+                    <option value=0>Web</option>
+                    <option value=1>Sistemas</option>
+                </select>
+            </p>
+            <button onclick="creaObj();">Carga</button>
+            <button onclick="muestraObj();">Muestra</button>
+            <button onclick="iniciar();">Inicializa</button>
+
+        </div>
+        <div style="width: 50%;">
+            <p><span id="linea">
+
+                </span>
+            </p>
+        </div>
+    </div>
+<script type="text/javascript" src=""></script>
+
+</body>
+
+</html>

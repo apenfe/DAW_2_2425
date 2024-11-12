@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 14 - UT4</title>
+    <style>
+        .container {
+            margin: 20px;
+        }
+        .input-group {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Gestión de Coche</h2>
+        
+        <div class="input-group">
+            <input type="text" id="marca" placeholder="Marca del coche">
+            <input type="text" id="combustible" placeholder="Tipo de combustible">
+            <button onclick="crearCoche()">Crear objeto</button>
+        </div>
+
+        <div class="input-group">
+            <input type="number" id="litros" placeholder="Cantidad de litros">
+            <button onclick="repostar()">Repostar</button>
+            <button onclick="consumir()">Consumir</button>
+        </div>
+
+        <div class="input-group">
+            <button onclick="mostrarInfo()">Muestra</button>
+        </div>
+
+        <div id="info"></div>
+    </div>
+
+    <script src="actividad_14_ut4.js"></script>
+</body>
+</html>
