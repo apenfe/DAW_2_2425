@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores CSS</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .container {
+            border: 1px solid #ccc;
+            margin: 20px 0;
+            padding: 10px;
+        }
+
+        /* Selector descendente (espacio) */
+        .descendant-demo div p {
+            background-color: #ffeb3b;
+            padding: 10px;
+        }
+
+        /* Selector hijo directo (>) */
+        .child-demo > p {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+        }
+
+        /* Selector hermano adyacente (+) */
+        .adjacent-demo h3 + p {
+            background-color: #2196f3;
+            color: white;
+            padding: 10px;
+        }
+
+        /* Selector hermano general (~) */
+        .sibling-demo h3 ~ p {
+            background-color: #9c27b0;
+            color: white;
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Demostración de Selectores CSS</h1>
+
+    <!-- Selector descendente -->
+    <div class="container descendant-demo">
+        <h3>Selector Descendente (espacio)</h3>
+        <div>
+            <p>Este párrafo está dentro de un div y usa el selector descendente 'div p'</p>
+            <div>
+                <p>Este también está afectado por el selector descendente</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Selector hijo directo -->
+    <div class="container child-demo">
+        <h3>Selector Hijo Directo (>)</h3>
+        <p>Este párrafo es hijo directo del div y usa el selector '>'</p>
+        <div>
+            <p>Este párrafo NO es hijo directo, está dentro de otro div</p>
+        </div>
+    </div>
+
+    <!-- Selector hermano adyacente -->
+    <div class="container adjacent-demo">
+        <h3>Selector Hermano Adyacente (+)</h3>
+        <p>Este párrafo está justo después del h3 y usa el selector '+'</p>
+        <p>Este párrafo no está afectado por el selector adyacente</p>
+    </div>
+
+    <!-- Selector hermano general -->
+    <div class="container sibling-demo">
+        <h3>Selector Hermano General (~)</h3>
+        <p>Este párrafo está después del h3</p>
+        <div>Esto es un div</div>
+        <p>Este párrafo también está después del h3</p>
+        <p>Y este también está afectado</p>
+    </div>
+
+</body>
+</html>

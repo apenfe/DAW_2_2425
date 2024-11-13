@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores CSS</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .container {
+            border: 1px solid #ccc;
+            margin: 20px 0;
+            padding: 10px;
+        }
+
+        /* Pseudo-clases */
+        .pseudo-classes a:link {
+            color: #2196f3;
+        }
+
+        .pseudo-classes a:visited {
+            color: #9c27b0;
+        }
+
+        .pseudo-classes a:hover {
+            color: #f44336;
+            text-decoration: none;
+        }
+
+        .pseudo-classes a:active {
+            color: #4caf50;
+        }
+
+        .pseudo-classes p:first-child {
+            font-weight: bold;
+            color: #f44336;
+        }
+
+        /* Pseudo-elementos */
+        .pseudo-elements p::first-line {
+            font-weight: bold;
+            color: #2196f3;
+        }
+
+        .pseudo-elements p::first-letter {
+            font-size: 2em;
+            color: #f44336;
+        }
+
+        .pseudo-elements h3::before {
+            content: "★ ";
+            color: #f44336;
+        }
+
+        .pseudo-elements h3::after {
+            content: " ★";
+            color: #f44336;
+        }
+
+        /* Selector de selección */
+        ::selection {
+            background-color: #ffeb3b;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Demostración de pseudoclases y pseudoelementos CSS</h1>
+
+    <!-- Pseudo-clases -->
+    <div class="container pseudo-classes">
+        <h3>Pseudo-clases</h3>
+        <p>Primer hijo con :first-child</p>
+        <p>Enlaces con pseudo-clases:</p>
+        <a href="#">Enlace con :link, :visited, :hover, :active</a>
+    </div>
+
+    <!-- Pseudo-elementos -->
+    <div class="container pseudo-elements">
+        <h3>Pseudo-elementos</h3>
+        <p>Este párrafo tiene la primera línea y primera letra estilizada usando ::first-line y ::first-letter.
+        Este es un texto largo para demostrar el efecto de first-line en múltiples líneas de contenido.</p>
+    </div>
+
+</body>
+</html>
