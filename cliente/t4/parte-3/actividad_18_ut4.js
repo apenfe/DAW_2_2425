@@ -1,4 +1,20 @@
+class Persona {
+    constructor(nombre, edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    toJson() {
+        return {
+            nombre: this.nombre,
+            edad: this.edad
+        };
+    }
+}
+
 window.addEventListener("DOMContentLoaded", () => {
+
+    let array = [];
 
     /*
         Implementa un JavaScript que use una función llamada ordenarArrayObjetos
@@ -8,18 +24,43 @@ window.addEventListener("DOMContentLoaded", () => {
         ascendente. Además, se mostrará por consola el resultado del ordenado.
     */
 
-    const calcularIVA = (precio, IVA) => {
-        return precio * IVA / 100;
-    }
+    let crear = document.getElementById("crear");
 
-    let resultado = document.getElementById("resultado");
+    crear.addEventListener("click", () => {
+        let nombre = document.getElementById("nombre").value;
+        let edad = parseInt(document.getElementById("edad").value, 10);
+        array.push(new Persona(nombre, edad).toJson());
 
-    let boton = document.getElementById("calcular");
-
-    boton.addEventListener("click", () => {
-        let precio = document.getElementById("precio").value;
-        let iva = document.getElementById("iva").value;
-        resultado.innerHTML = `El IVA es de ${calcularIVA(precio, iva)}€`;
+        document.getElementById("nombre").value = "";
+        document.getElementById("edad").value = "";
     });
+
+    let ordenar = document.getElementById("ordenar");
+
+    ordenar.addEventListener("click", () => {
+        let propiedad = document.getElementById("propiedad").value;
+
+        ordenarArrayObjetos(array, propiedad);
+
+        let lista = document.getElementById("lista");
+        lista.innerHTML = "";
+
+        for (let i = 0; i < array.length; i++) {
+            let li = document.createElement("li");
+            li.textContent = `Nombre: ${array[i].nombre} - Edad: ${array[i].edad}`;
+            lista.appendChild(li);
+        }
+
+        document.getElementById("propiedad").value = "";
+    });
+
+    const ordenarArrayObjetos = (array, propiedad) => {
+        array.sort((a, b) => {
+            if (typeof a[propiedad] === "string") {
+                return a[propiedad].localeCompare(b[propiedad]);
+            }
+            return a[propiedad] - b[propiedad];
+        });
+    };
 
 });
