@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_12</title>
+</head>
+<body>
+
+    <details>
+        <summary>Detalles</summary>
+        <p>Contenido oculto</p>
+      </details>
+      
+      <script>
+        var detalles = document.querySelector("details");
+      
+        detalles.addEventListener("click", mensaje);
+          
+        function mensaje(event){
+          event.preventDefault();
+          alert("Anulado el comportamiento por defecto");
+        }
+      </script>
+      
+</body>
+</html>

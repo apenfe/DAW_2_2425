@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_22b</title>
+</head>
+
+<body>
+
+    <select id="opciones" name="opciones" multiple>
+        <option value="1">Primer valor</option>
+        <option value="2">Segundo valor</option>
+        <option value="3">Tercer valor</option>
+        <option value="4">Cuarto valor</option>
+    </select>
+
+    <button onClick="valores()">Valores</button>
+
+
+
+    <script>
+
+        function valores() {
+            let lista = document.getElementById("opciones")
+            let seleccionados = lista.selectedOptions; // devuelve opciones seleccionadas como HTMLCollection 
+
+            for (let i = 0; i < seleccionados.length; i++) {
+                console.log(seleccionados[i].value);
+                console.log(seleccionados[i].text);
+
+            }
+
+
+        }
+
+
+
+    </script>
+
+
+</body>
+
+</html>

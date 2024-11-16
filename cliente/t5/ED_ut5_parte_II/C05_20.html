@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05_20</title>
+</head>
+
+<body>
+
+  <input type="checkbox" value="condiciones" id="condiciones" />He leído condiciones
+  <input type="checkbox" value="privacidad" id="privacidad" />He leído privacidad
+  <button onclick="valores()">Valores</button>
+
+
+  <script>
+
+
+    function valores() {
+      let condiciones = document.getElementById("condiciones")
+      let privacidad = document.getElementById("privacidad")
+      console.log("Elemento: " + condiciones.value)
+      console.log("sel: " + condiciones.checked)
+      if (condiciones.checked)
+        privacidad.disabled = true; // deshabilita el checkbox privacidad
+
+
+    }
+
+  </script>
+
+
+</body>
+
+</html>

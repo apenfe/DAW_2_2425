@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_11c</title>
+</head>
+
+<body>
+    <button id="btnSaludar">Saludar</button>
+    <script>
+        let btnSaludo = document.querySelector("#btnSaludar");
+        btnSaludo.onclick = saludo;
+        function saludo(event) {
+            alert(`Tipo de evento: ${event.type}`);
+        }
+    </script>
+</body>
+
+</html>

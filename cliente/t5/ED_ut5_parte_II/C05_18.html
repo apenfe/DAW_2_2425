@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05_18</title>
+</head>
+
+<body>
+
+  <input type="text" id="texto" />
+  <textarea id="parrafo"></textarea>
+  <button id="btn">Botón</button>
+  <script>
+    document.querySelector("#btn").addEventListener("click", function () {
+      console.log(document.querySelector("#texto").value); // devuelve un String
+      console.log(document.querySelector("#parrafo").value); // devuelve un String
+    })
+  </script>
+
+
+</body>
+
+</html>

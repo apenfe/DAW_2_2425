@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_10a</title>
+</head>
+
+<body>
+    <style>
+        .color {
+            background: lightcoral;
+        }
+    </style>
+    <button id="btnSaludar">Botón</button>
+    <script>
+        let btnSaludo = document.querySelector("#btnSaludar");
+        btnSaludo.addEventListener("mouseover", color);
+        btnSaludo.addEventListener("click", saludar, { once: true });
+
+
+        function saludar() {
+            alert("Hola")
+        }
+        function color() {
+            btnSaludo.classList.toggle("color");
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
