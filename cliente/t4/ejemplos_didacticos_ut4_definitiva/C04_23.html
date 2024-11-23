@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C04_23</title>
+</head>
+
+<body>
+    <script>
+        const numeros = [5, 10, 2, 1, 8];
+        numeros.sort(ordena);
+        console.log(numeros); // [1, 2, 5, 8, 10]
+
+        function ordena(x, y) {
+            /*
+            x=x.toUpperCase();
+            y=y.toUpperCase();
+            */
+            if (x < y) return 1;
+            if (x > y) return -1;
+            if (x == y) return 0;
+        }
+
+    </script>
+</body>
+
+</html>

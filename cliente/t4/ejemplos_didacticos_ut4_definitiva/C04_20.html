@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C04_20</title>
+</head>
+
+<body>
+    <script>
+        const frutas = ['manzana', 'plátano', 'naranja', 'kiwi', 'mango'];
+        const frutas2 = ['manzana', 'plátano', 'naranja', 'kiwi', 'mango'];
+        // Llenar el array con el valor "fruta"
+        frutas.fill('fruta');
+        console.log(frutas); // ['fruta', 'fruta', 'fruta', 'fruta', 'fruta']
+
+        // Llenar los elementos desde el índice 1 hasta el índice 3 con el valor "fruta"
+        frutas2.fill('fruta', 1, 4);
+        console.log(frutas2); // ['manzana', 'fruta', 'fruta', 'fruta', 'mango']
+
+    </script>
+</body>
+
+</html>

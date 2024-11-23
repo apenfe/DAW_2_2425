@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C04_08</title>
+</head>
+
+<body>
+    <script>
+        const letras = ["a", "b", "c"];
+
+        console.log(letras.at(0));    // "a"
+        console.log(letras.at(1));    // "b"
+        console.log(letras.at(3));    // undefined
+        console.log(letras.at(-1));   // "c"
+        console.log(letras.at(-2));   // "b"
+        letras[-1] = "Z";
+        console.log(letras[-1]);
+        console.log(letras.at(-1));
+        console.log(letras);
+    </script>
+</body>
+
+</html>

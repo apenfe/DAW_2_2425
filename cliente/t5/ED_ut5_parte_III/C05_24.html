@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05_24</title>
+</head>
+
+<body>
+  <form>
+    <input type="hidden" id="primero" value="aaa">
+    <input type="text" name="" id="segundo">
+    <input type="text" name="" id="tercero">
+
+  </form>
+  <button onclick="foco()">foco</button>
+
+
+
+  <script>
+    function foco() {
+      if (document.forms.length > 0) {
+        for (let i = 0; i < document.forms[0].elements.length; i++) {
+          let campo = document.forms[0].elements[i];
+          if (campo.type !== "hidden") {
+            campo.focus(); // Pone el foco en primer elemento del formulario que no sea oculto
+            break;
+          }
+        }
+      }
+    }
+  </script>
+
+
+</body>
+
+</html>

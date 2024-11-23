@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_44</title>
+</head>
+
+
+
+<body>
+
+    <script>
+
+        let regexp = /[aeiou]/i;    // Expresión con vocales en mayúscula o minúscula
+        console.log(regexp.test("a")); // true (es vocal)
+        console.log(regexp.test("t")); // false (no es vocal)
+
+        regexp = /[^aeiou]/i;   // Expresión que no acepta vocales, ni mayúsculas, ni minúsculas
+        console.log(regexp.test("a"));   // false
+        console.log(regexp.test("T"));   // true
+
+    </script>
+
+
+
+</body>
+
+
+
+</html>

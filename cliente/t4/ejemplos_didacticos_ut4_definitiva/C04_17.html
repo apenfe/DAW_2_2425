@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C04_17</title>
+</head>
+
+<body>
+    <script>
+        const frutas = ['manzana', 'plátano', 'naranja', 'kiwi', 'mango'];
+
+        // Extraer elementos desde el índice 1 hasta el final
+        const sliced1 = frutas.slice(1);
+        console.log(sliced1); // ['plátano', 'naranja', 'kiwi', 'mango']
+
+        // Extraer elementos desde el índice 1 hasta el índice 3 (sin incluir el índice 3)
+        const sliced2 = frutas.slice(1, 3);
+        console.log(sliced2); // ['plátano', 'naranja']
+
+        // Extraer los últimos dos elementos
+        const sliced3 = frutas.slice(-2);
+        console.log(sliced3); // ['kiwi', 'mango']
+
+    </script>
+</body>
+
+</html>

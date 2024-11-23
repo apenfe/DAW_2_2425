@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C04_96</title>
+</head>
+
+<body>
+  <script>
+    class Persona {
+      static numero = 0;
+      static getPersonas() {
+        return Persona.numero;
+      }
+
+      nombre = "";
+
+      constructor(n) {
+        Persona.numero++;
+        this.nombre = n;
+      }
+    }
+    a = new Persona("Marcos");
+    console.log(`${a.nombre} es la persona ${Persona.getPersonas()}`);
+    b = new Persona("Laura");
+    console.log(`${b.nombre} es la persona ${Persona.getPersonas()}`);
+
+  </script>
+</body>
+
+</html>

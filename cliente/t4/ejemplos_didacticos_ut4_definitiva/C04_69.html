@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C04_69</title>
+</head>
+
+<body>
+    <script>
+        function suma(a, b) {
+            if (b == undefined) { //en el caso que no se introduzca segundo parámetro
+                return a + a;
+            }
+            return a + b;
+        }
+        // llamada normal
+       console.log(suma(2, 7));
+        // llamada con un parámetro solo
+        console.log(suma(2));
+    </script>
+</body>
+
+</html>

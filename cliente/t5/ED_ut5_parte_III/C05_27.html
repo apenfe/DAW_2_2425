@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title>C05_27</title>
+    <script>
+        function convertirMayusculas() {
+            /*
+        Se convierte el contenido del <input> en mayusculas
+            */
+            document.getElementById("nombre").value = document.getElementById("nombre").value.toUpperCase();
+            document.getElementById("nombre").focus();
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Propiedad VALUE de un objeto INPUT de tipo TEXT</h2>
+    <form id="formulario" action="pagina.php">
+        <p>
+            <label for="nombre">Nombre y Apellidos: </label>
+            <input type="text" id="nombre" name="nombre" value="" size="30" onblur="convertirMayusculas()">
+        </p>
+        Introducir el nombre y los apellidos y hacer clic fuera del campo.
+    </form>
+</body>
+
+</html>

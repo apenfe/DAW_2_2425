@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_40c</title>
+</head>
+
+
+
+<body>
+
+    <script>
+
+        const text = `Estamos en primera línea
+Estamos en segunda línea
+Marcos (tercera línea comienza por Marcos)`;
+
+        const regexp1 = /^M....s/;
+
+        console.log(regexp1.test(text));      // false
+
+        const regexp2 = /^M....s/m;
+
+        console.log(regexp2.test(text));      // true
+
+
+
+    </script>
+
+
+
+</body>
+
+
+
+</html>

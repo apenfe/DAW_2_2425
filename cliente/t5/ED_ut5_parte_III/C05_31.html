@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05_31</title>
+</head>
+
+
+
+<body>
+  <script>
+    function validar() {
+      selected_index = document.getElementById("opciones").selectedIndex;
+      if (selected_index == null || selected_index == 0) { // determinar si selección es válida
+        alert("ERROR")
+        return false;
+      }
+
+    }
+
+  </script>
+  <select id="opciones" name="opciones">
+    <option value="">- Seleccione una opción -</option>
+    <option value="1">Opción 1</option>
+    <option value="2">Opción 2</option>
+    <option value="3">Opción 3</option>
+  </select>
+
+  <button id="btn" onclick="validar()">validar</button>
+
+
+</body>
+
+</html>

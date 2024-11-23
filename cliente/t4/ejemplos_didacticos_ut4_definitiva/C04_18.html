@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C04_18</title>
+</head>
+
+<body>
+    <script>
+        const frutas = ['manzana', 'plátano', 'naranja', 'kiwi'];
+
+        // Agregar elementos en el índice 2
+        frutas.splice(2, 0, 'pera', 'mango');
+        console.log(frutas); // ['manzana', 'plátano', 'pera', 'mango', 'naranja', 'kiwi']
+
+        // Eliminar los elementos desde el índice 1 hasta el índice 2
+        const borrarFrutas = frutas.splice(1, 2);
+        console.log(frutas); // ['manzana', 'mango', 'naranja', 'kiwi']
+        console.log(borrarFrutas); // ['plátano', 'pera']
+
+        // Reemplazar el elemento en el índice 0 por "fresa"
+        frutas.splice(0, 1, 'fresa');
+        console.log(frutas); // ['fresa', 'mango', 'naranja', 'kiwi']
+
+    </script>
+</body>
+
+</html>

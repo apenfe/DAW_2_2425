@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_40e</title>
+</head>
+
+
+
+<body>
+
+    <script>
+
+        const text = "Soy Marcos, y vuelvo a ser Marcos";
+
+        const regexp = /M....s/y;
+
+        console.log(regexp.lastIndex)      // 0
+        console.log(regexp.test(text));    // false (en posición 0 no se encuentra coincidencia)
+        regexp.lastIndex = 4;
+        console.log(regexp.test(text));    // true (en posición 4 se encuentra coincidencia)
+        console.log(regexp.lastIndex)      // 10 (donde termina la ocurrencia encontrada)
+        console.log(regexp.test(text));    // false (en posición 10 no hay coincidencia)
+        console.log(regexp.lastIndex)      // 0 (se ha reiniciado)
+
+
+
+    </script>
+
+
+
+</body>
+
+
+
+</html>

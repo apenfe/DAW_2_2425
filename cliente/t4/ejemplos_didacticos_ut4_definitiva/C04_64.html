@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C04_64</title>
+</head>
+
+<body>
+    <script>
+
+        function suma(num1, num2) {
+            return num1 + num2;
+        }
+
+        function llamadaSuma(num1, num2) {
+            return suma.call(this, num1, num2);
+            // this será una referencia al objeto window; y los argumentos son pasados directamente a la función
+        }
+
+        console.log(llamadaSuma(10, 10));   //20
+
+    </script>
+</body>
+
+</html>

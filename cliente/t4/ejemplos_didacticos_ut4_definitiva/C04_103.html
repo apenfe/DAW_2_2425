@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C04_103</title>
+</head>
+
+<body>
+  <script>
+    class Persona {
+      nombrePersona;
+      constructor(nombre) {
+        this.nombrePersona = nombre;
+      }
+      mostrar() {
+        console.log(`Hola, mi nombre es ${this.nombrePersona}`);
+      }
+    }
+
+    class Heroe extends Persona {
+      nombre;
+      constructor(nombre, nomHeroe) {
+        super(nombre);
+        this.nombre = nomHeroe;
+      }
+      mostrar() {
+        super.mostrar();
+        console.log(`Hola mi nombre de heroe es ${this.nombre} (${this.nombrePersona})`);
+      }
+    }
+    const h = new Heroe("Laura", "SuperInvisible");
+    h.mostrar();
+    //"Hola, mi nombre es Laura"
+    //"Hola, mi nombre de heroe es SuperInvisible (Laura)"
+
+
+  </script>
+</body>
+
+</html>

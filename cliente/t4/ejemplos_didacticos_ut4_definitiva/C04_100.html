@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C04_100</title>
+</head>
+
+<body>
+  <script>
+    class Persona {
+      nombre = "Laura";
+      constructor() {
+        console.log("Clase Persona - Padre - ");
+      }
+    }
+
+    class Heroe extends Persona {
+      constructor() {
+        //super();
+        console.log("Clase Heroe - Hija - ")
+      }
+
+    }
+    const h = new Heroe();
+    // Clase Persona - Padre - 
+    // Clase Heroe - Hija -
+
+  </script>
+</body>
+
+</html>

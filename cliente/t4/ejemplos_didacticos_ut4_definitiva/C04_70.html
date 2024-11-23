@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C04_70</title>
+</head>
+
+<body>
+    <script>
+        function Coche() {
+            // Propiedades de la clase
+            this.marca = "Audi A6";
+            this.combustible = "diesel";
+            this.cantidadLitros = 0; // Litros de combustible que tiene el coche.
+        }
+
+        let cocheDeMarcos = new Coche();
+        let cocheDeLaura = new Coche();
+
+        cocheDeMarcos.marca="Citroen";
+        document.write(cocheDeLaura.marca);
+        document.write("<br/>");
+        document.write(cocheDeMarcos.marca);
+
+
+    </script>
+</body>
+
+</html>

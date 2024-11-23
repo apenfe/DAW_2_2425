@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C04_73</title>
+</head>
+
+<body>
+    <script>
+        function Coche(marca, combustible) {
+            // Propiedades
+            this.marca = marca;
+            this.combustible = combustible;
+            this.cantidad = 0; // Litros de combustible que tiene el coche. 
+        }
+
+        let cocheDeMarcos = new Coche("Volkswagen Golf", "gasolina");
+        let cocheDeLaura = new Coche("Mercedes SLK", "diesel");
+
+        document.write("<br/>El coche de Marcos es un: " + cocheDeMarcos.marca + " con " + cocheDeMarcos.combustible);
+        document.write("<br/>El coche de Laura es un: " + cocheDeLaura.marca + " con " + cocheDeLaura.combustible);
+
+        // Imprimirá:
+        // El coche de Marcos es un: Volkswagen Golf a gasolina
+        // El coche de Laura es un: Mercedes SLK a diesel 
+        // Ahora modificamos la marca y el combustible del coche de Marcos:
+
+        cocheDeMarcos.marca = "BMW X5";
+        cocheDeMarcos.combustible = "diesel";
+        document.write("<br/>El coche de Marcos es un: " + cocheDeMarcos.marca + " con " + cocheDeMarcos.combustible);
+
+        // Imprimirá: El coche de Marcos es un: BMW X5 a diesel 
+
+
+
+
+    </script>
+</body>
+
+</html>

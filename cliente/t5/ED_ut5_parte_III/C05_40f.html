@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_40f</title>
+</head>
+
+
+
+<body>
+
+    <script>
+
+        const text = `Hola
+Marcos`;                            // "Hola\nMarcos"
+
+        // Consideración de separadores
+        const regexp1 = /Hola.M....s/s;
+        console.log(regexp1.test(text)); // true, se considera que separador \n es un carácter
+
+        // Flag multilinea
+        const regexp2 = /Hola.M....s/m;
+        console.log(regexp2.test(text)); // false, no se considera que \n sea un carácter
+
+
+
+
+    </script>
+
+
+
+</body>
+
+
+
+</html>

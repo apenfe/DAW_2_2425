@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C04_34</title>
+</head>
+
+<body>
+    <script>
+        const numeros = [1, 2, 3, 4, 5];
+
+        const numerosPares = numeros.filter(esPar);
+        console.log(numerosPares); // [2, 4]
+
+        function esPar(numero) {
+            return numero % 2 === 0;
+        }
+
+    </script>
+</body>
+
+</html>

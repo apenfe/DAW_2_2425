@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C04_66</title>
+</head>
+
+<body>
+    <script>
+        function hipotenusa(x, y) {
+            function cuadrado(z) {
+                return z * z;
+            }
+            return Math.sqrt(cuadrado(x) + cuadrado(y));
+        }
+        console.log("<br/>Hipotenusa de 1 y 2 es: " + hipotenusa(1, 2));
+        // Consola: Hipotenusa de 1 y 2 es: 2.23606797749979
+
+
+    </script>
+</body>
+
+</html>

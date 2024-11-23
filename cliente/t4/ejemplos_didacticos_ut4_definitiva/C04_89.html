@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C04_89</title>
+</head>
+
+<body>
+  <script>
+    class Persona {
+      nombre;
+      peso = 80;
+
+      constructor(nombre) {
+        this.nombre = nombre;
+      }
+    }
+
+    const c = new Persona("Marcos");
+    console.log(c.nombre); // Marcos
+    console.log(c.peso);
+    c.nombre = "Laura";
+    console.log(c.nombre); // Laura
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05_36</title>
+</head>
+
+
+
+<body>
+
+  <div id="checks">
+    <input type="checkbox" name="grupo">uno</input>
+    <input type="checkbox" name="grupo">dos</input>
+    <input type="checkbox" name="grupo">tres</input>
+  </div>
+  <div id="resultado"></div>
+
+  <script>
+
+    document.querySelector("#checks").addEventListener("click", validar);
+
+    function validar() {
+      document.querySelector("#resultado").innerHTML = validaChk();
+    }
+
+    function validaChk() {
+      let checkboxes = document.getElementsByName("grupo");
+      let chk = false;
+      for (let i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+          chk = true;
+        }
+      }
+      return chk;
+    }
+
+
+
+  </script>
+
+
+
+</body>
+
+
+
+</html>

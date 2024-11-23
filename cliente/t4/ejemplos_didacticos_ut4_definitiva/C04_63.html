@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C04_63</title>
+</head>
+
+<body>
+    <script>
+
+        window.color = "rojo";
+        let o = { color: "azul" };
+
+        function dimeColor() {
+            console.log(color);
+        }
+        let objectoDimeColor = dimeColor.bind(o);
+        objectoDimeColor();   //azul
+        dimeColor(); // rojo
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C04_65</title>
+</head>
+
+<body>
+    <script>
+        var nombre = "Marcos";  // variable global
+        var materias = "Cliente, Servidor, LM, Interfaces y Despliegue"; // variable global
+
+        function demo() {
+            var nombre = "Marisa"; // variable local
+            document.write("<br/>" + materias + " no pertenecen a " + nombre + ".");
+        }
+        // Llamamos a la función para que use las variables locales.
+
+        demo();
+
+        // Utilizamos las variables globales definidas al comienzo.
+        document.write("<br/>" + materias + " pertenecen a " + nombre + ".");
+
+
+    </script>
+</body>
+
+</html>

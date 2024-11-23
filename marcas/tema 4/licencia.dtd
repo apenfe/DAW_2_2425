@@ -1,0 +1,9 @@
+<!ELEMENT licencias_pesca (licencia_pesca)>
+<!ELEMENT licencia_pesca (nombre, info)>
+<!ATTLIST licencia_pesca
+          numero CDATA #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT info (clase, caducidad, dni, nombre)>
+<!ELEMENT clase (#PCDATA)>
+<!ELEMENT caducidad (#PCDATA)>
+<!ELEMENT dni (#PCDATA)>

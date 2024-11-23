@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05_35</title>
+</head>
+
+
+
+<body>
+  <script>
+
+    function validaTlf() {
+      let res = document.getElementById("res");
+      res.innerHTML = valida();
+    }
+
+    function valida() {
+
+      let ret = true;
+
+      valor = document.getElementById("campo").value;
+      if (!(/^\d{9}$/.test(valor))) { // validación por expresión regular
+        ret = false;
+      }
+
+      return ret;
+    }
+  </script>
+
+<input type="text" id="campo">
+<button onclick="validaTlf()">validar</button>
+<div id="res"></div>
+
+</body>
+
+
+</html>

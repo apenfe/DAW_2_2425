@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_40g</title>
+</head>
+
+
+
+<body>
+
+    <script>
+
+        const text = `Soy Marcos, estoy en una cadena`;
+
+        // Con flag d activado
+        const regexp1 = /M....s/d;
+        const result1 = regexp1.exec(text);
+        console.log(result1.indices); // [4, 10]
+        // Sin flag d activado
+        const regexp2 = /M....s/;
+        const result2 = regexp2.exec(text);
+        console.log(result2.indices); // undefined
+        
+
+
+</script>
+
+
+
+</body>
+
+
+
+</html>

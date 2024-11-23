@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C04_92</title>
+</head>
+
+<body>
+  <script>
+    class Persona {
+      nombre;
+      #peso;
+
+      constructor(nombre, peso = 40) {
+        this.nombre = nombre;
+        this.#peso = peso;
+      }
+
+      get verPeso() {
+        return '⭐'.repeat(parseInt(this.#peso / 10));
+      }
+
+      set ponerPeso(peso) {
+        this.#peso = peso;
+      }
+    }
+
+    const c = new Persona("Marcos");
+    console.log(c.peso);    // undefined
+    console.log(c.verPeso);    // '⭐⭐⭐⭐'
+    c.ponerPeso = 70;
+    console.log(c.verPeso);    // '⭐⭐⭐⭐⭐⭐⭐'
+
+
+  </script>
+</body>
+
+</html>

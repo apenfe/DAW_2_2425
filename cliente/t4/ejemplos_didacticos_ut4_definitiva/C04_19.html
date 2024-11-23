@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C04_19</title>
+</head>
+
+<body>
+    <script>
+        const frutas = ['manzana', 'plátano', 'naranja', 'kiwi', 'mango'];
+
+        // Copiar los elementos desde el índice 1 hasta el índice 3 y pegarlos en el índice 3
+        frutas.copyWithin(3, 1, 4);
+        console.log(frutas); // ['manzana', 'plátano', 'naranja', 'plátano', 'naranja']
+
+        // Copiar los últimos dos elementos y pegarlos en el índice 0
+        frutas.copyWithin(0, -2);
+        console.log(frutas); // ['plátano', 'naranja', 'naranja', 'plátano', 'naranja']
+
+    </script>
+</body>
+
+</html>

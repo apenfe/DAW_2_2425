@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05_25c</title>
+</head>
+
+<body>
+  <textarea id="txt" cols="30" rows="10" onkeydown="return limite(5);"></textarea>
+
+  <script>
+
+    function limite(maxCar) {
+      let txt = document.querySelector("#txt");
+      if (txt.value.length >= maxCar) {
+        return false; // no dejará introducir más caracteres
+      }
+      else {
+        return true;
+      }
+    }
+
+  </script>
+
+
+</body>
+
+</html>

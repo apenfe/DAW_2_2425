@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_42c</title>
+</head>
+
+
+
+<body>
+
+    <script>
+
+        const text = "El formato adecuado de fecha es 2024-11-23. Será ignorado el formato 23-11-2024.";
+        const regexp = /([0-9]{4})-([0-9]{2})-([0-9]{2})/gd;
+
+        const result = regexp.exec(text);    
+        console.log(result); // ['2024-11-23', '2024', '11', '23'] con index: 32
+        console.log(result.indices); // [[32, 42], [32, 36], [37, 39], [40, 42]]
+        console.log(regexp.exec(text)); // null
+       
+    </script>
+
+
+
+</body>
+
+
+
+</html>

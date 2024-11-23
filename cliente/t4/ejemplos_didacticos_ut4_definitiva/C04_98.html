@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C04_98</title>
+</head>
+
+<body>
+  <script>
+    class Persona {
+      nombre = "Marcos";
+
+      constructor() {
+        this.saludar();
+      }
+
+      saludar() {
+        console.log("Hola");
+      }
+    }
+
+    const p = new Persona();      // Hola (Acceso a saludar() desde dentro de la clase)
+    p.saludar();                  // Hola (Acceso a saludar() desde fuera de la clase)
+
+
+  </script>
+</body>
+
+</html>

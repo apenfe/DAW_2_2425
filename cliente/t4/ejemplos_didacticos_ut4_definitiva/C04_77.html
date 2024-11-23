@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C04_77</title>
+</head>
+
+<body>
+    <script>
+        function Coche(marca, combustible) {
+            // Propiedades
+            this.marca = marca;
+            this.combustible = combustible;
+            this.cantidad = 0; // Litros de combustible que tiene el coche. 
+            this.rellenarDeposito = function (litros) { this.cantidad = litros };
+        }
+
+        let cocheDeMarcos = new Coche("Volkswagen Golf", "gasolina");
+        let cocheDeLaura = new Coche("Mercedes SLK", "diesel");
+
+        cocheDeMarcos.rellenarDeposito(34);
+        document.write("<br/>El coche de Marcos tiene " + cocheDeMarcos.cantidad + " litros de " + cocheDeMarcos.combustible + " en el depósito.");
+        // Imprimirá
+        // El coche de Marcos tiene 34 litros de diesel en el depósito. 
+
+    </script>
+</body>
+
+</html>

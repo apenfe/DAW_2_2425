@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_26</title>
+</head>
+
+<body>
+    Permitir exclusivamente números:
+    <input type="text" id="texto" onkeydown="return permitir(event, 'N')" />
+
+    Permitir exclusivamente letras:
+    <input type="text" id="texto" onkeydown="return permitir(event, 'C')" />
+
+    Permitir exclusivamente números o letras:
+    <input type="text" id="texto" onkeydown="return permitir(event, 'N_C')" />
+
+
+
+    <script>
+        function permitir(elEvento, permitidos) {
+            // Variables que definen los caracteres permitidos
+            let numeros = "0123456789";
+            let caracteres = " abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZáéíóúÁÉÍÓÚÜü";
+            let numeros_caracteres = numeros + caracteres;
+            let teclas_especiales = ["Backspace", "Delete", "ArrowLeft", "ArrowRight"];
+
+
+            // Seleccionar los caracteres a partir del parámetro de la función
+            switch (permitidos) {
+                case 'N':
+                    permitidos = numeros;
+                    break;
+                case 'C':
+                    permitidos = caracteres;
+                    break;
+                case 'N_C':
+                    permitidos = numeros_caracteres;
+                    break;
+            }
+
+            let caracter = elEvento.key;
+
+            // Comprobación de teclas especiales
+            // (teclas de borrado y flechas horizontales)
+            let tecla_especial = false;
+            for (let i in teclas_especiales) {
+                if (caracter == teclas_especiales[i]) {
+                    tecla_especial = true;
+                    break;
+                }
+            }
+
+            // Comprobar si la tecla pulsada se encuentra en los caracteres permitidos
+            // o si es una tecla especial
+            return permitidos.indexOf(caracter) != -1 || tecla_especial;
+        }
+    </script>
+
+
+
+</body>
+
+</html>

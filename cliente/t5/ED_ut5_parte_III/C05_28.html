@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05_28</title>
+</head>
+    <script>
+        function marcar() {
+            document.getElementById("otoño").checked = true;
+        }
+        function desmarcar() {
+            document.getElementById("otoño").checked = false;
+        }
+    </script>
+</head>
+
+<body>
+    <form action="" method="get">
+        <input type="checkbox" id="otoño" name="otoño" value="Si" />¿Te gusta el otoño?
+    </form>
+    <button onclick="marcar()">Marcar Checkbox</button>
+    <button onclick="desmarcar()">Desmarcar Checkbox</button>
+</body>
+
+</html>

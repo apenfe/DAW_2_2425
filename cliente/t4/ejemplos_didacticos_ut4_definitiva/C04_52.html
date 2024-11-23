@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C04_52</title>
+</head>
+
+<body>
+    <script>
+        const fmayor2 = function () {
+            console.log("Función si es mayor de 2.");
+        };
+
+        const fmenor2 = function () {
+            console.log("Función si es menor de 2.");
+        };
+
+        const fPrincipal = function (callback1, callback2) {
+            const n = parseInt(Math.random() * 5);
+            console.log(n);
+            if (n > 2) callback1();
+            else callback2();
+        };
+
+        fPrincipal(fmayor2, fmenor2); // Si se ejecuta varias veces, se verán los dos mensajes
+
+
+
+    </script>
+</body>
+
+</html>

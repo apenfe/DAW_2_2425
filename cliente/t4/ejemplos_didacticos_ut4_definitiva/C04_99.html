@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C04_99</title>
+</head>
+
+<body>
+  <script>
+    class Persona {
+      nombre = "Marcos";
+
+      constructor() {
+        this.#saludar();
+      }
+
+      #saludar() {
+        console.log("Hola");
+      }
+    }
+
+    const p = new Persona();     // Hola (Acceso a saludar() desde dentro de la clase)
+    p.saludar();                 // Da un error: Uncaught TypeError: p.saludar is not a function
+
+  </script>
+</body>
+
+</html>

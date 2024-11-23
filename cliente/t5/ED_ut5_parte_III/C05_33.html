@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05_33</title>
+</head>
+
+
+
+<body>
+  <script>
+
+    console.log(validaFecha("28-11-2024"));
+
+    console.log(validaFecha("29-02-2025"));
+
+
+
+    function validaFecha(fecha) {
+
+      //dd-mm-yyyy
+
+      let partes = fecha.split("-");
+      let yy = parseInt(partes[2]);
+      let mm = parseInt(partes[1]);
+      let dd = parseInt(partes[0]);
+
+     // console.log(yy);
+     // console.log(mm);
+     // console.log(dd);
+
+      fechaCompleta = new Date(yy, mm-1, dd); // enero corresponde con 0
+
+
+     // console.log("FECHA " + fechaCompleta);
+     // console.log("MES " + fechaCompleta.getMonth());
+
+      valida = true;
+      if (fechaCompleta.getFullYear() != yy)
+        valida = false;
+
+      if (fechaCompleta.getMonth()+1 != mm)
+        valida = false;
+
+      if (fechaCompleta.getDate() != dd)
+        valida = false;
+
+      return valida;
+    }
+
+  </script>
+  <!-- <input type="date" /> -->
+
+
+</body>
+
+</html>

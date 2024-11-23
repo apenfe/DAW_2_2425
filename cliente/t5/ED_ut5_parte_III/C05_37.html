@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05_37</title>
+</head>
+
+
+
+<body>
+
+  <div id="radios">
+    <input type="radio" name="grupo">uno</input>
+    <input type="radio" name="grupo">dos</input>
+    <input type="radio" name="grupo">tres</input>
+  </div>
+  <div id="resultado"></div>
+
+  <script>
+    valida() // llamamos explícitamente a la función inicialmente
+
+    document.querySelector("#radios").addEventListener("click", valida);
+
+    function valida() {
+      document.querySelector("#resultado").innerHTML = validaChk();
+    }
+
+    function validaChk() {
+      let radios = document.getElementsByName("grupo");
+      let chk = false;
+      for (let i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+          chk = true;
+        }
+      }
+      return chk;
+    }
+
+
+
+  </script>
+
+
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05_32</title>
+</head>
+
+
+
+<body>
+  <script>
+    function validar() {
+      valor = document.getElementById("campo").value;
+      if (!(/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(valor))) {// expresión regular
+        alert("ERROR")
+        return false;
+      }
+
+
+    }
+
+  </script>
+  <input type="text" name="" id="campo">
+
+  <button id="btn" onclick="validar()">validar</button>
+
+
+</body>
+
+</html>

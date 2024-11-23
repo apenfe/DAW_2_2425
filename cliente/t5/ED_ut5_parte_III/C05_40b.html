@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_40b</title>
+</head>
+
+
+
+<body>
+
+    <script>
+
+        const regexp1 = /M....s/i;
+
+        console.log(regexp1.test("Marcos"));      // true
+        console.log(regexp1.test("marcos"));      // true
+        console.log(regexp1.test("MARCOS"));      // true
+
+        const regexp2 = /M....s/;
+
+        console.log(regexp2.test("Marcos"));      // true
+        console.log(regexp2.test("marcos"));      // false
+        console.log(regexp2.test("MARCOS"));      // false
+
+
+
+
+    </script>
+
+
+
+</body>
+
+
+
+</html>

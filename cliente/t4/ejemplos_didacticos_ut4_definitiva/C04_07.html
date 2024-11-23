@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C04_07</title>
+</head>
+
+<body>
+    <script>
+        let personas = new Array(40);
+        console.log(personas.length); //muestra 40
+        personas[50] = "Marcos"
+        console.log(personas.length); //muestra 51
+
+        // modificación de la propiedad length
+        let colores = ["rojo", "verde", "azul"]; // crea array con 3 strings
+        colores.length = 2;
+        console.log(colores[2]);        //undefined
+
+        colores.length = 4;
+       console.log(colores[2]);        //undefined
+    </script>
+</body>
+
+</html>

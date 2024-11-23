@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_11e</title>
+</head>
+<body>
+
+    <button id="btnSaludar">Botón</button>
+    <button id="btnSaludar2">Botón2</button>
+    <script>
+        var btnSaludo=document.querySelector("#btnSaludar")
+        btnSaludo.addEventListener("click",info)
+
+        var btnSaludo2=document.querySelector("#btnSaludar2")
+        btnSaludo2.addEventListener("click",info)
+
+
+        function info(event){
+            console.log("raton: " + event.clientX + "/" + event.clientY);
+            console.log("control:" , event.target.id);
+        }
+
+
+
+
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C04_23b</title>
+</head>
+
+<body>
+    <script>
+        const letras = ["a", "f", "b", "i", "e"];
+        letras.sort(ordena);
+        console.log(letras); // ['a', 'b', 'e', 'f', 'i']
+
+        function ordena(x, y) {
+            
+            x=x.toUpperCase();
+            y=y.toUpperCase();
+            
+            if (x < y) return -1;
+            if (x > y) return 1;
+            if (x == y) return 0;
+        }
+
+    </script>
+</body>
+
+</html>

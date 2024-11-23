@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_40d</title>
+</head>
+
+
+
+<body>
+
+    <script>
+
+        const text = "Busco este 😀 en la cadena";
+
+        const regexp1 = /\u{1F600}/;
+        console.log(regexp1.test(text)); // false, flag unicode no activo
+
+        const regexp2 = /\u{1F600}/u;
+        console.log(regexp2.test(text)); // true, flag unicode activo
+
+
+    </script>
+
+
+
+</body>
+
+
+
+</html>

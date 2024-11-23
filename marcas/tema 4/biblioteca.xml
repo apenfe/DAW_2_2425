@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fichas>
+<ficha numero="1">
+    <general>
+        <fecha_salida>2010-01-01</fecha_salida>
+        <fecha_devolucion>2010-01-15</fecha_devolucion>
+    </general>
+    <lector>
+        <nombre>Carlos</nombre>
+        <apellido>Jiménez</apellido>
+        <domicilio></domicilio>
+        <telefono></telefono>
+    </lector>
+    <libro>
+        <titulo>El Quijote</titulo>
+        <autor>Miguel de Cervantes</autor>
+        <clasificacion>1</clasificacion>
+    </libro>
+</ficha>
+<ficha numero="2">
+    <general>
+        <fecha_salida>2010-01-01</fecha_salida>
+        <fecha_devolucion>2010-01-15</fecha_devolucion>
+    </general>
+    <lector>
+        <nombre>Carlos</nombre>
+        <apellido>Jiménez</apellido>
+        <domicilio></domicilio>
+        <telefono></telefono>
+    </lector>
+    <libro>
+        <titulo>El Quijote</titulo>
+        <autor>Miguel de Cervantes</autor>
+        <clasificacion>1</clasificacion>
+    </libro>
+</ficha>
+
+
+</fichas>

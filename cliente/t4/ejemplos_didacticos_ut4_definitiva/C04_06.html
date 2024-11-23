@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C04_06</title>
+</head>
+
+<body>
+    <script>
+        const letras = ["a", "b", "c"];
+
+        letras[1] = "Z";
+        console.log(letras);   //["a","Z","c"]
+        letras[3] = "D";
+        console.log(letras);   // ["a","Z","c","D"]
+        letras[5] = "A";
+        console.log(letras);   //["a","Z","c","D",,"A"]
+        console.log(letras[4]);//undefined/
+
+    </script>
+</body>
+
+</html>

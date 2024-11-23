@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_43</title>
+</head>
+
+
+
+<body>
+
+
+
+    <script>
+
+        let regexp = /cebra./;
+
+        console.log(regexp.test("cebraxxxx")); // true
+        console.log(regexp.test("cebras"));   // true
+
+        regexp = /cebra\./; // el punto está escapado, luego invalida su función de comodín.
+
+        console.log(regexp.test("cebra."));  // true (es literalmente el punto)
+        console.log(regexp.test("cebras"));  // false
+
+
+
+    </script>
+
+
+
+</body>
+
+
+
+</html>

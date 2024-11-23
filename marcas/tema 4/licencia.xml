@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<licencias_pesca>
+<licencia_pesca numero="1">
+    <nombre>Pesca maritima de crecreo</nombre>
+    <info>
+        <clase></clase>
+        <caducidad></caducidad>
+        <dni></dni>
+        <nombre></nombre>
+    </info>
+</licencia_pesca>
+</licencias_pesca>

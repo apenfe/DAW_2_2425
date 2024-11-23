@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_45</title>
+</head>
+
+
+
+<body>
+
+    <script>
+
+        let regexp = /casa|cama/;   // RegExp que acepta "casa" o "cama"
+        console.log(regexp.test("la cama azul")); //true
+
+        regexp = /cas(i|o)ta/;  // RegExp que acepta "casita" o "casota"
+        console.log(regexp.test("casita"));  // true
+        console.log(regexp.test("caseta"));  // false
+
+        /* Código para observar la parte de las capturas de texto
+        
+        let texto = "la casita está dentro de la casota";
+        regexp = /cas(i|o)ta/g;
+        console.log(regexp.exec(texto));
+        console.log(regexp.exec(texto));
+        
+        */
+    </script>
+
+
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05_34</title>
+</head>
+
+
+
+<body>
+  <script>
+
+    function validaDNI() {
+      let res = document.getElementById("res");
+      res.innerHTML = valida();
+    }
+
+    function valida() {
+
+      let ret = true;
+
+      valor = document.getElementById("campo").value;
+      var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+
+      // Comprobación del formato del número
+      if (!(/^\d{8}[A-Z]$/.test(valor))) {
+        ret = false;
+      }
+
+      // Comprobación de la letra
+      if (valor.charAt(8) != letras[(valor.substring(0, 8)) % 23]) {
+        ret = false;
+      }
+      return ret;
+    }
+  </script>
+
+<input type="text" id="campo">
+<button onclick="validaDNI()">validar</button>
+<div id="res"></div>
+
+</body>
+
+</html>

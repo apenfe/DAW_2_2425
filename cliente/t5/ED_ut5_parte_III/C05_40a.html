@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_40</title>
+</head>
+
+
+
+<body>
+
+    <script>
+
+        const text = `Estimado Marcos,
+
+                    Te escribo para contarte que tu primo Marcos ha estado
+                    en casa hoy.
+
+                    Deberías visitar la casa.
+
+                    Un saludo.
+                    Marcos`;
+
+        const regexp1 = /M....s/;
+
+        console.log(regexp1.lastIndex);      // 0
+        console.log(regexp1.test(text));    // true
+        console.log(regexp1.lastIndex);     // 0
+        console.log(regexp1.test(text));    // true
+        console.log(regexp1.lastIndex);      // 0
+
+        const regexp2 = /M....s/g;
+
+        console.log(regexp2.lastIndex);      // 0
+        console.log(regexp2.test(text));    // true
+        console.log(regexp2.lastIndex);      // 15 (primera línea)
+        console.log(regexp2.test(text));    // true
+        console.log(regexp2.lastIndex);      // 82 (tercera línea)
+        console.log(regexp2.test(text));    // true
+        console.log(regexp2.lastIndex);      // 231 (última línea)
+        console.log(regexp2.test(text));    // false (no encuentra más, reinicia búsqueda)
+        console.log(regexp2.lastIndex);      // 0
+
+
+
+    </script>
+
+
+
+</body>
+
+
+
+</html>

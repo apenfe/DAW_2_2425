@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C04_101</title>
+</head>
+
+<body>
+  <script>
+    class Persona {
+      nombre;
+      constructor() {
+        this.nombre = "Laura";
+      }
+      mostrar() {
+        console.log(`Hola, mi nombre es ${this.nombre}`);
+      }
+    }
+
+    class Heroe extends Persona {
+      poder;
+      constructor(p) {
+        super();
+        this.poder = p;
+        
+      }
+
+    }
+    const h = new Heroe("Invisible");
+    h.mostrar(); //"Hola mi nombre es Laura"
+    console.log(h.poder) // Invisible
+
+
+  </script>
+</body>
+
+</html>

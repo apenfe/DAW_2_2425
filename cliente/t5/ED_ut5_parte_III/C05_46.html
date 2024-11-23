@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_46</title>
+</head>
+
+
+
+<body>
+
+
+
+    <script>
+
+        let regexp = /^mas...on$/i;     // Debe empezar por "mas" y acabar con "on"
+        console.log(regexp.test("mastodon")); // true  (empieza con "mas", y termina con "on")
+        console.log(regexp.test("Master"));  // false (empieza por "Mas", pero no termina en "on")
+
+        regexp = /do$/i;      // Debe terminar por "do"
+        console.log(regexp.test("Vivido"));  // true (termina en "do")
+        console.log(regexp.test("dominó"));  // false (contiene "do" pero no acaba por "do")
+
+    </script>
+
+
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C04_38</title>
+</head>
+
+<body>
+    <script>
+        const cadenas = ['hola', ' ', 'mundo', '!'];
+
+        const concatenacion = cadenas.reduceRight(concatena);
+        console.log(concatenacion); // '!mundo hola'
+
+        function concatena(acumulador, valor) {
+            return acumulador + valor;
+        }
+
+    </script>
+</body>
+
+</html>

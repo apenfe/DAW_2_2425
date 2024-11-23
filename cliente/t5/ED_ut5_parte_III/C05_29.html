@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05_29</title>
+</head>
+
+<body>
+  <script>
+    function validar() {
+      valor = document.getElementById("campo").value;
+      if (valor == null || valor.length == 0 || valor.trim() == "") {
+        alert("El campo no puede estar vacío ");
+        return false;
+      }
+      return true
+    }
+  </script>
+  <form action="" method="" id="" name="" onsubmit="return validar()">
+    <input type="text" id="campo" />
+    <input type="submit" value="Enviar" />
+  </form>
+
+</body>
+
+</html>

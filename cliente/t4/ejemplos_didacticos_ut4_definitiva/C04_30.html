@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C04_30</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        let sum = 0;
+        const numeros = [65, 44, 12, 4];
+        numeros.forEach(myFunction);
+        document.getElementById("demo").innerHTML = sum; //Resultado: 125
+        function myFunction(item) {
+            sum += item;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C04_72</title>
+</head>
+
+<body>
+    <script>
+        function Coche(marca, combustible) {
+            // Propiedades
+            this.marca = marca;
+            this.combustible = combustible;
+            this.cantidad = 0; // Litros de combustible que tiene el coche. 
+        }
+
+        let cocheDeMarcos = new Coche("Volkswagen Golf", "gasolina");
+        let cocheDeLaura = new Coche("Mercedes SLK", "diesel");
+
+        document.write(cocheDeMarcos.marca);
+        document.write("<br/>");
+        document.write(cocheDeLaura.marca);
+
+
+
+    </script>
+</body>
+
+</html>

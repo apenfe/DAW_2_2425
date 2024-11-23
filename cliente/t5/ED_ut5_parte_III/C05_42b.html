@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_42b</title>
+</head>
+
+
+
+<body>
+
+    <script>
+
+        const text = `El color de la casa azul, es más intenso cuando el cielo está azul.
+        Por tanto, en los días despejados, el azul de la casa se junta con el cielo.`;
+
+        const regexp = /(..) (a.u.)./g;
+
+        console.log(regexp.exec(text));     // ['sa azul,', 'sa', 'azul']
+        console.log(regexp.exec(text));     // ['tá azul.', 'tá', 'azul']
+        console.log(regexp.exec(text));     // ['el azul ', 'el', 'azul']
+        console.log(regexp.exec(text));     // null
+        
+    </script>
+
+
+
+</body>
+
+
+
+</html>
