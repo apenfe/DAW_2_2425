@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<poemario>
+    <poema>
+        <titulo>Poema de la guerra</titulo>
+        <autor>
+            <nombre>Antonio Machado</nombre>
+            <fechaNacimiento>1875</fechaNacimiento>
+            <fechaDefuncion>1939</fechaDefuncion>
+            <movimiento>Generación del 98</movimiento>
+        </autor>
+        <estilo>Modernismo</estilo>
+        <tematica>guerra</tematica>
+        <versos>
+            <verso>Otra vez en la noche...Es el martillo</verso>
+            <verso>de la fiebre en las sienes bien venidas</verso>
+            <verso>del niño. -Madre, ¿el pájaro amarillo!</verso>
+            <verso>¡las mariposas negras y moradas!</verso>
+            <verso>Duerme, hijo mío. - Y la manita oprime</verso>
+            <verso>La madre, junto al lecho-. ¡Oh flor de fuego!</verso>
+            <verso>¿Quién ha de helarte, flor de sangre, dime:</verso>
+            <verso>Hay en la pobre alcoba olor de espliego;</verso>
+        </versos>
+    </poema>
+    <poema>
+        <titulo>Vientos del pueblo</titulo>
+        <autor>
+            <nombre>Miguel Hernández</nombre>
+            <fechaNacimiento>1910</fechaNacimiento>
+            <fechaDefuncion>1942</fechaDefuncion>
+            <movimiento>Generación del 36</movimiento>
+        </autor>
+        <estilo>gongorino</estilo>
+        <tematica>social</tematica>
+        <versos>
+            <verso>Vientos del pueblo me llevan,</verso>
+            <verso>vientos del pueblo me arrastran,</verso>
+            <verso>me esparcen el corazón</verso>
+            <verso>y me aventan la garganta.</verso>
+            <verso>Los bueyes doblan la frente,</verso>
+            <verso>impotentemente mansa,</verso>
+            <verso>delante de los castigos:</verso>
+            <verso>los leones la levantan</verso>
+            <verso>y al mismo tiempo castigan</verso>
+            <verso>con su clamorosa zarpa.</verso>
+        </versos>
+    </poema>
+</poemario>

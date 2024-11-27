@@ -4,10 +4,19 @@
 <licencia_pesca numero="1">
     <nombre>Pesca maritima de crecreo</nombre>
     <info>
-        <clase></clase>
-        <caducidad></caducidad>
-        <dni></dni>
-        <nombre></nombre>
+        <clase>A</clase>
+        <caducidad>12/12/2012</caducidad>
+        <dni>45672323S</dni>
+        <nombre>Adrian Peñalver Fernandez</nombre>
+    </info>
+</licencia_pesca>
+<licencia_pesca numero="2">
+    <nombre>Pesca maritima de crecreo</nombre>
+    <info>
+        <clase>F</clase>
+        <caducidad>22/12/2012</caducidad>
+        <dni>49672323S</dni>
+        <nombre>Lucia Moltan Marquez</nombre>
     </info>
 </licencia_pesca>
 </licencias_pesca>

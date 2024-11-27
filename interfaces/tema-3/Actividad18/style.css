@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #DCD0FF;
+}
+
+#todo {
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    color: #663399;
+}
+
+.diapo {
+    width: 90%;
+    height: 80vh;
+    margin: 20px auto;
+    overflow: hidden;
+    border: 5px solid #663399;
+    text-align: center;
+    position: relative;
+}
+
+.diapo__title {
+    background-color: #663399;
+    color: white;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.diapo__list {
+    display: flex;
+    list-style: none;
+    margin-top: 50px;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.list__item {
+    display: block;
+    background-color: #663399;
+    border: 3px solid white;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    font-size: 28px;
+}
+
+.list__link {
+    text-decoration: none;
+    color: white;
+    background-color: #663399;
+}
+
+.atras {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    color: #663399;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sigue {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    color: #663399;
+    text-decoration: none;
+    cursor: pointer;
+}

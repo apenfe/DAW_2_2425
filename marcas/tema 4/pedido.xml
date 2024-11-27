@@ -10,4 +10,14 @@
     <direccion>calle Barco 4, tercer piso, letra A</direccion>
     <fecha>19-5-2000</fecha>
 </pedido>
+<pedido numero="2">
+    <destinatario>
+        <nombre>Hipolito</nombre>
+        <apellido1>Roldán</apellido1>
+        <apellido2>Martínez</apellido2>
+    </destinatario>
+    <articulo>Moto BR023</articulo>
+    <direccion>calle Cid 32, numero 23</direccion>
+    <fecha>19-2-2023</fecha>
+</pedido>
 </pedidos>
