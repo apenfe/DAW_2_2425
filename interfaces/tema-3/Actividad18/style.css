@@ -28,6 +28,7 @@ h1 {
     border: 5px solid #663399;
     text-align: center;
     position: relative;
+    display: none;
 }
 
 .diapo__title {
@@ -77,4 +78,74 @@ h1 {
     color: #663399;
     text-decoration: none;
     cursor: pointer;
+}
+
+
+
+#pre1:target {
+    display: block;
+}
+
+#pre2a {
+    display: none;
+}
+
+#pre2b {
+    display: none;
+}
+
+#arlo {
+    display: none;
+}
+
+#snoopy {
+    display: none;
+}
+
+#asterix {
+    display: none;
+}
+
+#starwars {
+    display: none;
+}
+
+#sinsajo {
+    display: none;
+}
+
+#apellCata {
+    display: none;
+}
+
+#apellCata:target {
+    display: block;
+}
+
+#pre2a:target {
+    display: block;
+}
+
+#pre2b:target {
+    display: block;
+}
+
+#arlo:target {
+    display: block;
+}
+
+#snoopy:target {
+    display: block;
+}
+
+#asterix:target {
+    display: block;
+}
+
+#starwars:target {
+    display: block;
+}
+
+#sinsajo:target {
+    display: block;
 }
