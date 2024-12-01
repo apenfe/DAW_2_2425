@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #ADD8E6;
+    position: relative;
+}
+
+#titulo {
+    font-size: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 30px;
+    color: red;
+    animation: title 3s linear infinite;
+    -webkit-animation: title 3s linear infinite;
+}
+
+@keyframes title {
+    0% {
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -o-transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(+50px);
+        -webkit-transform: translateY(+50px);
+        -moz-transform: translateY(+50px);
+        -ms-transform: translateY(+50px);
+        -o-transform: translateY(+50px);
+    }
+
+    100% {
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -o-transform: translateY(0px);
+    }
+}
+
+
+.moneda {
+    z-index: 10;
+    padding: 10px;
+}
+
+.moneda__link {
+    display: inline-block;
+}
+
+.moneda__image {
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+.moneda__link:hover .moneda__image {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+}
+
+.moneda--1 {
+    position: absolute;
+    top: 60px;
+    left: 10px;
+}
+
+.moneda--2 {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+}
+
+.moneda--3 {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.moneda--4 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.cuadro {
+    width: 80%;
+    height: 80vh;
+    margin: 20px auto;
+    display: block;
+}
+
+.cuadro__title {
+    color: green;
+    margin-top: 150px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.cuadro__frame {
+    float: left;
+    margin-right: 20px;
+}
+
+.cuadro__description {
+    float: none;
+}
+
+#Augusto,
+#Trajano,
+#Adriano,
+#Marco {
+    display: none;
+}
+
+#Augusto:target,
+#Trajano:target,
+#Adriano:target,
+#Marco:target {
+    display: block;
+}
+
+body:not(:has(:target)) #Augusto {
+    display: block;
+}
