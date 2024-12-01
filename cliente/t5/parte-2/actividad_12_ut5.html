@@ -8,7 +8,18 @@
 </head>
 <body>
    
-    <input type="text" id="texto" name="texto">
+    <form id="countryForm">
+        <label for="country">Elige un país:</label>
+        <select id="country" name="country">
+            <option value="">Seleccione un país</option>
+            <option value="es">España</option>
+            <option value="fr">Francia</option>
+            <option value="it">Italia</option>
+            <option value="de">Alemania</option>
+        </select>
+        <button type="submit">Enviar</button>
+        <p id="error" style="color: red; display: none;">Por favor, elija un país.</p>
+    </form>
     
 </body>
 </html>

@@ -1,19 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    /*
-    Crear una página que tenga un campo de entrada. Cuando el usuario pase el ratón
-por encima, el texto introducido pasará a mayúsculas, y cuando salga el ratón,
-volverá a minúsculas. Utilizar eventos mouseover y mouseout
-    */
-
-    let texto = document.getElementById('texto');
-
-    texto.addEventListener("mouseover", () => {
-        texto.value = texto.value.toUpperCase();
-    });
-
-    texto.addEventListener("mouseout", () => {
-        texto.value = texto.value.toLowerCase();
+    document.getElementById('countryForm').addEventListener('submit', function (event) {
+        var country = document.getElementById('country').value;
+        var error = document.getElementById('error');
+        if (country === "") {
+            error.style.display = 'block';
+            event.preventDefault();
+        } else {
+            error.style.display = 'none';
+        }
     });
 
 });
