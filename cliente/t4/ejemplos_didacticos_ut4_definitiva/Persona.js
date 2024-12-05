@@ -4,4 +4,8 @@ export class Persona {
   saluda() {
     return `Hola ${this.Nombre}`
   }
+
+
+
 }
+
