@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bool</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <p class="titulo">Operadores lógicos</p>
+
+    <p class="subtitulo">Los pioneros</p>
+
+    <div class="container">
+        <p class="texto">George Boole, matemático británico del siglo XIX, estudió la estrecha
+        relación entre la lógica y las matemáticas en su obra de 1847 "<i>El análisis matemático
+        de la lógica</i>". En su honor, la lógica que limita los valores
+        posibles de las variables a 0 o 1 recibe el nombre de lógica booleana. En la
+        lógica booleana las operaciones básicas son las operaciones AND, OR y NOT.</p>
+
+        <p class="texto">George Shannon, ingeniero y matemático estadounidense del siglo XX,
+        descubrió la relación entre la lógica booleana y los circuitos eléctricos en
+        su tesis doctoral de 1937 "<i>Análisis simbólico de los circuitos de conmutación
+        y de relés</i>". La idea de Shannon de utilizar circuitos eléctricos para
+        realizar operaciones lógicas se aplicó de forma sistemática al diseño de
+        circuitos digitales a partir de la segunda guerra mundial y es la base de los
+        ordenadores digitales electrónicos que conocemos hoy en día.</p>
+    </div>
+    <p class="subtitulo">Puertas lógicas y tablas de verdad</p>
+    <div class="container">
+        <p class="texto">Una puerta lógica es un circuito que efectúa una operación lógica, es
+        decir, un circuito que a partir de dos señales de entrada produce una señal
+        de salida, cuyas tensiones pueden interpretarse como valores booleanos 0 o 1.
+        Curiosamente, todas las operaciones lógicas se pueden reducir a combinaciones
+        de una única operación: la operación NAND (o también de la operación NOR).
+        Así, cualquier circuito lógico, por complicado que sea, se puede construir a
+        partir de puertas lógicas NAND (o NOR).</p>
+
+        <p class="texto">Las tablas de verdad muestran el resultado de las operaciones lógicas. Si
+        las entradas se llaman A y B y pueden tener dos valores (0 o 1), hay cuatro
+        posibles combinaciones de entradas. Las tablas de verdad indican la salida
+        correspondiente a cada combinación de entradas. A continuación se muestran
+        las tablas de verdad de las operaciones NAND y NOR.</p>
+    </div>
+    <div class="container-tables">
+            <p class="table__title">Operador NAND</p>
+            <table border="1" class="table table--1">
+                <tbody class="table__body">
+                    <tr class="table__row">
+                        <td rowspan="2" colspan="2">NAND</td>
+                        <td colspan="3">A</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td rowspan="2">B</td>
+                        <td>0</td>
+                        <td class="verde">1</td>
+                        <td class="verde">1</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td>1</td>
+                        <td class="verde">1</td>
+                        <td class="verde">0</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="table__title">Operador NOR</p>
+            <table class="table table--2">
+                <tbody class="table__body">
+                    <tr class="table__row">
+                        <td rowspan="2" colspan="2" class="nor">NOR</td>
+                        <td colspan="3">A</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td class="bajo">0</td>
+                        <td class="bajo">1</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td rowspan="2">B</td>
+                        <td class="der-abajo">0</td>
+                        <td class="der-abajos">1</td>
+                        <td class="der-abajos">0</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td class="der-abajo">1</td>
+                        <td class="der-abajos">0</td>
+                        <td class="der-abajos">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+    </div>
+</body>
+</html>
