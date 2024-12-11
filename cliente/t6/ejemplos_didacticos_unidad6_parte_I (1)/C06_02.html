@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C06_02</title>
+  </head>
+  <body>
+    <div id="uno" class="ele">1</div>
+    <div id="dos" class="ele">2</div>
+    <div id="tres" class="ele">3</div>
+    <script>
+      const capas = document.getElementsByClassName("ele");
+      // Si no existen elementos devuelve un HTMLCollection(0) []
+      console.log(capas[2]); // div#tres.ele
+      console.log(capas.length); // 3
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C06_04c</title>
+    <style>
+      div {
+        width: 100px;
+        height: 50px;
+        border: 1px solid black;
+      }
+
+      div:nth-child(2) {
+        background-color: red;
+      }
+      div:first-child {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="uno">1</div>
+    <div>2</div>
+    <div>3</div>
+
+    <script>
+      // Acceso mediante selector id
+      const capa = document.querySelector("#uno");
+      capa.innerHTML = "uno";
+      // Acceso mediante pseudoclase a un hijo concreto
+      const capa2 = document.querySelector("div:nth-child(2)");
+      capa2.innerHTML = "dos";
+    </script>
+  </body>
+</html>

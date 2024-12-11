@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05_54</title>
+  </head>
+
+  <body>
+    <script>
+      function leerCookie(nombre) {
+        // extraer el valor de la cookie
+        let a = document.cookie.substring(
+          document.cookie.indexOf(nombre + "=") + nombre.length + 1,
+          document.cookie.length
+        );
+        if (a.indexOf(";") != -1) a = a.substring(0, a.indexOf(";"));
+        return a;
+      }
+      console.log(document.cookie);
+      alert(leerCookie("nombre"));
+      alert(leerCookie("coche"));
+    </script>
+  </body>
+</html>

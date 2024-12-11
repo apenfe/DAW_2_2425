@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_40g</title>
+</head>
+
+
+
+<body>
+
+    <script>
+
+        const text = `El color de la casa azul, es más intenso cuando el cielo está azul.
+        Por tanto, en los días despejados, el azul de la casa se junta con el cielo.`;
+
+        // Con flag d activado
+        const regexp1 = /a..l/dg;
+        const result1 = regexp1.exec(text);
+        
+        
+        console.log(result1);
+        console.log(result1.indices);
+        console.log(regexp1.exec(text).indices);
+        Object.keys(result1).includes("indices");      // true
+
+        // Sin flag d activado
+        const regexp2 = /a..l/;
+        const result2 = regexp2.exec(text);
+        
+        console.log(result2);
+        Object.keys(result2).includes("indices");      // false
+
+
+        console.log(Object.keys(result1)); // ['0', 'index', 'input', 'groups', 'indices']
+
+    </script>
+
+
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C06_22</title>
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+
+    <script>
+
+        const divInterno = document.createElement("div");
+        divInterno.textContent = "DIV INTERNO"
+
+        const divExterno = document.createElement("div");
+        divExterno.id = "app";
+
+        divExterno.appendChild(divInterno);
+        // <div id="app"><div>DIV INTERNO</div></div>
+        document.body.appendChild(divExterno);
+        
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C06_16</title>
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+    <div id="capa" class="info data dark" data-number="5"></div>
+
+    <script>
+        const div = document.querySelector("#capa");
+        console.log(div.hasAttribute("data-number")); // true
+        console.log(div.hasAttributes()); // true
+        console.log(div.getAttributeNames()); // ['id', 'class', 'data-number']
+        console.log(div.getAttribute("id")); // capa
+        console.log(div.removeAttribute("id")); // undefined
+        console.log(div.getAttributeNames()); // ['class', 'data-number']
+        console.log(div.setAttribute("id", "capa")); // undefined
+        console.log(div.getAttributeNames()); // ['class', 'data-number', 'id']
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05_53</title>
+  </head>
+
+  <body>
+    <script>
+      const cookies = document.cookie.split(";"); // devuelve un array considerando ; como separador del string
+      for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
+        if (cookie.startsWith("nombre=")) {
+          const valor = cookie.substring("nombre=".length, cookie.length);
+          console.log(valor);
+          break;
+        }
+      }
+    </script>
+  </body>
+</html>

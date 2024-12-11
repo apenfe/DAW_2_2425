@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C06_17</title>
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+    <div id="uno" name="nombre">Uno</div>
+    <div id="dos">Dos</div>
+
+
+    <script>
+        let div1 = document.getElementById("uno");
+        let div2 = document.getElementById("dos");
+        let nom = div1.getAttributeNode("name");
+console.log(nom);
+        div2.setAttributeNode(nom.cloneNode(true));
+        console.log(div2.getAttribute("name")); // nombre
+
+       
+       
+    </script>
+</body> 
+
+</html>

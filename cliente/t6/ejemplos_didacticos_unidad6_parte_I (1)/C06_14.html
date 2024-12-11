@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C06_14</title>
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+
+
+    <script>
+        const div = document.createElement("div");
+        div.textContent = "Elemento 1";
+        const div2 = div; // NO SE HACE UNA COPIA
+        div2.textContent = "Elemento 2";
+        div.textContent; // "Elemento 2"
+        console.log(div); // <div>Elemento 2</div>
+        console.log(div2); // <div>Elemento 2</div>
+
+        const div3 = document.createElement("div");
+        div3.textContent = "Elemento 3";
+        const div4 = div3.cloneNode(); // Se está clonando
+        div4.textContent = "Elemento 4";
+        div3.textContent; // "Elemento 3"
+        console.log(div3); // <div>Elemento 3</div>
+        console.log(div4); // <div>Elemento 4</div>
+
+    </script>
+</body>
+
+</html>

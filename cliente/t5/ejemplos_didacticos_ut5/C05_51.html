@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_51</title>
+</head>
+
+
+
+<body>
+
+
+
+    <script>
+
+        regexp = /[0-9]{2}/; // Un número formado por dos dígitos (entre 0 y el 9)
+        console.log(regexp.test(42));        // true
+        console.log(regexp.test(88));        // true
+        console.log(regexp.test(100));         // false (no son 2 dígitos)
+        console.log(regexp.test("100"));       // true (tiene al menos 2 dígitos)
+
+        regexp = /^[0-9]{2}$/;    // Un número de exactamente 2 dígitos (del 0 al 9)
+
+        console.log(regexp.test(4));    // false (no llega a 2 dígitos)
+        console.log(regexp.test(55));   // true
+        console.log(regexp.test(100));    // false (no tiene exáctamente 2 dígitos)
+
+        regexp = /^[0-9]{3,}$/;
+        console.log(regexp.test(45));     // false (debe tener al menos 3 dígitos)
+        console.log(regexp.test(4923));   // true
+
+        regexp = /^[0-9]{2,5}$/;
+
+        console.log(regexp.test(2));      // false (no tiene de 2 a 5 dígitos)
+        console.log(regexp.test(444));    // true
+        console.log(regexp.test(543213)); // false (no tiene de 2 a 5 dígitos)
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C06_24b</title>
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <p>texto</p>
+    </div>
+
+    <script>
+        let container = document.getElementById("container");
+        
+        const elemento = document.createElement("div");
+        elemento.textContent = "Elemento insertado";
+        
+        const elemento2 = document.createElement("div");
+        elemento2.textContent = "Elemento insertado2";
+        
+        container.after(elemento, elemento2);
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C06_25b</title>
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <p>texto</p>
+        <p>texto2</p>
+    </div>
+
+    <script>
+        let container = document.getElementById("container");
+
+        const htmlCode = '<div class="text">¡¡Un saludo!!</div>';
+
+        // Descomentar cada vez una única línea para ver comportamiento
+        container.insertAdjacentHTML("beforebegin", htmlCode); // Antes
+        //container.insertAdjacentHTML("afterbegin", htmlCode); // Como hijo, al principio
+        //container.insertAdjacentHTML("beforeend", htmlCode); // Como hijo, al final
+        //container.insertAdjacentHTML("afterend", htmlCode);  // Después
+
+
+
+
+
+    </script>
+</body>
+
+</html>

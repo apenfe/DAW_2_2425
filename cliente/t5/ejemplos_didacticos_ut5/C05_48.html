@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_48</title>
+</head>
+
+
+
+<body>
+ 
+
+
+    <script>
+
+        let regexp = /^C*on$/; // 'C' tiene que estar 0 o más veces 
+
+        console.log(regexp.test("Con"));     // true ('C' aparece 1 vez y acaba en "on")
+        console.log(regexp.test("Camion"));   // false (después de la 'C' no se termina en "on")
+        console.log(regexp.test("CCCCCCon"));  // true ('C' aparece 0 o más veces)
+
+
+
+    </script>
+
+
+
+</body>
+
+
+
+</html>

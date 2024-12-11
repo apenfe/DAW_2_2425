@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C06_03</title>
+</head>
+<body>
+    <div name="ele">1</div>
+    <div name="ele">2</div>
+    <div name="ele">3</div>
+    <script>
+        const capas = document.getElementsByName("ele");
+        // Si no existen elementos devuelve NodeList(0) []
+        console.log(capas[2]) // div
+        console.log(capas.length) // 3
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C06_07</title>
+    <style>
+      div {
+        width: 100px;
+        height: 50px;
+        border: 1px solid black;
+      }
+
+      div:nth-child(1) {
+        background-color: red;
+      }
+      div:first-child {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="info" id="uno">1</div>
+    <div class="info">2</div>
+    <div class="info">3</div>
+
+    <script>
+      // Devuelve una lista de nodos que tenga la clase info
+      const capas = document.querySelectorAll(".info");
+      capas[2].innerHTML = "uno";
+
+      // Devuelve una lista de nodos que tengan id uno
+      const capas2 = document.querySelectorAll("#uno");
+      capas2[0].innerHTML = "xxx";
+    </script>
+  </body>
+</html>
