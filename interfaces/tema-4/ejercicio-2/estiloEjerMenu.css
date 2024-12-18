@@ -54,7 +54,8 @@ li {
     border: none;
 }
 
-#menu li:hover {
+.menu__option--left:hover,
+.menu__option--right:hover {
     border: 1px solid #777777;
     padding: 4px 9px 4px 9px;
     background: #f4f4f4;
@@ -98,6 +99,7 @@ li {
     display: flex;
     flex-direction: column;
     display: none;
+    border: 1px solid gray;
 }
 
 .ultima__fila {
@@ -142,10 +144,29 @@ li {
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     padding: 10px;
+    border: 1px solid gray;
 }
 
 .menu__option--right:hover .desplegable1columna {
     display: block;
+}
+
+.simple {
+    list-style: none;
+}
+
+.simple__item {
+    width: 100%;
+}
+
+.simple__item a {
+    color: blue !important;
+    text-decoration: underline;
+}
+
+.simple__item:hover a {
+    color: blue;
+    text-decoration: underline !important;
 }
 
 /* Galeria de imagenes */
