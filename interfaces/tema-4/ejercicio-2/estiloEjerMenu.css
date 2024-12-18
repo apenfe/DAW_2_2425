@@ -87,15 +87,43 @@ li {
 .desplegable2columnas {
     position: absolute;
     left: 0px;
-    width: 250px;
+    width: 300px;
     background-color: #F0F0F0;
-    display: none;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.ultima__fila {
+    display: flex;
+}
+
+.titulo__h2 {
+    padding: 5px;
+    text-align: left;
+    border-bottom: 2px solid gray;
+    margin-bottom: 10px;
+}
+
+.texto {
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.col_1--1 {
+    margin: 5px;
+}
+
+.col_1--2 {
+    margin: 5px;
+    text-align: left;
+    margin-left: 10px;
 }
 
 .menu__option--left:hover .desplegable2columnas {
