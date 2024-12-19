@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C06_28</title>
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+    <div id="div1">
+        <div class="header">
+            <h1>Titular</h1>
+        </div>
+        <p>Párrafo de descripción</p>
+        <a href="/">Enlace</a>
+    </div>
+    <script>
+
+        // Trabajando sobre <body>
+        console.log(document.body.children.length);  // 2
+        console.log(document.body.children); // [div#div1, script]
+        console.log(document.body.parentElement);  // <html>
+
+        const div = document.querySelector("#div1");
+
+        console.log(div.children);  // [div.header, p, a]
+        console.log(div.firstElementChild);  // <div class="header">
+        console.log(div.lastElementChild); // <a href="/">
+
+        const a = div.querySelector("a");
+
+        console.log(a.previousElementSibling); // <p>
+        console.log(a.nextElementSibling); // null
+    </script>
+
+</body>
+
+</html>

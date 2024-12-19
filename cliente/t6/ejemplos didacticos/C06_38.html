@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title>C06_38 Crear Tabla</title>
+</head>
+<body>
+    <h3>Creando y borrando filas en una tabla</h3>
+    <label>Texto de la fila: </label>
+    <input type="text" id="textoFila">
+    <button onclick="anadir()">añadir</button>
+    <table id="tabla">  <thead>      <tr>          <th>Nombre</th>      </tr>     </thead>
+    </table>
+
+
+    
+    <script type="text/javascript">
+        document.getElementById("tabla").style.display = "none"; //se hace invisible la tabla al principio
+
+        function anadir() {
+            document.getElementById("tabla").style.display = "block"; //se hace visible cuando se añade una fila
+            var textoFila = document.getElementById("textoFila").value; //se recupera el texto de la fila introducido
+            var tabla = document.getElementById("tabla"); //se recupera la tabla
+            var tr = document.createElement("tr"); //se crea el tr
+            var td = document.createElement("td"); //se crea el td del texto
+            var txt = document.createTextNode(textoFila); //se crea el nodo de texto con el texto introducido
+            td.appendChild(txt); //se añade el nodo de texto al td
+
+            var boton = document.createElement("button"); //se crea un botón
+            boton.id = "idBoton"; //se pone un id al botón 
+            var txtboton = document.createTextNode("borrar"); //se crea el nodo de texto del botón
+            boton.onclick = borrarFila; //se asocia la función borrarFila() al botón
+            boton.appendChild(txtboton); //se añade el texto al botón
+            var tdboton = document.createElement("td"); //se crea el td del botón
+            tdboton.append(boton); //se añade el botón al td
+
+            tr.append(td); //se añade el td del texto al tr
+            tr.append(tdboton); //se añade el td del botón al tr
+            tabla.append(tr); //se añade el tr a la tabla
+        }
+
+        function borrarFila() {
+            let td = this.parentElement; //el padre del botón es el td
+            let tr = td.parentElement; //el padre del td es el tr
+            tr.remove(); // se elimina el tr
+            var lineas = document.getElementById("tabla").children.length;
+            if (lineas == 1) // si solo está la cabecera...
+                document.getElementById("tabla").style.display = "none"; //se oculta la tabla
+        }
+    </script>
+</body>
+
+</html>
+

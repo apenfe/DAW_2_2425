@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C06_30</title>
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>uno</li>
+        <li id="d">dos</li>
+        <li>tres</li>
+        <li>cuatro</li>
+        <li>cinco</li>
+    </ul>
+
+    <script>
+
+        ul = document.querySelector("ul");
+
+        for (i = 0; i < ul.children.length; i++) {
+            li = ul.children[i];
+            if (li.id == "d")
+                li.style.color = "red"; // modificación estilo
+            document.write(li.innerHTML + "<br>");
+        }
+
+    </script>
+</body>
+
+</html>

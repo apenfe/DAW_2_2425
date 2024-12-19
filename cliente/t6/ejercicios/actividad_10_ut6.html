@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title> UNIDAD 6 - ACTIVIDAD 10</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 14px;
+        }
+
+        #cuerpo {
+            margin-bottom: 20px;
+        }
+
+        .check {
+            padding: 10px;
+            width: 3%;
+        }
+
+        .codigo {
+            border: 1px solid black;
+            padding: 10px;
+            width: 30%;
+        }
+
+        .nombre {
+            border: 1px solid black;
+            padding: 10px;
+            width: 50%;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 95%;
+            margin: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Creando una tabla</h1>
+    <input type="text" id="codigo">
+    <input type="text" id="nombre">
+    <button onclick="anadir()">Añadir</button>
+    <div id="cuerpo">
+        <table id="tabla">
+            <thead>
+                <tr>
+                    <th>Sel</th>
+                    <th>Código</th>
+                    <th>Nombre</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <button onclick="borrar()">Borrar</button>
+    <button onclick="mostrar()">Mostrar</button>
+
+    
+</body>
+
+</html>

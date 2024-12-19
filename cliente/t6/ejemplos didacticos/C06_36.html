@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title>C06_36 Crear Lista</title>
+    <script type="text/javascript">
+        function borrar() {
+            var id = parseInt(prompt("elemento a eliminar"));
+            var ol = document.getElementById("lista");
+            var liBorrar = ol.children[id - 1]; //elemento a eliminar (empieza de 0 a length - 1)
+            //liBorrar.parentElement.removeChild(liBorrar);
+            liBorrar.remove(); //elimina el li
+            document.getElementById("info").innerHTML = "Elementos: " + ol.children.length; //actualiza el número de elementos del ol
+        }
+        function anadir() {
+            var ol = document.querySelector("#lista"); //se busca la lista por ID
+            if (ol == null) { //todavía no se ha creado la lista
+                ol = document.createElement("ol"); //se crea la lista
+                ol.id = "lista"; //se le asigna un id
+                document.body.appendChild(ol); //añade el ol al HTML
+            }
+            let texto = prompt("texto para la lista");
+            let txt = document.createTextNode(texto); //Crea el texto
+            var li = document.createElement("li"); //Crea el li
+            li.appendChild(txt);//añade el texto al li
+            ol.append(li); //añade el li al ol
+            document.getElementById("info").innerHTML = "Elementos: " + ol.children.length; //actualiza el número de elementos del ol
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Creando una lista</h2>
+    <button id="btnAnadir">Añade un elemento</button>
+    <button id="btnBorrar">Borrar un elemento</button>
+    <div id="info"></div>
+    <script>
+        let btnAnadir = document.querySelector("#btnAnadir");
+        btnAnadir.addEventListener("click", anadir);
+        let btnBorrar = document.querySelector("#btnBorrar");
+        btnBorrar.addEventListener("click", borrar);
+    </script>
+
+</body>
+
+</html>

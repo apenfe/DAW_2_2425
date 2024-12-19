@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title>C06_37 Manejando Selector</title>
+
+</head>
+
+<body>
+    <h1>Manejando un Selector (añadir y quitar elementos)</h1>
+    <input type="text" id="nombre">
+    <button onclick="anadir()">añadir</button>
+    <button onclick="borrar()">borrar seleccionado</button>
+    <div id="borrado"></div>
+    <p>Elementos</p>
+
+    <select style="width: 200px;" id="sel" size="5" multiple="multiple">
+        <option id="1" value="1">Uno</option>
+        <option id="2" value="2">Dos</option>
+    </select>
+
+
+    <script type="text/javascript">
+        var contadorID = 2; //asigna un id diferente por elemento
+
+        function anadir() {
+            let nombre = document.getElementById("nombre").value; //recoge el texto escrito por el usuario
+            let sel = document.querySelector("#sel"); //selecciona la lista
+            let opt = document.createElement("option");
+            contadorID++; //incrementa el contador
+            opt.id = contadorID;
+            opt.value = contadorID;
+            let txtOpt = document.createTextNode(nombre); //crea el texto
+            opt.appendChild(txtOpt); //añade el texto a la opción
+            sel.append(opt); //añade la opción al select
+        }
+
+        function borrar() {
+            var sel = document.getElementById("sel");
+            var seleccionados = sel.selectedOptions; //colección de opciones seleccionadas
+            while (seleccionados.length > 0) { //mientras que haya seleccionados
+                seleccionados[0].remove(); //se borra el primer seleccionado
+            }
+        }
+    </script>
+</body>
+
+
+</html>

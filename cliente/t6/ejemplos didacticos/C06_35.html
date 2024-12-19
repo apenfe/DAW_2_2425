@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C06_35</title>
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+
+    <script>
+
+        p = document.createElement("p");
+        p.id = "uno"
+        c = document.createTextNode("HOLA");
+        p.appendChild(c);
+
+        document.body.appendChild(p) // añadido al DOM
+
+        p.remove(); // eliminado directamente
+
+        document.body.appendChild(p); // añadido de nuevo
+        
+        let parrafo = document.getElementById("uno");
+        parrafo.parentNode.removeChild(parrafo); // eliminado a través del padre
+
+    </script>
+</body>
+
+</html>
