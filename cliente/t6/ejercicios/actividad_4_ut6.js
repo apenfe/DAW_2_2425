@@ -7,7 +7,6 @@ document.getElementById('btnAgregar').addEventListener('click', function () {
         nuevoElemento.textContent = texto;
         lista.appendChild(nuevoElemento);
 
-        // Limpiar el campo de texto
         document.getElementById('texto').value = '';
     }
 });
