@@ -405,10 +405,15 @@ li {
 	color: blue !important;
 }
 
+.col_3-final {
+	width: 100%;
+}
+
 .image-container-2 {
 	width: 100%;
 	display: flex;
 	flex-direction: row;
+	gap: 10px;
 }
 
 .img_right {
@@ -416,8 +421,12 @@ li {
 }
 
 .tex {
-	width: 70%;
+	width: 300px;
 	text-align: left;
+}
+
+.tex>a {
+	color: blue !important;
 }
 
 .menu__option--three:hover .dropdown_3columns {
