@@ -1,5 +1,24 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE ediciones_aranda SYSTEM "/home/jcfernandez/Escritorio/ARANDA/arandaFIN.dtd">
+<!DOCTYPE ediciones_aranda [
+  <!ELEMENT ediciones_aranda (cabecera, informes)>
+  <!ELEMENT cabecera (titulo, contenido, descripcion, fecha)>
+  <!ELEMENT titulo (#PCDATA)>
+  <!ELEMENT contenido (#PCDATA)>
+  <!ELEMENT descripcion (#PCDATA)>
+  <!ELEMENT fecha (#PCDATA)>
+  <!ELEMENT informes (norte, centro, sur)>
+  <!ELEMENT norte (trim1, trim2, trim3, trim4)>
+  <!ELEMENT centro (trim1, trim2, trim3, trim4)>
+  <!ELEMENT sur (trim1, trim2, trim3, trim4)>
+  <!ELEMENT trim1 (#PCDATA)>
+  <!ATTLIST trim1 valor CDATA "NO_INFO">
+  <!ELEMENT trim2 (#PCDATA)>
+  <!ATTLIST trim2 valor CDATA "NO_INFO">
+  <!ELEMENT trim3 (#PCDATA)>
+  <!ATTLIST trim3 valor CDATA "NO_INFO">
+  <!ELEMENT trim4 (#PCDATA)>
+  <!ATTLIST trim4 valor CDATA "NO_INFO">
+]>
 <ediciones_aranda>
   <cabecera>
     <titulo>Ediciones Aranda</titulo>
