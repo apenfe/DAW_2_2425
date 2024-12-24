@@ -35,7 +35,6 @@ li {
 }
 
 /* opciones barra */
-
 .menu__option--left {
 	width: 50px;
 	text-align: center;
@@ -101,7 +100,6 @@ li {
 }
 
 /* general */
-
 #menu li a {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
@@ -173,7 +171,7 @@ li {
 /* desplegable 1 columnas */
 .desplegable1columna {
 	position: absolute;
-	left: 0px;
+	left: -34px;
 	width: 80px;
 	background-color: #F0F0F0;
 	display: none;
@@ -212,7 +210,7 @@ li {
 .dropdown_5columns {
 	position: absolute;
 	left: 0px;
-	width: 200px;
+	width: 800px;
 	background-color: #F0F0F0;
 	display: none;
 	border-radius: 5px;
@@ -232,7 +230,7 @@ li {
 .dropdown_4columns {
 	position: absolute;
 	left: 0px;
-	width: 200px;
+	width: 500px;
 	background-color: #F0F0F0;
 	display: none;
 	border-radius: 5px;
@@ -251,8 +249,8 @@ li {
 /* desplegable 3 columnas */
 .dropdown_3columns {
 	position: absolute;
-	left: 0px;
-	width: 200px;
+	left: -299px;
+	width: 400px;
 	background-color: #F0F0F0;
 	display: none;
 	border-radius: 5px;
@@ -266,6 +264,11 @@ li {
 
 .menu__option--three:hover .dropdown_3columns {
 	display: block;
+}
+
+/* espacio */
+.espacio {
+	width: 28%;
 }
 
 /* Galeria de imagenes */
