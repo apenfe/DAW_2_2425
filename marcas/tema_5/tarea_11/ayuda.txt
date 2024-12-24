@@ -1,0 +1,30 @@
+aranda.xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ediciones_aranda SYSTEM "/home/jcfernandez/Escritorio/ARANDA/arandaFIN.dtd">
+<ediciones_aranda>
+  <cabecera>
+    <titulo>Ediciones Aranda</titulo>
+    <contenido>Informe regional de ventas</contenido>
+
+...
+
+      <trim4>30000</trim4>
+        </sur>
+      </tabla>
+    </informe>
+  </informes>
+</ediciones_aranda>
+
+Puede darse más de una solución correcta.
+
+DTD:
+
+<!ELEMENT ediciones_aranda (cabecera, informes)>
+<!ELEMENT cabecera (titulo, contenido, descripcion)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT contenido (#PCDATA)>
+
+...
+
+<!ELEMENT sur (trim1, trim2, trim3, trim4)>

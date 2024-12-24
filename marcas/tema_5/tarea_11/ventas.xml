@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ediciones_aranda SYSTEM "/home/jcfernandez/Escritorio/ARANDA/arandaFIN.dtd">
+<ediciones_aranda>
+  <cabecera>
+    <titulo>Ediciones Aranda</titulo>
+    <contenido>Informe regional de ventas</contenido>
+    <descripcion>Informe de ventas para las regiones Norte, Centro y Sur</descripcion>
+    <fecha>30/12/2009</fecha>
+  </cabecera>
+  <informes>
+    <norte>
+      <trim1>24000</trim1>
+      <trim2>38600</trim2>
+      <trim3 >NO_INFO</trim3>
+      <trim4>NO_INFO</trim4>
+    </norte>
+    <centro>
+      <trim1>NO_INFO</trim1>
+      <trim2>16080</trim2>
+      <trim3>25000</trim3>
+      <trim4>29000</trim4>
+    </centro>
+    <sur>
+      <trim1>27000</trim1>
+      <trim2>31400</trim2>
+      <trim3>40100</trim3>
+      <trim4>30000</trim4>
+    </sur>
+  </informes>
+</ediciones_aranda>
