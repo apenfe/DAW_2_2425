@@ -17,7 +17,5 @@ document.addEventListener('DOMContentLoaded', function () {
         // Agregar el elemento a la lista
         lista.appendChild(nuevoElemento);
 
-        // Resetear el select al primer elemento
-        selectElement.selectedIndex = 0;
     });
 });
