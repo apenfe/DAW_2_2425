@@ -403,7 +403,21 @@ li {
 
 .greybox-item>a {
 	color: blue !important;
+}
 
+.image-container-2 {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.img_right {
+	margin-right: 10px;
+}
+
+.tex {
+	width: 70%;
+	text-align: left;
 }
 
 .menu__option--three:hover .dropdown_3columns {
