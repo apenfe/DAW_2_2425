@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- haz un htlm para un grid layout de 3 filas y 4 columnas -->
+    <style>
+
+        .grid-container {
+            display: grid;
+            padding: 10px;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            background-color: aqua;
+        }
+        .grid-item-1 {
+            height: 100px;
+            background-color: #ccc;
+            border: 1px solid #333;
+            padding: 20px;
+            text-align: center;
+            grid-column: 1/5;
+        }
+        .grid-item-2 {
+            height: 300px;
+            background-color: #ccc;
+            border: 1px solid #333;
+            padding: 20px;
+            text-align: center;
+            grid-column: 1/2;
+        }
+        .grid-item-3 {
+            height: 300px;
+            background-color: #ccc;
+            border: 1px solid #333;
+            padding: 20px;
+            text-align: center;
+            grid-column: 2/5;
+        }
+        .grid-item-4 {
+            height: 50px;
+            background-color: #ccc;
+            border: 1px solid #333;
+            padding: 20px;
+            text-align: center;
+            grid-column: 1/5;
+        }
+    </style>
+
+    <div class="grid-container">
+        <header class="grid-item-1">My header</header>
+        <aside class="grid-item-2">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </aside>
+        <main class="grid-item-3">Lorem Ipsum
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, perspiciatis. Reprehenderit nam maiores et asperiores eos, quia necessitatibus eius natus libero recusandae repudiandae repellendus accusantium ab facilis consectetur atque possimus.</p>
+        </main>
+        <footer class="grid-item-4">Footer</footer>
+    </div>
+
+</body>
+</html>
