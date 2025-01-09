@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>c07_11</title>
+
+</head>
+
+<body>
+    <script>
+        async function funcion_asincrona() {
+            const resultado = await obtenerResultado();
+            console.log("El resultado es: ", resultado);
+        }
+
+        function obtenerResultado() {
+            return new Promise(resolve => {
+                setTimeout(() => resolve(42), 2000);
+            });
+        }
+
+        funcion_asincrona();
+
+        console.log("YYYY");
+
+
+    </script>
+</body>
+
+</html>

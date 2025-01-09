@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C07_26</title>
+
+</head>
+
+<body>
+
+    <script>
+        var xhr=new XMLHttpRequest();
+        xhr.open('GET',"https://jsonplaceholder.typicode.com/posts/1",true);
+        xhr.onreadystatechange = function(){
+            if (xhr.readyState===4 && xhr.status===200){
+                var json=JSON.parse(xhr.responseText);
+                console.log(json.id + " - " + json.title);
+            }
+        }
+        xhr.send();
+
+    </script>
+
+</body>
+
+</html>

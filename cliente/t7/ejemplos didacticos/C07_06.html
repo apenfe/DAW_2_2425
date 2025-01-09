@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C07_06</title>
+
+</head>
+
+<body>
+    <script>
+        function aleatorios(iteraciones, cBack) {
+            const numeros = [];
+            for (let i = 0; i < iteraciones; i++) {
+                const numero = 1 + Math.floor(Math.random() * 6);
+                numeros.push(numero);
+                if (numero === 6) {
+                    cBack(true, numeros);
+                    return;
+                }
+            }
+            cBack(false, numeros);
+        }
+        function result(error, mensaje) {
+            if (error) {
+                console.log("Ha salido error")
+
+                console.error(`Error: ${mensaje}`);
+            }
+            else
+                console.log(mensaje);
+        }
+        aleatorios(6, result);
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<datos>
+<dato edad="44">Mensaje en XML Local</dato>
+<dato id="linea1" edad="33">2 Mensaje en XML Local</dato>
+<dato id="linea2" edad="55">3 Mensaje en XML Local</dato>
+</datos>

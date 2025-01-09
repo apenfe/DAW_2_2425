@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C07_18</title>
+
+</head>
+
+<body>
+    <script>
+        function llama() {
+            peticion('./info.txt');
+        }
+        function peticion(url) {
+            http_request = new XMLHttpRequest();
+            http_request.onreadystatechange = respuesta;
+            http_request.open('GET', url, true);
+            http_request.send();
+        }
+        function respuesta() {
+            if (http_request.readyState == 4) {
+                if (http_request.status == 200) {
+                    console.log(http_request.responseText);
+                } else {
+                    console.log('Hubo problemas con la petición.');
+                }
+            }
+        }
+
+        llama();
+        console.log("DESPUES")
+
+
+    </script>
+</body>
+
+</html>

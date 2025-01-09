@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C07_12</title>
+
+</head>
+
+<body>
+    <script>
+        function esperar(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+        async function miFuncion() {
+            console.log('Inicio de la función');
+            try {
+                await esperar(2000); // Esperar 2 segundos
+                console.log('Después de esperar');
+
+                const resultado = await otraFuncion(); // Llamada a otra función asincrónica
+                console.log('Resultado:', resultado);
+            } catch (error) {
+                console.error('Error:', error.message);
+            }
+            console.log('Fin de la función');
+        }
+        async function otraFuncion() {
+            await esperar(1000); // Esperar 1 segundo
+            return 'Valor del resultado';
+        }
+        // Llamar a la función asincrónica
+        miFuncion();
+        console.log("Continua la ejecución");
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C07_17</title>
+
+</head>
+
+<body>
+    <script>
+        function test(file) {
+            let archivo = new XMLHttpRequest();
+
+            archivo.open("GET", file, false); // false indica que se realiza de forma síncrona.
+            archivo.onreadystatechange = function () {
+                if (archivo.readyState == 4) {
+                    if (archivo.status == 200) {
+                        let Texto = archivo.responseText;
+                        console.log("Contenido: \n" + Texto);
+                    }
+                }
+            }
+            archivo.send(null);
+        }
+        test('./info.txt')
+        console.log("XXXXXXXXXXX")
+        
+
+
+    </script>
+</body>
+
+</html>

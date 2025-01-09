@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C07_08</title>
+
+</head>
+
+<body>
+    <script>
+        function firstTask() {
+            return new Promise((resolve) => {
+                setTimeout(() => resolve('Primera tarea completada'), 1000);
+            });
+        }
+
+        function secondTask(message) {
+            return new Promise((resolve) => {
+                setTimeout(() => resolve(`${message}, Segunda tarea completada`), 1000);
+            });
+        }
+
+        firstTask()
+            .then(result => {
+                console.log(result);
+                return secondTask(result);
+            })
+            .then(result => console.log(result))
+            .catch(error => console.error(error));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C07_22</title>
+
+</head>
+
+<body>
+    <button id="boton">Petición</button>
+    <script>
+        document.getElementById("boton").addEventListener("click", llama, true);
+
+        function llama() {
+            peticion('./dato.xml');
+        }
+
+        async function peticion(url) {
+            try {
+                const response = await fetch(url);
+                if (response.ok) {
+                    const txtDoc = await response.text();
+                    const parser = new DOMParser();
+                    const xmlDoc = parser.parseFromString(txtDoc, "text/xml");
+                    const root = xmlDoc.querySelectorAll("dato");
+                    for (i = 0; i < root.length; i++)
+                        console.log(root[i].textContent);
+                } else {
+                    alert('Hubo problemas con la petición.');
+                }
+            } catch (error) {
+                alert('Hubo problemas con la petición.');
+            }
+        }
+    </script>
+
+</body>
+
+</html>

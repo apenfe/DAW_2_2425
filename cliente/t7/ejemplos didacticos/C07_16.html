@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C07_16</title>
+
+</head>
+
+<body>
+    <script>
+        const client = new XMLHttpRequest();
+
+        client.addEventListener("readystatechange", () => {
+            const isDone = client.readyState === 4;
+            const isOk = client.status === 200;
+            if (isDone && isOk) {
+                console.log(client.responseText);
+            }
+        });
+        client.open("GET", "./info.txt");
+        client.send();
+        console.log("Síncrono");
+
+    </script>
+</body>
+
+</html>

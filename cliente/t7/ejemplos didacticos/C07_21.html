@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C07_21</title>
+
+</head>
+
+<body>
+    <script>
+        function llama() {
+            peticion('./dato.xml');
+        }
+        function peticion(url) {
+            
+            http_request = new XMLHttpRequest();
+            http_request.overrideMimeType('text/xml');
+            http_request.onreadystatechange = respuesta;
+            http_request.open('GET', url, true);
+            http_request.send();
+        }
+        function respuesta() {
+            if (http_request.readyState == 4) {
+                if (http_request.status == 200) {
+                    var xml = http_request.responseXML;
+                    var datos = xml.querySelectorAll("dato");
+                    for (let i = 0; i < datos.length; i++)
+                        console.log(datos[i].textContent);
+                } else {
+                    console.log('Hubo problemas con la petición.');
+                }
+            }
+        }
+
+        llama();
+        console.log("DESPUES")
+
+
+    </script>
+</body>
+
+</html>
