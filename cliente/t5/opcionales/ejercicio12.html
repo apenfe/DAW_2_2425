@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 12</title>
+</head>
+<body>
+<div id="primero">
+	<div id="segundo">
+		<button id="boton">Boton</button>
+	</div>
+</div>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function(){
+		var boton = document.getElementById("boton");
+        var segundo = document.getElementById("segundo");
+        var primero = document.getElementById("primero");
+
+		boton.addEventListener("click", function(){
+			alert("Boton pulsado");
+		});
+
+        segundo.addEventListener("click", function(){
+			alert("Div segundo pulsado");
+		});
+
+		primero.addEventListener("click", function(){
+			alert("Div primero pulsado");
+		});
+	});
+</script>
+</body>
+</html>

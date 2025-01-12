@@ -1,0 +1,16 @@
+{
+    "provincias": [
+        {
+            "codigo": "28",
+            "nombre": "Madrid"
+        },
+        {
+            "codigo": "08",
+            "nombre": "Barcelona"
+        },
+        {
+            "codigo": "01",
+            "nombre": "Ávila"
+        }
+    ]
+}

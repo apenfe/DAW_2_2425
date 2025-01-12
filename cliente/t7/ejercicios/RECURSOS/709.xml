@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<informacion>
+  <datos id="conceptos">
+    <dato>colores</dato>
+    <dato>planetas</dato>
+  </datos>
+  <datos id="colores">
+    <dato>azul</dato>
+    <dato>rojo</dato>
+    <dato>verde</dato>
+    <dato>gris</dato>
+    <dato>blanco</dato>
+  </datos>
+  <datos id="planetas">
+    <dato>Mercurio</dato>
+    <dato>Venus</dato>
+    <dato>Tierra</dato>
+    <dato>Marte</dato>
+    <dato>Júpiter</dato>
+  </datos>
+</informacion>
+
+
+

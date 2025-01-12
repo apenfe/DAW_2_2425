@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<datos>
+  <dato>
+    <nombre>Marcos</nombre>
+    <edad>25</edad>
+    <email>marcos@example.com</email>
+  </dato>
+  <dato>
+    <nombre>Lara</nombre>
+    <edad>30</edad>
+    <email>lara@example.com</email>
+  </dato>
+  <dato>
+    <nombre>Jorge</nombre>
+    <edad>22</edad>
+    <email>jorge@example.com</email>
+  </dato>
+</datos>
+
+
+

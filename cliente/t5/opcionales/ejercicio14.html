@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 14</title>
+</head>
+<body>
+<select name="color" id="color">
+    <option value="red">Rojo</option>
+    <option value="green">Verde</option>
+    <option value="blue">Azul</option>
+</select>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // leer cookie
+    var cookie = document.cookie;
+    var color = cookie.split(';').find(function(item) {
+      return item.trim().startsWith('color=');
+    });
+    if (color) {
+      color = color.split('=')[1];
+      var select = document.getElementById('color');
+      select.value = color;
+    }
+
+    let body = document.querySelector('body');
+    body.style.backgroundColor = color;
+
+    var select = document.getElementById('color');
+    select.addEventListener('change', function() {
+      var color = select.value;
+      document.cookie = 'color=' + color + '; path=/'+ '; expires=' + new Date(new Date().getTime() + 1000 * 60 * 60 * 24 * 30).toUTCString();
+      body.style.backgroundColor = color;
+    });
+  });
+</script>
+</body>
+</html>

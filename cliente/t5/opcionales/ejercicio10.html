@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 10</title>
+</head>
+<body>
+<select name="primero" id="primero">
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+</select>
+
+<select name="segundo" id="segundo">
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+</select>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		var primero = document.getElementById('primero');
+		var segundo = document.getElementById('segundo');
+
+		primero.addEventListener('change', function() {
+            alert('primero' + primero.value);
+            alert('segundo' + segundo.value);
+		});
+
+		segundo.addEventListener('change', function() {
+			alert('primero' + primero.value);
+			alert('segundo' + segundo.value);
+		});
+	});
+</script>
+</body>
+</html>

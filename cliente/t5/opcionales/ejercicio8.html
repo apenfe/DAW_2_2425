@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 8</title>
+</head>
+<body>
+<!--formulario para un nombre-->
+    <form id="form">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre">
+        <input type="submit" value="Enviar">
+    </form>
+<script>
+  document.addEventListener('DOMContentLoaded', function(){
+    document.getElementById('form').addEventListener('submit', function(event){
+      event.preventDefault();
+      var nombre = document.getElementById('nombre').value;
+      let regex = /^[A-Z][a-z]+$/;
+        if(regex.test(nombre)){
+            alert('Nombre correcto');
+        }else{
+            alert('Nombre incorrecto');
+        }
+    });
+  });
+</script>
+</body>
+</html>
