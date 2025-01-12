@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 2</title>
+</head>
+<body>
+<button id="boton">Click me!</button>
+<div id="contenido"></div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    let boton = document.getElementById('boton');
+    let contenido = document.getElementById('contenido');
+
+    boton.addEventListener('click', function() {
+
+        fetch('./RECURSOS/info.txt')
+            .then(response => response.text())
+            .then(data => {
+                contenido.innerHTML = data;
+            })
+    });
+  });
+</script>
+</body>
+</html>

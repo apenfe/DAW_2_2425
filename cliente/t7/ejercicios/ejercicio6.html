@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 6</title>
+</head>
+<body>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var request = new XMLHttpRequest();
+    request.open('GET', './RECURSOS/706.json', true);
+    request.onreadystatechange = function() {
+      if (request.readyState == 4 && request.status == 200) {
+        var data = JSON.parse(request.responseText);
+
+        for (var i = 0; i < data.length; i++) {
+          var div = document.createElement('div');
+          var img = document.createElement('img');
+          var p = document.createElement('p');
+          img.src = './RECURSOS/' + data[i].url;
+          p.innerHTML = data[i].pie;
+          div.appendChild(img);
+          div.appendChild(p);
+          document.body.appendChild(div);
+        }
+
+      }
+    }
+    request.send();
+
+  });
+</script>
+</body>
+</html>

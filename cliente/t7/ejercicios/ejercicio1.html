@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 1</title>
+</head>
+<body>
+<button id="boton">Click me!</button>
+<div id="contenido"></div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    let boton = document.getElementById('boton');
+    let contenido = document.getElementById('contenido');
+
+    boton.addEventListener('click', function() {
+
+      let xhr = new XMLHttpRequest();
+      xhr.open('GET', './RECURSOS/info.txt', true);
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          contenido.innerHTML = xhr.responseText;
+        }
+      };
+      xhr.send();
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 4</title>
+</head>
+<body>
+<button id="boton">Click me!</button>
+<h2>Información de Usuario</h2>
+<p id="nombre">Nombre:</p>
+<p id="edad">Edad:</p>
+<p id="email">Email:</p>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    let boton = document.getElementById('boton');
+    let nombre = document.getElementById('nombre');
+    let edad = document.getElementById('edad');
+    let email = document.getElementById('email');
+
+    boton.addEventListener('click', function() {
+
+      fetch('./RECURSOS/703.json')
+        .then(response => response.json())
+        .then(data => {
+          nombre.innerHTML += ' ' + data.nombre;
+          edad.innerHTML += ' ' + data.edad;
+          email.innerHTML += ' ' + data.email;
+        });
+
+    });
+  });
+</script>
+</body>
+</html>

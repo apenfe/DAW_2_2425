@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 8</title>
+</head>
+<body>
+<!--
+Realiza un código que carga una lista según se va rellenando un campo de texto y
+que coincida con lo escrito. Si no hay ningún elemento, no debe aparecer la lista.
+Si el usuario pincha sobre un elemento de la lista, se carga en el campo de texto y
+desaparece la lista. Los datos de entrada son los mismos que el ejercicio 7
+(archivo 707.ax.txt)
+-->
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" onkeyup="cargarLista(this.value)">
+        <ul id="lista"></ul>
+    </form>
+    <script>
+        function cargarLista(nombre) {
+            var lista = document.getElementById('lista');
+            lista.innerHTML = '';
+            if (nombre.length > 0) {
+                var xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        var datos = xhr.responseText;
+                        datos = datos.split(';');
+                        for (var i = 0; i < datos.length; i++) {
+                            var li = document.createElement('li');
+
+                          if (!datos[i].includes(nombre)) {
+                            continue;
+                          }
+
+                            li.innerHTML = datos[i];
+                            li.onclick = function() {
+                                document.getElementById('nombre').value = this.innerHTML;
+                                lista.innerHTML = '';
+                            };
+                            lista.appendChild(li);
+                        }
+                    }
+                };
+                xhr.open('GET', './RECURSOS/707.ax.txt', true);
+                xhr.send();
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 7</title>
+</head>
+<body>
+<select name="opcion" id="opcion"></select>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var select = document.getElementById('opcion');
+    let request = new XMLHttpRequest();
+    request.open('GET', './RECURSOS/707.ax.txt', true);
+    request.onreadystatechange = function() {
+      if (request.readyState === 4 && request.status === 200) {
+        let data = request.responseText;
+        let opciones = data.split(';');
+        opciones.forEach(function(opcion) {
+          let option = document.createElement('option');
+          option.value = opcion;
+          option.text = opcion;
+          select.appendChild(option);
+        });
+      }
+    };
+    request.send();
+  });
+</script>
+</body>
+</html>

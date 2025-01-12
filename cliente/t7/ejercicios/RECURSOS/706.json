@@ -1,12 +1,12 @@
 [{
-    "url": "./bosque.png",
+    "url": "bosque.png",
     "pie": "Bosque"
   },
   {
-    "url": "./mar.png",
+    "url": "mar.png",
     "pie": "Olas de mar"
   },
   {
-    "url": "./pradera.png",
+    "url": "pradera.png",
     "pie": "Pradera"
   }]

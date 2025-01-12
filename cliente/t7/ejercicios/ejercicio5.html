@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 5</title>
+</head>
+<body>
+<h2>Tabla de datos</h2>
+<table border="1" id="table">
+    <tr>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>Email</th>
+    </tr>
+</table>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var table = document.getElementById('table');
+
+    if(table.rows.length == 1) {
+      table.style.display = 'none';
+    }else {
+      table.style.display = 'block';
+    }
+
+    let data = new XMLHttpRequest();
+    data.open('GET', './RECURSOS/705.xml', true);
+    data.onreadystatechange = function() {
+      if(data.readyState == 4 && data.status == 200) {
+        let xml = data.responseXML;
+        let personas = xml.getElementsByTagName('dato');
+
+        for(let i = 0; i < personas.length; i++) {
+          let nombre = personas[i].getElementsByTagName('nombre')[0].textContent;
+          let edad = personas[i].getElementsByTagName('edad')[0].textContent;
+          let email = personas[i].getElementsByTagName('email')[0].textContent;
+          let row = table.insertRow(-1);
+          let cell1 = row.insertCell(0);
+          let cell2 = row.insertCell(1);
+          let cell3 = row.insertCell(2);
+          cell1.innerHTML = nombre;
+          cell2.innerHTML = edad;
+          cell3.innerHTML = email;
+        }
+      }
+    }
+    data.send();
+    table.style.display = 'block';
+
+  });
+</script>
+
+
+</body>
+</html>

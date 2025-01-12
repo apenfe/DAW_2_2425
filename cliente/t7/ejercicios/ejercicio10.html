@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 10</title>
+</head>
+<!--
+{
+    "provincias": [
+        {
+            "codigo": "28",
+            "nombre": "Madrid"
+        },
+        {
+            "codigo": "08",
+            "nombre": "Barcelona"
+        },
+        {
+            "codigo": "01",
+            "nombre": "Ávila"
+        }
+    ]
+}
+-->
+<body>
+Selecciona la provincia:
+<select name="provincias" id="provincias"></select>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+
+    fetch('./RECURSOS/710.json')
+            .then(response => response.json())
+            .then(data => {
+              let provincias = document.getElementById('provincias');
+              let opciones = data.provincias;
+              opciones.forEach(provincia => {
+                let option = document.createElement('option');
+                option.value = provincia.codigo;
+                option.text = provincia.nombre;
+                provincias.appendChild(option);
+              });
+            });
+
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 9</title>
+</head>
+<body>
+<h2>Selecciona una opción:</h2>
+<select name="conceptos" id="concepto">
+  <option value="0">Selecciona una opción</option>
+</select>
+<div id="div"></div>
+<button id="mostrar">Mostrar Selección</button>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    let colores;
+    let planetas;
+    let xml = new XMLHttpRequest();
+    xml.open("GET", "./RECURSOS/709.xml", true);
+    xml.send();
+    xml.onreadystatechange = function() {
+      if (xml.readyState == 4 && xml.status == 200) {
+        let xmlDoc = xml.responseXML;
+        let conceptos = xmlDoc.getElementById("conceptos").getElementsByTagName("dato");
+        colores = xmlDoc.getElementById("colores").getElementsByTagName("dato");
+        planetas = xmlDoc.getElementById("planetas").getElementsByTagName("dato");
+
+        let select = document.getElementById("concepto");
+        for (let i = 0; i < conceptos.length; i++) {
+          let option = document.createElement("option");
+          option.text = conceptos[i].textContent;
+          select.add(option);
+        }
+      }
+    }
+
+    let select = document.getElementById("concepto");
+    let div = document.getElementById("div");
+
+    select.addEventListener("change", function() {
+      div.innerHTML = '';
+      let seleccion = select.options[select.selectedIndex].text;
+      let selectNew = document.createElement("select");
+      selectNew.id = "seleccionado";
+
+      if (seleccion == "colores") {
+        for (let i = 0; i < colores.length; i++) {
+          let option = document.createElement("option");
+          option.text = colores[i].textContent;
+          selectNew.add(option);
+        }
+      } else if (seleccion == "planetas") {
+        for (let i = 0; i < planetas.length; i++) {
+          let option = document.createElement("option");
+          option.text = planetas[i].textContent;
+          selectNew.add(option);
+        }
+      }
+      div.appendChild(selectNew);
+    });
+
+    let mostrar = document.getElementById("mostrar");
+    mostrar.addEventListener("click", function() {
+      let seleccion = select.options[select.selectedIndex].text;
+      let seleccionado = document.getElementById("seleccionado");
+      if (seleccionado) {
+        alert(seleccionado.options[seleccionado.selectedIndex].text);
+      } else {
+        alert("No hay selección disponible");
+      }
+    });
+  });
+</script>
+</body>
+</html>
