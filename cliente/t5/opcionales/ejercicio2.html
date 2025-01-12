@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+<!--
+Implementa un botón que permita mostrar u ocultar la contraseña ingresada en un
+campo de formulario.
+-->
+
+    <form action="" id="formulario">
+        <label for="password">Contraseña:</label>
+        <input type="password" name="password" id="password">
+<!--        <button id="ver">Ver contraseña</button>-->
+        <input type="submit" value="Enviar">
+    </form>
+    <button id="ver">Ver contraseña</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('formulario').addEventListener('submit', function (event) {
+                event.preventDefault();
+                let password = document.getElementById('password').value;
+
+                let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+
+                if (regex.test(password)) {
+                    alert('Contraseña válida');
+                } else {
+                    alert('Contraseña inválida');
+                }
+            });
+            // el problema es que se envia el formulario al hacer click en el boton de ver contraseña
+            // para evitar esto se debe agregar un event listener al boton
+
+
+            document.getElementById('ver').addEventListener('click', function () {
+                let password = document.getElementById('password');
+                if (password.type === 'password') {
+                    password.type = 'text';
+                } else {
+                    password.type = 'password';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

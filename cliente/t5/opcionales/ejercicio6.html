@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 6</title>
+</head>
+<body>
+    <form id="form">
+        <label for="edad">Edad:</label>
+        <input type="text" name="edad" id="edad">
+        <input type="submit" value="Enviar">
+    </form>
+    <script>
+        document.getElementById('form').addEventListener('submit', function(e){
+            e.preventDefault();
+            var edad = document.getElementById('edad').value;
+            if(edad >= 18){
+                alert('Eres mayor de edad');
+            }else{
+                alert('Eres menor de edad');
+            }
+        });
+    </script>
+</body>
+</html>

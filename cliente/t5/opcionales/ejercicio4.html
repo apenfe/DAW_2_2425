@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 4</title>
+</head>
+<body>
+<form action="" id="formulario">
+  <label for="fecha">Fecha:</label>
+    <input type="date" id="fecha" name="fecha" required>
+  <input type="submit" value="Enviar">
+</form>
+
+<script>
+    document.getElementById('formulario').addEventListener('submit', function(e) {
+        e.preventDefault();
+	    var fecha = document.getElementById('fecha').value;
+	    var fechaActual = new Date();
+	    var fechaIngresada = new Date(fecha);
+
+	    if(fechaIngresada > fechaActual){
+		    alert('La fecha ingresada es futura');
+		    return;
+	    }
+	    alert('La fecha ingresada es válida');
+
+  });
+</script>
+</body>
+</html>

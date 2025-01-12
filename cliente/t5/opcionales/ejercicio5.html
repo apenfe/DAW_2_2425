@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 5</title>
+</head>
+<body>
+<form action="#" id="formulario">
+	<label for="url">URL:</label>
+	<input type="text" id="url" name="url" required>
+	<br>
+	<input type="submit" value="Enviar">
+</form>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		document.getElementById('formulario').addEventListener('submit', function(event) {
+			event.preventDefault();
+			var url = document.getElementById('url').value;
+			var regex = /^(http|https):\/\/[^ "]+$/;
+            			if (!regex.test(url)) {
+				alert('URL inválida');
+				return;
+			}
+			alert('URL válida');
+		});
+	});
+</script>
+
+</body>
+</html>

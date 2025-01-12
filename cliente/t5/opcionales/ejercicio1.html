@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+<form action="" id="formulario">
+    <label for="password">Contraseña:</label>
+    <input type="password" name="password" id="password">
+    <input type="submit" value="Enviar">
+</form>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('formulario').addEventListener('submit', function (event) {
+            event.preventDefault();
+            let password = document.getElementById('password').value;
+
+            let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+
+            if (regex.test(password)) {
+                alert('Contraseña válida');
+            } else {
+                alert('Contraseña inválida');
+            }
+        });
+    });
+</script>
+</body>
+</html>

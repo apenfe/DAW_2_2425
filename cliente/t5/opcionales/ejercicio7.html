@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 7</title>
+</head>
+<body>
+<form id="form">
+    <label for="codigoPostal">Codigo Postal:</label>
+    <input type="text" name="codigoPostal" id="codigoPostal">
+    <input type="submit" value="Enviar">
+</form>
+<script>
+    document.getElementById('form').addEventListener('submit', function(e){
+        e.preventDefault();
+        var codigoPostal = document.getElementById('codigoPostal').value;
+        var regex = /^[0-9]{5}$/;
+        if(regex.test(codigoPostal)){
+            alert('Codigo Postal correcto');
+        }else{
+            alert('Codigo Postal incorrecto');
+        }
+    });
+</script>
+</body>
+</html>
