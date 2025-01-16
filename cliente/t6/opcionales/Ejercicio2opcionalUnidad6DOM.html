@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+
+    <div id="div">Este es el div</div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            let div = document.getElementById("div");
+            let htmlDelDiv = div.outerHTML;
+
+            console.log(htmlDelDiv);
+
+            div.innerHTML = "Este es el nuevo contenido del div";
+
+            console.log(div.outerHTML);
+
+            div.style.backgroundColor = "red";
+            div.style.color = "white";
+            div.style.border = "1px solid black";
+        });
+    </script>
+</body>
+</html>

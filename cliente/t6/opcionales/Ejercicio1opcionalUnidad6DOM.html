@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+
+    <h1>Crear una tabla con 4 filas, las filas pares de color gris y las impares de color rosa</h1>
+
+    <div id="div"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            let div = document.getElementById('div');
+            let table = document.createElement('table');
+            let tbody = document.createElement('tbody');
+
+            table.style.border = '1px solid black';
+            table.style.width = '50%';
+            table.style.margin = 'auto';
+            table.style.borderCollapse = 'collapse';
+
+            for (let i = 1; i <= 4; i++) {
+                let tr = document.createElement('tr');
+                if(i % 2 == 0){
+                    tr.style.backgroundColor = 'gray';
+                }else{
+                    tr.style.backgroundColor = 'pink';
+                }
+
+                let td = document.createElement('td');
+                td.style.border = '1px solid black';
+                td.style.padding = '10px';
+                td.textContent = `Fila , Columna`;
+                tr.appendChild(td);
+
+                tbody.appendChild(tr);
+            }
+
+            table.appendChild(tbody);
+            div.appendChild(table);
+        });
+    </script>
+</body>
+</html>

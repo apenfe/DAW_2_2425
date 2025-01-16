@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+
+    <div id="div">Este es el div</div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            let div = document.getElementById("div");
+
+            div.insertAdjacentHTML("beforebegin", "<p id='eliminar'>beforebegin</p>");
+            div.insertAdjacentHTML("afterbegin", "<p>afterbegin</p>");
+            div.insertAdjacentHTML("beforeend", "<p>beforeend</p>");
+            div.insertAdjacentHTML("afterend", "<p>afterend</p>");
+
+            // eliminiar del DOM
+            let eliminar = document.getElementById('eliminar');
+            eliminar.remove();
+
+        });
+    </script>
+</body>
+</html>

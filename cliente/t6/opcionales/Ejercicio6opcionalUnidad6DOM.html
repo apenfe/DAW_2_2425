@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+
+            let body = document.querySelector("body");
+            let div1 = document.createElement("div");
+            let div2 = document.createElement("div");
+            let div3 = document.createElement("div");
+
+            div1.innerHTML = "Div 1";
+            div2.innerHTML = "Div 2";
+            div3.innerHTML = "Div 3";
+
+            body.appendChild(div1);
+            body.appendChild(div2);
+            body.appendChild(div3);
+
+            // mover div1 al final
+            body.appendChild(div1);
+
+        });
+    </script>
+</body>
+</html>
