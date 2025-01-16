@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejercicio 1</title>
+</head>
+<body>
+<input type="text" id="nombre">
+<p id="nombreAlmacenado"></p>
+<button id="boton">Almacenar nombre</button>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function(){
+
+		document.getElementById('boton').addEventListener('click', function(){
+			var nombre = document.getElementById('nombre').value;
+
+			localStorage.setItem('nombre', nombre);
+			cargarNombre();
+		});
+
+        function cargarNombre(){
+			document.getElementById('nombreAlmacenado').innerHTML = localStorage.getItem('nombre');
+		}
+
+        cargarNombre();
+	});
+
+</script>
+</body>
+</html>
