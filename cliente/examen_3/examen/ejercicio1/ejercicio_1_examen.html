@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Validación de formulario</title>
+
+
+    <style type="text/css">
+        label {
+            width: 150px;
+            float: left;
+            margin-bottom: 5px;
+        }
+
+        input,
+        select {
+            width: 150px;
+            float: left;
+            margin-bottom: 5px;
+        }
+
+        fieldset {
+            background: #66CCCC;
+            width: 350px;
+            border: thick solid #306;
+        }
+
+        legend {
+            border-top-width: medium;
+            border-right-width: medium;
+            border-bottom-width: medium;
+            border-left-width: medium;
+            border-top-style: solid;
+            border-right-style: solid;
+            border-bottom-style: solid;
+            border-left-style: solid;
+            background-color: #FFF;
+        }
+
+        #mensajes {
+            float: left;
+            background: #33FF33;
+            width: 325px;
+        }
+
+        #errores {
+            float: left;
+            background: #FF6633;
+            width: 325px;
+        }
+
+        #intentos {
+            float: left;
+            background: #CCFF33;
+            width: 325px;
+        }
+
+        .error {
+            border: solid 2px #FF0000;
+
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Validación de formulario</legend>
+        <form name="formulario" id="formulario" action="http://www.google.es" method="get">
+            <label for="fecha">Fecha:</label>
+            <input type="text" name="fecha" id="fecha" />
+            <label for="hora">Hora:</label>
+            <input type="text" name="hora" id="hora" />
+            <label for="tipoVehiculo">Tipo de vehículo:</label>
+            <select name="tipoVehiculo" id="tipoVehiculo">
+                <option value="0" selected="selected">Seleccionar ...</option>
+                <option value="TU">Turismo</option>
+                <option value="VE">Veh. mixto adaptable</option>
+                <option value="FU">Furgoneta</option>
+                <option value="MO">Moto</option>
+            </select>
+            <label for="matricula">Matrícula:</label>
+            <input name="matricula" type="text" id="matricula" />
+            <label for="correo">Correo electrónico:</label>
+            <input name="correo" type="text" id="correo" />
+            <label for="nombre">Nombre:</label>
+            <input name="nombre" type="text" id="nombre" />
+            <label for="condiciones">Acepto condiciones:</label>
+            <input type="checkbox" id="condiciones" name="condiciones" />
+           
+            <input type="reset" name="limpiar" id="button" value="Limpiar" />
+            <input type="submit" name="enviar" id="enviar" value="Enviar" />
+        </form>
+        <div id="errores"></div>
+        <div id="intentos"></div>
+    </fieldset>
+
+    <script type="text/javascript" src="./ejercicio_1_examen.js"></script>
+</body>
+
+</html>

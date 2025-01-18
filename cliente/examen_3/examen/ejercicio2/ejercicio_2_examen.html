@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .shopping-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .shopping-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .shopping-list li.completed {
+            text-decoration: line-through;
+            color: #888;
+        }
+        .shopping-list button {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de la compra</h1>
+    <input type="text" id="itemInput" placeholder="Agregar nuevo ítem">
+    <button id="addItemButton">Agregar</button>
+    <ul class="shopping-list" id="shoppingList"></ul>
+
+    <script src="./ejercicio_2_examen.js"></script>
+</body>
+</html>

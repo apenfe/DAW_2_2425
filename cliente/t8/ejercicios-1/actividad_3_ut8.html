@@ -5,33 +5,88 @@
 	<title>ejercicio 3</title>
 </head>
 <body>
-<select name="opciones" id="opciones">
-	<option value="1">Opción 1</option>
-	<option value="2">Opción 2</option>
-	<option value="3">Opción 3</option>
-</select>
-<button id="boton">Almacenar nombre</button>
-<p id="nombreAlmacenado"></p>
+<table id="tabla">
+	<thead>
+		<td>
+			Seleccionar
+		</td>
+		<td>
+			Nombre
+		</td>
+	</thead>
+	<tr id="fila1">
+		<td>
+			<input type="checkbox" id="opcion1" value="opcion1">
+		</td>
+		<td>
+			Elemento 1
+		</td>
+	</tr>
+	<tr id="fila2">
+		<td>
+			<input type="checkbox" id="opcion2" value="opcion2">
+		</td>
+		<td>
+			Elemento 2
+		</td>
+	</tr>
+	<tr id="fila3">
+		<td>
+			<input type="checkbox" id="opcion3" value="opcion3">
+		</td>
+		<td>
+			Elemento 3
+		</td>
+	</tr>
+</table>
+<button id="boton">Grabar</button>
 
 <script>
 	document.addEventListener('DOMContentLoaded', function(){
 
-		document.getElementById('boton').addEventListener('click', function(){
-			var opcion = document.getElementById('opciones').value;
+        let seleccionados = [];
+        let boton = document.getElementById('boton');
 
-			localStorage.setItem('opcion', opcion);
-			cargarOpcion();
+        boton.addEventListener('click', function(){
+			let tabla = document.getElementById('tabla');
+			let filas = tabla.getElementsByTagName('tr');
+			for (let i = 1; i < filas.length; i++) {
+				let fila = filas[i];
+				let checkbox = fila.getElementsByTagName('input')[0];
+				if (checkbox.checked) {
+					seleccionados.push(fila.getElementsByTagName('td')[1].innerText);
+				}
+			}
+
+            // almacenar en localStorage
+	        localStorage.setItem('seleccionados', JSON.stringify(seleccionados));
+	        recuperarDatos();
+
 		});
-        
-        function cargarOpcion(){
-			document.getElementById('nombreAlmacenado').innerHTML = localStorage.getItem('opcion');
-            let select = document.getElementById('opciones');
-            select.value = localStorage.getItem('opcion');
+
+        function recuperarDatos(){
+			 seleccionados = JSON.parse(localStorage.getItem('seleccionados'));
 		}
 
-        cargarOpcion();
-	});
+        function actualizarTabla(){
+	        let tabla = document.getElementById('tabla');
 
+            let filas = tabla.getElementsByTagName('tr');
+			for (let i = 1; i < filas.length; i++) {
+				let fila = filas[i];
+				let checkbox = fila.getElementsByTagName('input')[0];
+				let nombre = fila.getElementsByTagName('td')[1].innerText;
+				if (seleccionados.includes(nombre)) {
+					checkbox.checked = true;
+				} else {
+					checkbox.checked = false;
+				}
+			}
+        }
+
+        recuperarDatos();
+        actualizarTabla();
+	});
 </script>
 </body>
 </html>

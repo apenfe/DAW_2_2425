@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Mi Portafolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            customBlue: '#1e3a8a', // Color personalizado
+          },
+	  fontFamily: {
+            sans: ['Poppins', 'sans-serif'], // Personalización de fuentes
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="font-sans">
+     <!-- Header -->
+    <header class="bg-blue-900 flex justify-between items-center px-4 md:px-8 py-6">
+        <h1 class="text-white text-2xl md:text-3xl font-bold">Mi Portafolio</h1>
+        <nav class="space-x-4 md:space-x-8">
+            <a href="#hero" class="text-white hover:text-blue-200 transition-colors">Inicio</a>
+            <a href="#projects" class="text-white hover:text-blue-200 transition-colors">Proyectos</a>
+            <a href="#contact" class="text-white hover:text-blue-200 transition-colors">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="bg-gray-300 py-20 px-4 md:py-32 text-center">
+        <h2 class="text-4xl md:text-5xl font-bold text-customBlue mb-4">Hola, soy Desarrollador Web</h2>
+        <p class="text-xl md:text-2xl text-gray-700 mb-8">Construyo experiencias digitales únicas</p>
+        <a href="#projects" class="inline-block bg-customBlue text-white px-8 py-3 rounded-lg hover:bg-blue-800 transition-colors">
+            Ver Mis Proyectos
+        </a>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 px-4 md:px-8 bg-gray-100">
+        <h2 class="text-3xl font-bold text-center text-customBlue mb-12">Mis Proyectos</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow transform hover:-translate-y-1">
+                <h3 class="text-xl font-bold text-customBlue mb-3">Proyecto 1</h3>
+                <p class="text-gray-600 mb-4">Descripción breve del proyecto.</p>
+                <a href="#" class="text-customBlue hover:text-blue-700 font-medium">Ver detalles →</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow transform hover:-translate-y-1">
+                <h3 class="text-xl font-bold text-customBlue mb-3">Proyecto 2</h3>
+                <p class="text-gray-600 mb-4">Descripción breve del proyecto.</p>
+                <a href="#" class="text-customBlue hover:text-blue-700 font-medium">Ver detalles →</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow transform hover:-translate-y-1">
+                <h3 class="text-xl font-bold text-customBlue mb-3">Proyecto 3</h3>
+                <p class="text-gray-600 mb-4">Descripción breve del proyecto.</p>
+                <a href="#" class="text-customBlue hover:text-blue-700 font-medium">Ver detalles →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-black text-white text-center py-12 px-4">
+        <h2 class="text-2xl font-bold mb-4">Contacto</h2>
+        <p class="text-lg mb-4">¿Tienes un proyecto en mente?</p>
+        <p class="text-lg">Contáctame: <a href="mailto:tuemail@example.com" class="text-blue-400 hover:text-blue-300 underline transition-colors">tuemail@example.com</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejercicio 4</title>
+</head>
+<body>
+<h1>Manipulación de lista con SessionStorage</h1>
+<label for="elementoAdd">Agregar elemento</label>
+<input type="text" id="elementoAdd">
+<button id="add">Agregar</button>
+<label for="elementoDelete">Eliminar elemento</label>
+<input type="text" id="elementoDelete">
+<button id="delete">Eliminar</button>
+
+<h1>Lista completa:</h1>
+<ul id="lista"></ul>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let lista = document.getElementById('lista');
+        let botonAdd = document.getElementById('add');
+        let botonDelete = document.getElementById('delete');
+        let elementoAdd = document.getElementById('elementoAdd');
+        let elementoDelete = document.getElementById('elementoDelete');
+
+        botonAdd.addEventListener('click', function() {
+            let elemento = elementoAdd.value;
+            let listaActual = sessionStorage.getItem('lista');
+            if (listaActual) {
+                listaActual = JSON.parse(listaActual);
+            } else {
+                listaActual = [];
+            }
+            listaActual.push(elemento);
+            sessionStorage.setItem('lista', JSON.stringify(listaActual));
+            mostrarLista();
+        });
+
+        botonDelete.addEventListener('click', function() {
+            let elemento = elementoDelete.value;
+            let listaActual = sessionStorage.getItem('lista');
+            if (listaActual) {
+                listaActual = JSON.parse(listaActual);
+            } else {
+                listaActual = [];
+            }
+            let index = listaActual.indexOf(elemento);
+            if (index > -1) {
+                listaActual.splice(index, 1);
+            }
+            sessionStorage.setItem('lista', JSON.stringify(listaActual));
+            mostrarLista();
+        });
+
+        function mostrarLista() {
+            let listaActual = sessionStorage.getItem('lista');
+            if (listaActual) {
+                listaActual = JSON.parse(listaActual);
+            } else {
+                listaActual = [];
+            }
+            lista.innerHTML = '';
+            for (let i = 0; i < listaActual.length; i++) {
+                let li = document.createElement('li');
+                li.textContent = listaActual[i];
+                lista.appendChild(li);
+            }
+        }
+
+        mostrarLista();
+    });
+</script>
+</body>
+</html>

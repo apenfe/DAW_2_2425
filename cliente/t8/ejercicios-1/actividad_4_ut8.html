@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejercicio 4</title>
+</head>
+<body>
+<input type="text" id="nombre" placeholder="nombre">
+<input type="number" id="telefono" placeholder="telefono">
+<button id="boton">Guardar</button>
+<pre></pre>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function(){
+		let boton = document.getElementById('boton');
+        let nombre = document.getElementById('nombre');
+        let telefono = document.getElementById('telefono');
+        let pre = document.getElementsByTagName('pre')[0];
+        pre.innerHTML = '';
+
+        boton.addEventListener('click', function(){
+			let nombre = document.getElementById('nombre').value;
+			let telefono = document.getElementById('telefono').value;
+			let datos = {
+				nombre: nombre,
+				telefono: telefono
+			};
+			localStorage.setItem('datos', JSON.stringify(datos));
+	        mostrar();
+		});
+
+		function cargar(){
+			return JSON.parse(localStorage.getItem('datos'));
+        }
+
+        function mostrar(){
+	        let datos = cargar();
+	        nombre.value = datos.nombre;
+	        telefono.value = datos.telefono;
+            pre.innerHTML = JSON.stringify(datos, null, 2);
+        }
+
+        mostrar();
+
+	});
+</script>
+</body>
+</html>
