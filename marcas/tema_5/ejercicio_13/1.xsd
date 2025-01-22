@@ -1,4 +1,4 @@
-﻿<xs:element name="marcadores">
+<xs:element name="marcadores">
   <xs:complexType>
     <xs:sequence minOccurs="0" maxOccurs="unbounded">
       <xs:element ref="pagina"/>

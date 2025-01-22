@@ -1,0 +1,11 @@
+<xs:element name="articulos">
+  <xs:complexType>
+    <xs:sequence maxOccurs="unbounded">
+      <xs:element name="codigo" minOccurs="0" type="xs:string"/>
+      <xs:element name="id" minOccurs="0" type="xs:string"/>
+      <xs:element name="text" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+<xs:element name="codigo" type="xs:string"/>
+<xs:element name="id" type="xs:string"/>

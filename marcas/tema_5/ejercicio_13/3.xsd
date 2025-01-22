@@ -1,0 +1,3 @@
+<xs:element name="mayor_de_edad">
+  <xs:complexType />
+</xs:element>

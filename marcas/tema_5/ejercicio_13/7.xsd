@@ -1,0 +1,10 @@
+<xs:element name="articulo">
+  <xs:complexType>
+    <xs:choice>
+      <xs:element ref="codigo"/>
+      <xs:element ref="id"/>
+    </xs:choice>
+  </xs:complexType>
+</xs:element>
+<xs:element name="codigo" type="xs:string"/>
+<xs:element name="id" type="xs:string"/>

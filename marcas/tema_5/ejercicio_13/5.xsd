@@ -1,0 +1,7 @@
+<xs:element name="personas">
+  <xs:complexType>
+    <xs:sequence minOccurs="1" maxOccurs="unbounded">
+      <xs:element ref="nombre"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>

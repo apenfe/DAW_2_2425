@@ -1,0 +1,12 @@
+<xs:element name="br">
+  <xs:complexType>
+    <xs:attribute name="descripcion" type="xs:string" use="required"/>
+  </xs:complexType>
+</xs:element>
+<xs:element name="etiquetas_html">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="br"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>

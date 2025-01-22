@@ -1,0 +1,12 @@
+<xs:element name="persona">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="nombre"/>
+      <xs:element ref="mayor_de_edad" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+<xs:element name="nombre" type="xs:string"/>
+<xs:element name="mayor_de_edad">
+  <xs:complexType/>
+</xs:element>

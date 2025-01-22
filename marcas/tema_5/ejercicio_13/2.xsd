@@ -1,0 +1,8 @@
+<xs:element name="ciudad">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="nombre"/>
+      <xs:element ref="pais"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
