@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejercicio 9</title>
+</head>
+<body>
+<h1>Almacenamiento de Alumnos con IndexedDB</h1>
+<label for="numero">Número de lista:</label>
+<input type="number" id="numero" name="numero">
+<label for="nombre">Nombre:</label>
+<input type="text" id="nombre" name="nombre">
+<button id="guardar">Guardar Alumno</button>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let lista = document.getElementById('mensajes');
+        let botonBorrar = document.getElementById('borrar');
+        let inputRegistro = document.getElementById('registro');
+
+        if (!window.indexedDB) {
+            console.log('Su navegador no soporta IndexedDB');
+            return;
+        }
+
+        const request = window.indexedDB.open('baseDatos', 1);
+
+        request.onupgradeneeded = (event) => {
+            const db = event.target.result;
+            if (!db.objectStoreNames.contains('mensajes')) {
+                db.createObjectStore('mensajes', { keyPath: 'id', autoIncrement: true });
+            }
+        };
+
+        function listar() {
+            while (lista.firstChild) {
+                lista.removeChild(lista.firstChild);
+            }
+
+            const request = window.indexedDB.open('baseDatos', 1);
+
+            request.onsuccess = (event) => {
+                const db = event.target.result;
+                const transaction = db.transaction('mensajes', 'readonly');
+                const store = transaction.objectStore('mensajes');
+                const getAllRequest = store.getAll();
+
+                getAllRequest.onsuccess = (event) => {
+                    const mensajes = event.target.result;
+                    mensajes.forEach((mensaje) => {
+                        const li = document.createElement('li');
+                        li.textContent = mensaje.name;
+                        lista.appendChild(li);
+                    });
+                };
+
+                getAllRequest.onerror = (event) => {
+                    console.log('Error al obtener los mensajes');
+                };
+            };
+        }
+
+        listar();
+
+        botonBorrar.addEventListener('click', () => {
+            const registro = parseInt(inputRegistro.value);
+
+            if (isNaN(registro)) {
+                console.log('El valor introducido no es un número');
+                return;
+            }
+
+            const request = window.indexedDB.open('baseDatos', 1);
+
+            request.onsuccess = (event) => {
+                const db = event.target.result;
+                const transaction = db.transaction('mensajes', 'readwrite');
+                const store = transaction.objectStore('mensajes');
+                const deleteRequest = store.delete(registro);
+
+                deleteRequest.onsuccess = (event) => {
+                    console.log('Registro borrado correctamente');
+                    alert('Registro borrado correctamente');
+                    listar();
+                };
+
+                deleteRequest.onerror = (event) => {
+                    console.log('Error al borrar el registro');
+                };
+            };
+        });
+    });
+</script>
+</body>
+</html>

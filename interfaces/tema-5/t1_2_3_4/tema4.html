@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>T4 TAILWIND</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+	  tailwind.config = {
+		theme: {
+		  extend: {
+			colors: {
+			  customBlue: '#1e3a8a', // Color personalizado
+			},
+		fontFamily: {
+			  sans: ['Poppins', 'sans-serif'], // Personalización de fuentes
+			  fancy: ['"Comic Sans MS"', 'cursive']
+			},
+			spacing: {
+				'72': '18rem',
+				'84': '21rem',
+				'96': '24rem'
+			},
+			screens: {
+				'xs': '400px',
+				'md': '768px',
+				'lg': '1024px',
+				'xl': '1280px'
+			}
+		  },
+		},
+	  };
+	</script>
+</head>
+<body>
+	<!-- Prueba la clase container combinada con p-4 y diferentes anchos de pantalla para observar cómo se comporta -->
+	<div class="container p-4 bg-gray-100">
+		<h1 class="text-3xl font-bold">Título Principal</h1>
+		<p class="text-xl font-light">Texto de ejemplo con fuente ligera.</p>
+		<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non urna vitae libero bibendum tincidunt. Integer nec odio nec urna fermentum tincidunt.</p>
+	</div>
+	<br>
+
+	<!-- Crea una barra de navegación con flexbox que tenga el logo a la izquierda y enlaces a la derecha. -->
+	<nav class="flex items-center justify-between p-4 bg-white shadow">
+		<div class="text-2xl font-bold">
+			<a href="#">Logo</a>
+		</div>
+		<div class="space-x-4">
+			<a href="#" class="text-gray-700 hover:text-blue-500">Inicio</a>
+			<a href="#" class="text-gray-700 hover:text-blue-500">Servicios</a>
+			<a href="#" class="text-gray-700 hover:text-blue-500">Contacto</a>
+		</div>
+	</nav>
+
+	<!-- Crea una galería de imágenes usando grid-cols-4. -->
+	<div class="grid grid-cols-4 gap-4 p-4">
+		<img src="https://placehold.co/600x400" alt="Imagen 1" class="w-full h-auto">
+		<img src="https://placehold.co/600x400" alt="Imagen 2" class="w-full h-auto">
+		<img src="https://placehold.co/600x400" alt="Imagen 3" class="w-full h-auto">
+		<img src="https://placehold.co/600x400" alt="Imagen 4" class="w-full h-auto">
+		<img src="https://placehold.co/600x400" alt="Imagen 5" class="w-full h-auto">
+		<img src="https://placehold.co/600x400" alt="Imagen 6" class="w-full h-auto">
+		<img src="https://placehold.co/600x400" alt="Imagen 7" class="w-full h-auto">
+		<img src="https://placehold.co/600x400" alt="Imagen 8" class="w-full h-auto">
+	</div>
+
+	<!-- Crea una tarjeta con un ancho fijo y una imagen con altura limitada. -->
+	<div class="w-1/2 shadow p-4 rounded-xl m-4">
+		<img src="https://placehold.co/600x400" alt="imagen" class="h-100">
+	</div>
+
+	<!-- Crea un diseño que cambie de una sola columna en pantallas pequeñas a varias columnas en pantallas grandes usando grid. -->
+	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-4">
+		<div class="bg-white p-4 shadow rounded">Contenido 1</div>
+		<div class="bg-white p-4 shadow rounded">Contenido 2</div>
+		<div class="bg-white p-4 shadow rounded">Contenido 3</div>
+		<div class="bg-white p-4 shadow rounded">Contenido 4</div>
+		<div class="bg-white p-4 shadow rounded">Contenido 5</div>
+		<div class="bg-white p-4 shadow rounded">Contenido 6</div>
+		<div class="bg-white p-4 shadow rounded">Contenido 7</div>
+		<div class="bg-white p-4 shadow rounded">Contenido 8</div>
+	</div>
+	<br>
+</body>
+</html>

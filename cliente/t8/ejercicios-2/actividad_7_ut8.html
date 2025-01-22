@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejercicio 7</title>
+</head>
+<body>
+<h1>Lectura de mensajes con IndexedDB</h1>
+<h2>Mensajes guardaddos:</h2>
+<ul id="mensajes"></ul>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let lista = document.getElementById('mensajes');
+
+        if (!window.indexedDB) {
+            console.log('Su navegador no soporta IndexedDB');
+        }
+
+        // paso 1: abrir la base de datos
+	    const request = window.indexedDB.open('baseDatos', 1);
+
+	    request.onsuccess = (event) => {
+		    const db = event.target.result;
+
+		    // paso 2: obtener el almacen de objetos
+		    const transaction = db.transaction('mensajes', 'readonly');
+
+		    const store = transaction.objectStore('mensajes');
+
+            // paso 3: realizar la lectura de los mensajes
+		    const getAllRequest = store.getAll();
+
+            // paso 4: mostrar los mensajes en la página
+            getAllRequest.onsuccess = (event) => {
+			    const mensajes = event.target.result;
+
+			    mensajes.forEach((mensaje) => {
+				    const li = document.createElement('li');
+				    li.textContent = mensaje.name;
+				    lista.appendChild(li);
+			    });
+		    };
+
+            getAllRequest.onerror = (event) => {
+			    console.log('Error al guardar el mensaje');
+		    };
+	    };
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejercicio 6</title>
+</head>
+<body>
+<h1>Grabación con IndexedDB</h1>
+<label for="mensaje">Introducir un mensaje</label>
+<input type="text" id="mensaje">
+<button id="add">Guardar</button>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let mensaje = document.getElementById('mensaje');
+        let add = document.getElementById('add');
+
+        if (!window.indexedDB) {
+            console.log('Su navegador no soporta IndexedDB');
+        }
+
+        add.addEventListener('click', function() {
+            const request = window.indexedDB.open('baseDatos', 1);
+
+            request.onupgradeneeded = (event) => {
+                const db = event.target.result;
+                db.createObjectStore('mensajes', { keyPath: 'id', autoIncrement: true });
+            };
+
+            request.onsuccess = (event) => {
+                const db = event.target.result;
+
+                const transaction = db.transaction('mensajes', 'readwrite');
+                const store = transaction.objectStore('mensajes');
+
+                const data = { name: mensaje.value };
+                const addRequest = store.add(data);
+
+                addRequest.onsuccess = (event) => {
+                    console.log('Mensaje guardado');
+                };
+
+                addRequest.onerror = (event) => {
+                    console.log('Error al guardar el mensaje');
+                };
+            };
+        });
+    });
+</script>
+</body>
+</html>
