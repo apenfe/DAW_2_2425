@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>T5 TAILWIND</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+	<!-- Crea un conjunto de botones con diferentes colores que cambien al pasar el ratón por encima -->
+	<button class="m-4 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Botón con hover 1</button>
+	<button class="m-4 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-700">Botón con hover 2</button>
+	<br>
+
+	<!-- Aplica un estilo de borde resaltado a los campos de un formulario cuando están enfocados. -->
+	<input class="px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Escribe algo aquí">
+	<br>
+
+	<!-- Crea un diseño de botón que cambie de color en hover y active para un efecto interactivo completo. -->
+	<button class="m-4 bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-700 active:bg-red-900">Botón interactivo</button>
+
+	<!-- Crea una tarjeta similar para un producto con una imagen, título y descripción, usando los estados hover, focus y active. -->
+	<div class="max-w-xs rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 p-4 m-4">
+		<img src="https://placehold.co/600x400" alt="Avatar" class="w-full h-48">
+		<div class="p-4 mt-2">
+			<h2 class="text-xl font-semibold">Nombre del Usuario</h2>
+			<p class="text-gray-500">Descripción breve del usuario.</p>
+			<button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-500">Ver Perfil</button>
+		</div>
+	</div>
+	   
+
+</body>
+</html>
