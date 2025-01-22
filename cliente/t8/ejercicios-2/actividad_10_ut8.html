@@ -2,23 +2,22 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>ejercicio 9</title>
+	<title>ejercicio 10</title>
 </head>
 <body>
-<h1>Almacenamiento de Alumnos con IndexedDB</h1>
+<h1>Busqueda de alumnos por número de lista</h1>
 <label for="numero">Número de lista:</label>
 <input type="number" id="numero" name="numero">
-<label for="nombre">Nombre:</label>
-<input type="text" id="nombre" name="nombre">
-<button id="guardar">Guardar Alumno</button>
+<button id="buscar">Buscar</button>
+<h2 id="nombre">Nombre del alumno:</h2>
 
 <script>
     let db;
 
     document.addEventListener('DOMContentLoaded', function() {
         const numero = document.getElementById('numero');
+        const buscar = document.getElementById('buscar');
         const nombre = document.getElementById('nombre');
-        const guardar = document.getElementById('guardar');
 
         if (!window.indexedDB) {
             console.error('Su navegador no soporta IndexedDB');
@@ -49,37 +48,33 @@
         };
 
         // Handle saving new students
-        guardar.addEventListener('click', function() {
+        buscar.addEventListener('click', function() {
             if (!db) {
                 console.error('La base de datos no está disponible');
                 return;
             }
 
-            if (!nombre.value || !numero.value) {
+            if (!numero.value) {
                 console.error('Por favor, rellene todos los campos');
                 return;
             }
 
-            const transaction = db.transaction('mensajes', 'readwrite');
-            const store = transaction.objectStore('mensajes');
+            // buscar el alumno por el número de lista
+	        const transaction = db.transaction(['mensajes'], 'readonly');
+            const objectStore = transaction.objectStore('mensajes');
+            const getRequest = objectStore.get(Number(numero.value));
 
-            const data = {
-                name: nombre.value,
-                number: parseInt(numero.value)
-            };
+            getRequest.onsuccess = () => {
+				if (getRequest.result) {
+					nombre.textContent = `Nombre del alumno: ${getRequest.result.name}`;
+				} else {
+					nombre.textContent = 'Alumno no encontrado';
+				}
+			};
 
-            const addRequest = store.add(data);
-
-            addRequest.onsuccess = () => {
-                console.log('Alumno guardado correctamente');
-                // Clear the form
-                nombre.value = '';
-                numero.value = '';
-            };
-
-            addRequest.onerror = (event) => {
-                console.error('Error al guardar el alumno:', event.target.error);
-            };
+            getRequest.onerror = (event) => {
+				console.error('Error al buscar el alumno:', event.target.error);
+			};
 
             transaction.oncomplete = () => {
                 console.log('Transacción completada');
