@@ -1,0 +1,43 @@
+<!ELEMENT aeropuerto (nombre, vuelos, fecha)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT vuelos (vuelo+)>
+<!ELEMENT vuelo (diario?, origen, destino, hora-salida, hora-llegada)>
+<!ELEMENT diario EMPTY>
+<!ELEMENT origen (#PCDATA)>
+<!ELEMENT destino (#PCDATA)> 
+<!ELEMENT hora-salida (#PCDATA)> 
+<!ELEMENT hora-llegada (#PCDATA)> 
+<!ELEMENT fecha (#PCDATA)>
+
+////////
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <!-- Definición del elemento raíz -->
+    <xs:element name="aeropuerto">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string"/>
+                <xs:element name="vuelos">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="vuelo" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="diario" type="xs:string" minOccurs="0"/>
+                                        <xs:element name="origen" type="xs:string"/>
+                                        <xs:element name="destino" type="xs:string"/>
+                                        <xs:element name="hora-salida" type="xs:string"/>
+                                        <xs:element name="hora-llegada" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="fecha" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

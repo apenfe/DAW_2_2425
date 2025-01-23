@@ -1,0 +1,27 @@
+<!ELEMENT localidades (provincia*)>
+<!ELEMENT provincia (#PCDATA | ciudad | codigo_postal|fistro)*>
+<!ELEMENT ciudad (#PCDATA)>
+<!ELEMENT codigo_postal (#PCDATA)>
+<!ELEMENT fistro EMPTY>
+
+////////
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <!-- Definición del elemento raíz -->
+    <xs:element name="localidades">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="provincia"  maxOccurs="unbounded">
+                    <xs:complexType mixed="true">
+                        <xs:choice maxOccurs="unbounded">
+                            <xs:element name="ciudad" type="xs:string"/>
+                            <xs:element name="codigo_postal" type="xs:string"/>
+                            <xs:element name="fistro" type="xs:string" minOccurs="0" maxOccurs="1"/>    
+                        </xs:choice>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

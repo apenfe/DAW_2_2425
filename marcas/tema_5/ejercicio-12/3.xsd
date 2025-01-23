@@ -1,0 +1,20 @@
+<!ELEMENT articulo (codigo | id)>
+<!ELEMENT codigo (#PCDATA)>
+<!ELEMENT id (#PCDATA)>
+
+////////
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <!-- Definición del elemento raíz -->
+    <xs:element name="articulo">
+        <xs:complexType>
+            <xs:choice>
+                <xs:element name="codigo" type="xs:string"/>
+                <xs:element name="vuelos" type="xs:string"/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

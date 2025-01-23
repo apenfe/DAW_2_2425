@@ -1,0 +1,31 @@
+<!ELEMENT localidades (localidad)*>
+<!ELEMENT localidad ((pais, ciudad) | codigo_postal)>
+<!ELEMENT pais (#PCDATA)>
+<!ELEMENT ciudad (#PCDATA)>
+<!ELEMENT codigo_postal (#PCDATA)>
+
+////////
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <!-- Definición del elemento raíz -->
+    <xs:element name="localidades">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="localidad"  maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:choice>
+                            <xs:sequence>
+                                <xs:element name="pais" type="xs:string"/>
+                                <xs:element name="ciudad" type="xs:string"/>
+                            </xs:sequence>
+                            <xs:element name="codigo_postal" type="xs:string"/>
+                        </xs:choice>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

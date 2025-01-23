@@ -1,0 +1,39 @@
+<!ELEMENT catalogoLibro (libro)*>
+<!ELEMENT libro (titulo,autor+,fecha,ISBN,editor)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT fecha (mes?,anyo)>
+<!ELEMENT mes (#PCDATA)>
+<!ELEMENT anyo (#PCDATA)>
+<!ELEMENT ISBN (#PCDATA)>
+<!ELEMENT editor (#PCDATA)>
+
+////////
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <!-- Definición del elemento raíz -->
+    <xs:element name="catalogoLibro">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="libro" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="titulo" type="xs:string"/>
+                            <xs:element name="autor" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+                            <xs:element name="fecha">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="mes" type="xs:string" minOccurs="0"/>
+                                        <xs:element name="anyo" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="ISBN" type="xs:string"/>
+                            <xs:element name="editor" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
