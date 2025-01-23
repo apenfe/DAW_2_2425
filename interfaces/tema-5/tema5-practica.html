@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>T5 FINAL TAILWIND</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+	<!-- Crea un diseño de página de inicio de un sitio web que incluya:
+            • Un encabezado con botones interactivos (con hover y focus).
+            • Una sección de productos con tarjetas que tengan efecto hover.
+            • Un formulario de contacto con campos que cambien de color cuando estén enfocados.
+        Recomendaciones:
+            • Usa clases de Tailwind para estilizar los botones, campos de texto y las tarjetas de productos.
+            • Implementa un sistema de tarjetas con hover para los productos.
+            • Asegúrate de que todos los campos de formularios tengan un estilo adecuado para focus.
+    -->
+    <!-- Encabezado con botones interactivos -->
+    <header class="bg-gray-800 text-white p-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Mi Sitio Web</h1>
+        <nav>
+            <button class="m-2 bg-blue-500 p-4 p-2 rounded hover:bg-blue-700 focus:ring-2 focus:ring-blue-500">Inicio</button>
+            <button class="m-2 bg-green-500 p-4 p-2 rounded hover:bg-green-700 focus:ring-2 focus:ring-green-500">Productos</button>
+            <button class="m-2 bg-red-500 p-4 p-2 rounded hover:bg-red-700 focus:ring-2 focus:ring-red-500">Contacto</button>
+        </nav>
+    </header>
+
+    <!-- Sección de productos -->
+    <section class="p-8">
+        <h2 class="text-3xl font-bold mb-4">Nuestros Productos</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="max-w-xs rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 p-4 m-4">
+                <img src="https://placehold.co/600x400" alt="Avatar" class="w-full h-48">
+                <div class="p-4 mt-2">
+                    <h2 class="text-xl font-semibold">Nombre del Usuario</h2>
+                    <p class="text-gray-500">Descripción breve del usuario.</p>
+                    <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-500">Ver Perfil</button>                        </div>
+                </div>
+                <div class="max-w-xs rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 p-4 m-4">
+                    <img src="https://placehold.co/600x400" alt="Avatar" class="w-full h-48">
+                    <div class="p-4 mt-2">
+                        <h2 class="text-xl font-semibold">Nombre del Usuario</h2>
+                        <p class="text-gray-500">Descripción breve del usuario.</p>
+                        <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-500">Ver Perfil</button>
+                    </div>
+                </div>
+                <div class="max-w-xs rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 p-4 m-4">
+                    <img src="https://placehold.co/600x400" alt="Avatar" class="w-full h-48">
+                    <div class="p-4 mt-2">
+                        <h2 class="text-xl font-semibold">Nombre del Usuario</h2>
+                        <p class="text-gray-500">Descripción breve del usuario.</p>
+                        <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-500">Ver Perfil</button>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+            <!-- Formulario de contacto -->
+            <section class="p-8 bg-gray-100">
+                <h2 class="text-3xl font-bold mb-4">Contáctanos</h2>
+                <form class="max-lg m-auto">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700">Nombre</label>
+                        <input id="name" type="text" class="w-full p-4 p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Tu nombre">
+                    </div>
+                    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 focus:ring-2 focus:ring-blue-500">Enviar</button>
+                </form>
+            </section>
+
+</body>
+</html>
