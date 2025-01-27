@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C09_05</title>
+</head>
+
+<body>
+    <video id="video" src="./canguros.mp4" width="500" controls>
+        <p>Tu navegador no soporta videos en HTML5</p>
+    </video>
+    <br />
+
+    <button id="play">Reproducir</button>
+    <button id="pause">Pausar</button>
+    
+    <script>
+        let video = document.querySelector('#video');
+        let play = document.querySelector('#play');
+        let pause = document.querySelector('#pause');
+        
+        play.addEventListener('click', () => {
+            video.play();
+        });
+
+        pause.addEventListener('click', () => {
+            video.pause();
+        });
+
+        
+
+    </script>
+
+</body>
+
+</html>
