@@ -4,25 +4,73 @@
 	<meta charset="UTF-8">
 	<title>T5 TAILWIND</title>
 	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					animation: {
+						'custom-bounce': 'bounce 1s infinite',
+						'pulse-color': 'pulseColor 3s infinite',
+					},
+					keyframes: {
+						bounce: {
+							'0%, 100%': { transform: 'translateY(0)' },
+							'50%': { transform: 'translateY(-10px)' },
+						},
+						pulseColor: {
+							'0%, 100%': { 
+								transform: 'scale(1)',
+								backgroundColor: '#3b82f6'
+							},
+							'50%': { 
+								transform: 'scale(1.1)',
+								backgroundColor: '#ef4444'
+							}
+						}
+					},
+				},
+			},
+		}
+	</script>
 </head>
 <body>
 	
-	   <!-- Crea un botón que cambie su color y tamaño al pasar el ratón utilizando transiciones. -->
-	   <button class="bg-red-500 text-white px-4 py-2 rounded-xl transition duration-1000 ease-in-out hover:bg-blue-700 hover:scale-110">
+	   	<!-- Crea un botón que cambie su color y tamaño al pasar el ratón utilizando transiciones. -->
+	   	<button class="bg-red-500 text-white px-4 py-2 rounded-xl transition duration-1000 ease-in-out hover:bg-blue-700 hover:scale-110">
 		Botón con transición
-	   </button>
-	   <br>
+	   	</button>
+	   	<br>
 
-	   <!-- Crea un diseño con imágenes que se agranden y roten al pasar el ratón utilizando transformaciones. -->
-	   <div class="max-w-xs rounded-lg shadow-lg transform duration-1000 ease-in-out hover:scale-105 hover:rotate-45 p-4 m-4">
-	   <img src="https://placehold.co/600x400" alt="Avatar" class="w-full h-48">
-	   <div class="p-4 mt-2">
-		   <h2 class="text-xl font-semibold">Nombre del Usuario</h2>
-		   <p class="text-gray-500">Descripción breve del usuario.</p>
-		   <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg transform duration-1000 ease-in-out hover:bg-blue-700 focus:ring-2 focus:ring-blue-500">Ver Perfil</button>
-	   </div>
-	   </div>
-</div>
+	   	<!-- Crea un diseño con imágenes que se agranden y roten al pasar el ratón utilizando transformaciones. -->
+	   	<div class="max-w-xs rounded-lg shadow-lg transform duration-1000 ease-in-out hover:scale-105 hover:rotate-45 p-4 m-4">
+	   		<img src="https://placehold.co/600x400" alt="Avatar" class="w-full h-48">
+	   		<div class="p-4 mt-2">
+		   		<h2 class="text-xl font-semibold">Nombre del Usuario</h2>
+		   		<p class="text-gray-500">Descripción breve del usuario.</p>
+		   		<button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg transform duration-1000 ease-in-out hover:bg-blue-700 focus:ring-2 focus:ring-blue-500">Ver Perfil</button>
+	   		</div>
+	   	</div>
+		
+		<!-- Aplica animaciones de giro o rebote a un icono en tu proyecto. -->
+		<div class="flex justify-center items-center mt-8">
+			<svg class="w-16 h-16 text-blue-500 animate-bounce" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+			</svg>
+		</div>
+
+		<!-- Crea una animación personalizada para un botón que cambie su tamaño y color repetidamente. -->
+		<div class="flex justify-center items-center mt-8">
+			<button class="px-6 py-3 rounded-lg text-white font-semibold animate-pulse-color">
+				Botón Animado
+			</button>
+		</div>
+
+		<!-- Crea un botón que pulse y cambie de color al pasar el ratón, utilizando tanto animaciones como transiciones. -->
+		<div class="flex justify-center items-center mt-8 mb-8">
+			<button class="bg-purple-500 px-6 py-3 rounded-lg text-white font-semibold animate-pulse transition-all duration-300 hover:bg-green-500 hover:scale-110">
+				Botón Pulsante
+			</button>
+		</div>
 
 </body>
 </html>
