@@ -1,0 +1,77 @@
+<!-- 
+<?xml version="1.0" encoding="UTF-8" ?>
+<libreria>
+  <codigo>1263</codigo>
+  <direccion>Juan de Juni, 31</direccion>
+  <telefono>983555555</telefono>
+  <propietario>
+    <nombre>Juanito</nombre>
+    <telefono>656222111</telefono>
+  </propietario>
+  <libro>
+    <titulo>Cien años de soledad</titulo>
+    <autor>Gabriel García Márquez</autor>
+    <formato>rústica</formato>
+    <publicacion>1967</publicacion>
+    <precio>23,5</precio>
+  </libro>
+</libreria>
+La librería tiene obligatoriamente un código, una dirección, un teléfono, un propietario, y uno o más libros.
+El código será un número entero entre 1000 y 9999.
+El propietario tiene un nombre y puede tener ninguno o varios teléfonos.
+El teléfono sólo se definirá una vez en el esquema, repitiendo su uso. Su contenido será una plantilla de 9 números.
+Cada libro está formado por los elementos título, autor, puede tener o no formato, publicación, precio, cantidad.
+El formato podrá ser rústica, tapa blanda o tapa dura.
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="libreria">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="codigo" type="codigo"/>
+                <xs:element name="direccion" type="xs:string"/>
+                <xs:element name="telefono" type="telefono"/>
+                <xs:element name="propietario" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="xs:string"/>
+                            <xs:element name="telefono" type="telefono" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="libro" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="titulo" type="xs:string"/>
+                            <xs:element name="autor" type="xs:string"/>
+                            <xs:element name="formato" type="formato" minOccurs="0"/>
+                            <xs:element name="publicacion" type="xs:integer"/>
+                            <xs:element name="precio" type="xs:decimal"/>
+                            <xs:element name="cantidad" type="xs:integer" minOccurs="0"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="codigo">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1000"/>
+            <xs:maxInclusive value="9999"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="telefono">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{9}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="formato">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="rústica"/>
+            <xs:enumeration value="tapa blanda"/>
+            <xs:enumeration value="tapa dura"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

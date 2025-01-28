@@ -14,3 +14,32 @@ Escribir el contenido del archivo "fichas.xsd" que permita validarlo,
 teniendo en cuenta que se debe definir la "edad" con la restricción de
 que el valor que tome no pueda ser menor que 0 ni mayor que 130.
 -->
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <!-- Definición del elemento raíz -->
+  <xs:element name="fichas">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- Cada elemento 'ficha' dentro de 'fichas' -->
+        <xs:element name="ficha" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <!-- Elemento 'nombre' dentro de 'ficha' -->
+              <xs:element name="nombre" type="xs:string"/>
+              <!-- Elemento 'edad' dentro de 'ficha' -->
+              <xs:element name="edad" type="edad"/>
+            </xs:sequence>
+            <!-- Atributo 'numero' en 'ficha' -->
+            <xs:attribute name="numero" type="xs:integer" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="edad">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="130"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
