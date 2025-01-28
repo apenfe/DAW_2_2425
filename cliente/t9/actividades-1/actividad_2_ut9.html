@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejercicio 2</title>
+</head>
+<body>
+	<h1>Reproductor de video con subtitulos</h1>
+<video src="./oso.mp4">
+	<track src="./subtitulos.vtt" kind="subtitles" srclang="es" label="Español" default>
+</video>
+<button id="reproducir">Reproducir</button>
+<button id="pausar">Pausar</button>
+<button id="reiniciar">Reiniciar</button>
+<button id="avanzar">Avanzar</button>
+<button id="retroceder">Retroceder</button>
+<input type="range" id="volumen" min="0" max="1" step="0.1" value="1">
+<script>
+
+	document.addEventListener('DOMContentLoaded', function(){
+		var video = document.querySelector('video');
+		var reproducir = document.querySelector('#reproducir');
+		var pausar = document.querySelector('#pausar');
+		var reiniciar = document.querySelector('#reiniciar');
+		var avanzar = document.querySelector('#avanzar');
+		var retroceder = document.querySelector('#retroceder');
+		var volumen = document.querySelector('#volumen');
+
+		reproducir.addEventListener('click', function(){
+			video.play();
+		});
+
+		pausar.addEventListener('click', function(){
+			video.pause();
+		});
+
+		reiniciar.addEventListener('click', function(){
+			video.currentTime = 0;
+		});
+
+		avanzar.addEventListener('click', function(){
+			video.currentTime += 3;
+		});
+
+		retroceder.addEventListener('click', function(){
+			video.currentTime -= 3;
+		});
+
+		volumen.addEventListener('input', function(){
+			video.volume = volumen.value;
+		});
+	});
+
+</script>
+</body>
+</html>
