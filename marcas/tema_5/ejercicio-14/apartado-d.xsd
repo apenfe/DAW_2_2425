@@ -1,0 +1,11 @@
+<xs:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="cantidad">
+        <xs:simpleType>
+            <xs:restriction base="xsd:decimal">
+                <xs:totalDigits value="4"/>
+                <xs:fractionDigits value="2"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    <xs:attribute name="divisa" type="xsd:string" use="required"/>
+</xs:schema>
