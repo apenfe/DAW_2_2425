@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 1</title>
+</head>
+<body>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    function realizarOperacion(numero1, numero2, funcion){
+	  return funcion(numero1, numero2);
+    }
+
+    function sumar(numero1, numero2){
+        	  alert( numero1 + numero2);
+    }
+
+    realizarOperacion(5, 3, sumar);
+  });
+</script>
+</body>
+</html>

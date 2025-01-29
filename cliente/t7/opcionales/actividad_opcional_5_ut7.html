@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 5</title>
+</head>
+<body>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    async function cargarDatos(){
+
+	    const xhr = new XMLHttpRequest();
+	    xhr.open('GET', '../ejercicios/RECURSOS/703.json');
+	    xhr.send();
+	    xhr.onreadystatechange = function() {
+		    if (xhr.readyState === 4 && xhr.status === 200) {
+			    const datos = JSON.parse(xhr.responseText);
+			    console.log(datos);
+		    }
+	    }
+    }
+
+    cargarDatos();
+  });
+</script>
+</body>
+</html>

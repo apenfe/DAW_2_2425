@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 6</title>
+</head>
+<body>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    async function obtenerUsuarios(){
+        const url = 'https://jsonplaceholder.typicode.com/users';
+	    const respuesta = await fetch(url);
+	    const usuarios = await respuesta.json();
+
+        let listaUsuarios = document.createElement('ul');
+        document.body.appendChild(listaUsuarios);
+
+        usuarios.forEach(usuario => {
+			let item = document.createElement('li');
+			item.textContent = usuario.name;
+			listaUsuarios.appendChild(item);
+		});
+    }
+
+      obtenerUsuarios();
+  });
+</script>
+</body>
+</html>

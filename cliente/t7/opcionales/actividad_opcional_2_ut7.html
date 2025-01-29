@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 2</title>
+</head>
+<body>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    function obtenerDatos(error){
+	   return new Promise((resolve, reject) => {
+	    setTimeout(() => {
+	      if (error) {
+	        reject('Error al obtener los datos');
+	      } else {
+	        resolve('Datos obtenidos');
+	      }
+	    }, 2000);
+        });
+    }
+
+    obtenerDatos(false)
+	  .then((response) => {
+		alert(response);
+	  })
+	  .catch((error) => {
+		alert(error);
+	  });
+
+      obtenerDatos(true)
+          .then((response) => {
+              alert(response);
+          })
+          .catch((error) => {
+              alert(error);
+          });
+
+  });
+</script>
+</body>
+</html>

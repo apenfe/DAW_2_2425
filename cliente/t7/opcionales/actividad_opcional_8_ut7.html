@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 8</title>
+</head>
+<body>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    async function cargarJSON(){
+        try {
+            const url = '../ejercicios/RECURSOS/706.json';
+            const respuesta = await fetch(url);
+            const json = await respuesta.json();
+
+            // mostrar el primer nodo
+            if (json.length > 0) {
+				console.log(json[0].pie);
+			} else {
+				console.log('No se encontraron usuarios en el JSON.');
+			}
+        } catch (error) {
+            console.error('Error al cargar el XML:', error);
+        }
+    }
+
+      cargarJSON();
+  });
+</script>
+</body>
+</html>
