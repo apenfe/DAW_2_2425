@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejercicio 2</title>
+</head>
+<body>
+<input type="text" id="nombre" placeholder="nombre">
+<input type="number" id="edad" placeholder="edad">
+<button id="boton">Almacenar nombre</button>
+
+<button id="mostrar">Mostrar datos en alert</button>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function(){
+		let boton = document.getElementById('boton');
+        let mostrar = document.getElementById('mostrar');
+
+        boton.addEventListener('click', function(){
+			let nombre = document.getElementById('nombre').value;
+			let edad = document.getElementById('edad').value;
+			sessionStorage.setItem('nombre', nombre);
+			sessionStorage.setItem('edad', edad);
+		});
+
+        mostrar.addEventListener('click', function(){
+			let nombre = sessionStorage.getItem('nombre');
+			let edad = sessionStorage.getItem('edad');
+			alert('Nombre: ' + nombre + ' Edad: ' + edad);
+		});
+	});
+
+</script>
+</body>
+</html>
