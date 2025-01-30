@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejercicio 6</title>
+</head>
+<body>
+	<h1>Actualizar edad de un usuario en indexDB</h1>
+	<input type="text" id="nombre" placeholder="Nombre">
+	<input type="number" id="edad" placeholder="Edad">
+	<button id="actualizar">Actualizar</button>
+<script>
+	document.addEventListener('DOMContentLoaded', function(){
+		
+		let db;
+		let boton = document.getElementById('actualizar');
+
+		boton.addEventListener('click', function(){
+
+			let nombre = document.getElementById('nombre').value;
+			let edad = document.getElementById('edad').value;
+
+			let request = indexedDB.open('miBD', 1);
+
+			request.onupgradeneeded = function(event){
+				db = event.target.result;
+				let objectStore = db.createObjectStore('usuarios', {keyPath: 'id', autoIncrement: true});
+				objectStore.createIndex('nombre', 'nombre', {unique: false});
+				objectStore.createIndex('edad', 'edad', {unique: false});
+			}
+
+			request.onsuccess = function(event){
+
+				db = event.target.result;
+				let transaction = db.transaction(['usuarios'], 'readwrite');
+				let objectStore = transaction.objectStore('usuarios');
+				let index = objectStore.index('nombre');
+				let cursor = index.openCursor(IDBKeyRange.only(nombre));
+
+				cursor.onsuccess = function(event){
+					let cursor = event.target.result;
+					if(cursor){
+						let usuario = cursor.value;
+						usuario.edad = edad;
+						let request = cursor.update(usuario);
+
+						request.onsuccess = function(){
+							console.log('Edad actualizada');
+						}
+					}
+				}
+			}
+		});
+
+	});
+
+</script>
+</body>
+</html>

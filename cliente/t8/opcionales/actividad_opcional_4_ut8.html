@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejercicio 4</title>
+</head>
+<body>
+	<h1>Almacenar datos en indexDB</h1>
+	<label for="nombre">Nombre:</label>
+	<input type="text" id="nombre">
+	<label for="edad">Edad:</label>
+	<input type="text" id="edad">
+	<button id="boton">Guardar</button>
+<script>
+	document.addEventListener('DOMContentLoaded', function(){
+		
+		let boton = document.getElementById('boton');
+		let nombre = document.getElementById('nombre');
+		let edad = document.getElementById('edad');
+		let db;
+
+		let request = window.indexedDB.open('miBD', 1);
+
+		request.onsuccess = function(event){
+			db = event.target.result;
+		}
+
+		request.onupgradeneeded = function(event){
+			db = event.target.result;
+			let objectStore = db.createObjectStore('usuarios', {keyPath: 'id', autoIncrement: true});
+			objectStore.createIndex('nombre', 'nombre', {unique: false});
+			objectStore.createIndex('edad', 'edad', {unique: false});
+		}
+
+		boton.addEventListener('click', function(){
+			var transaction = db.transaction(['usuarios'], 'readwrite');
+			var objectStore = transaction.objectStore('usuarios');
+			var request = objectStore.add({nombre: nombre.value, edad: edad.value});
+			request.onsuccess = function(event){
+				alert('Datos guardados'+ nombre.value + ' ' + edad.value);
+			}
+		});
+
+	});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejercicio 5</title>
+</head>
+<body>
+	<h1>Ver datos almacenados en indexDB</h1>
+<script>
+	document.addEventListener('DOMContentLoaded', function(){
+		
+		let db;
+
+		let request = indexedDB.open('miBD', 1);
+
+		request.onupgradeneeded = function(event){
+		 	db = event.target.result;
+		 	let objectStore = db.createObjectStore('usuarios', {keyPath: 'id', autoIncrement: true});
+		 	objectStore.createIndex('nombre', 'nombre', {unique: false});
+		 	objectStore.createIndex('edad', 'edad', {unique: false});
+		}
+
+		request.onsuccess = function(event){
+			db = event.target.result;
+			let transaction = db.transaction(['usuarios'], 'readonly');
+			let objectStore = transaction.objectStore('usuarios');
+			let cursor = objectStore.openCursor();
+			cursor.onsuccess = function(event){
+				let cursor = event.target.result;
+				if(cursor){
+					console.log(cursor.value);
+					cursor.continue();
+				}
+			}
+		}	
+
+	});
+
+</script>
+</body>
+</html>

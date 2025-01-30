@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejercicio 7</title>
+</head>
+<body>
+	<h1>Borra un usuario en indexDB dado su id</h1>
+	<input type="number" id="id" placeholder="id">
+	<button id="borrar">Borrar</button>
+<script>
+	document.addEventListener('DOMContentLoaded', function(){
+		
+		let db;
+		let boton = document.getElementById('borrar');
+
+		boton.addEventListener('click', function(){
+
+			let id = document.getElementById('id').value;
+			let request = indexedDB.open('miBD', 1);
+
+			request.onupgradeneeded = function(event){
+				db = event.target.result;
+				let objectStore = db.createObjectStore('usuarios', {keyPath: 'id', autoIncrement: true});
+				objectStore.createIndex('nombre', 'nombre', {unique: false});
+				objectStore.createIndex('edad', 'edad', {unique: false});
+			}
+
+			request.onsuccess = function(event){
+
+				db = event.target.result;
+				let transaction = db.transaction(['usuarios'], 'readwrite');
+				let objectStore = transaction.objectStore('usuarios');
+				let request = objectStore.delete(parseInt(id));
+
+				request.onsuccess = function(event){
+					console.log('Usuario borrado');
+				}
+
+				request.onerror = function(event){
+					console.log('Error al borrar el usuario');
+				}
+			}
+		});
+
+	});
+
+</script>
+</body>
+</html>

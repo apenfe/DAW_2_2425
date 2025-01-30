@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejercicio 9</title>
+</head>
+<body>
+    <h1>Almacenar array de objetos en indexedDB</h1>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const arrayProductos = [
+                {nombre: 'Producto 1', precio: 100},
+                {nombre: 'Producto 2', precio: 200},
+                {nombre: 'Producto 3', precio: 300},
+                {nombre: 'Producto 4', precio: 400},
+                {nombre: 'Producto 5', precio: 500}
+            ];
+
+            let db;
+            const request = window.indexedDB.open('miBD', 1);
+
+            request.onupgradeneeded = function(event){
+                db = event.target.result;
+                let objectStore = db.createObjectStore('productos', {keyPath: 'id', autoIncrement: true});
+                objectStore.createIndex('nombre', 'nombre', {unique: false});
+                objectStore.createIndex('precio', 'precio', {unique: false});
+
+                objectStore = db.createObjectStore('usuarios', {keyPath: 'id', autoIncrement: true});
+                objectStore.createIndex('nombre', 'nombre', {unique: false});
+                objectStore.createIndex('edad', 'edad', {unique: false});
+            };
+
+            request.onsuccess = function(event) {
+                db = event.target.result;
+                const transaction = db.transaction(['productos'], 'readwrite');
+                const store = transaction.objectStore('productos');
+
+                arrayProductos.forEach(producto => {
+                    const peticion = store.add(producto);
+
+                    peticion.onsuccess = function() {
+                        console.log('Producto añadido:', producto);
+
+                        // Mostrar los productos almacenados con cursor
+                        const transaction = db.transaction(['productos'], 'readonly');
+                        const store = transaction.objectStore('productos');
+                        const cursor = store.openCursor();
+
+                        cursor.onsuccess = function(event) {
+                            const cursor = event.target.result;
+                            if(cursor) {
+                                console.log('Producto:', cursor.value);
+                                cursor.continue();
+                            } else {
+                                console.log('No hay más productos');
+                            }
+                        };
+
+                        cursor.onerror = function() {
+                            console.log('Error al recorrer los productos');
+                        };
+                    };
+
+                    peticion.onerror = function() {
+                        console.log('Error al añadir el producto:', producto);
+                    };
+
+                });
+
+            };
+        });
+    </script>
+</body>
+</html>

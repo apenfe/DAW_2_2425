@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejercicio 8</title>
+</head>
+<body>
+	<h1>Borra la base de datos indexedDB</h1>
+<script>
+	document.addEventListener('DOMContentLoaded', function(){
+
+		/*
+Implementa   un   JavaScript   que   elimine   la   base   de   datos   “miBD”   en   indexedDB.
+Muestra un mensaje en la consola cuando la operación se complete con éxito o si
+ocurre un error.
+		*/
+		
+		let db;
+		let request = indexedDB.open('miBD', 1);
+
+		request.onupgradeneeded = function(event){
+			db = event.target.result;
+			let objectStore = db.createObjectStore('usuarios', {keyPath: 'id', autoIncrement: true});
+			objectStore.createIndex('nombre', 'nombre', {unique: false});
+			objectStore.createIndex('edad', 'edad', {unique: false});
+		}
+
+		request.onsuccess = function(event){
+			db = event.target.result;
+			let transaction = db.transaction(['usuarios'], 'readwrite');
+			let objectStore = transaction.objectStore('usuarios');
+			let request = objectStore.clear();
+
+			request.onsuccess = function(event){
+				console.log('Base de datos borrada');
+			}
+			
+			request.onerror = function(event){
+				console.log('Error al borrar la base de datos');
+			}
+		}
+
+	});
+
+</script>
+</body>
+</html>
