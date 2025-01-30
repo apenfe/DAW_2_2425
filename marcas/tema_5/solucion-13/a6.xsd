@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="articulos">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="codigo"/>
+        <xs:element ref="id"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="codigo" type="xs:string"/>
+  <xs:element name="id" type="xs:string"/>
+</xs:schema>

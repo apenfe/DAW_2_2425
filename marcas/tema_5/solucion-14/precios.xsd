@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="precios">
+    <xs:complexType>
+      <xs:sequence maxOccurs="unbounded">
+        <xs:element ref="precio"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="precio">
+   <xs:simpleType>
+            <xs:restriction base="xs:decimal">
+              <xs:totalDigits value="3"/>
+              <xs:fractionDigits value="2"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+ 
+
+</xs:schema>

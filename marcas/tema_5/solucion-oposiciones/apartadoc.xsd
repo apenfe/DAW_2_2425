@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="trabajador">
+    <xs:complexType>
+      <xs:sequence>
+          <xs:element name="edad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:integer">
+                    <xs:minInclusive value="16"/>
+                    <xs:maxInclusive value="65"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
