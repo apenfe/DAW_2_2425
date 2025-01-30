@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades CSS</title>
+    <style>
+    
+        dialog {
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        dialog[open] {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Flecha animada */
+        .toggle {
+            cursor: pointer;
+            font-size: 24px;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .details {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .expanded {
+            transform: rotate(90deg);
+        }
+    </style>
+    <script>
+        function toggleDetails() {
+            var details = document.getElementById("details");
+            var arrow = document.getElementById("arrow");
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+                arrow.classList.add("expanded");
+            } else {
+                details.style.display = "none";
+                arrow.classList.remove("expanded");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Actividad 10.9</h2>
+    <span id="arrow" class="toggle" onclick="toggleDetails()">▶</span>
+    <div id="details" class="details">
+        <button onclick="document.getElementById('dialogo').showModal()">Abrir diálogo</button>
+        <dialog id="dialogo">
+            <p>Este es un cuadro de diálogo animado.</p>
+            <button onclick="document.getElementById('dialogo').close()">Cerrar</button>
+        </dialog>
+    </div>
+</body>
+</html>
