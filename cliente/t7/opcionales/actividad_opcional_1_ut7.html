@@ -6,13 +6,19 @@
 </head>
 <body>
 <script>
+  /*
+  Crea una función llamada realizarOperación() que reciba dos números y una función
+  callback.   La   función   debe   realizar   una   operación   matemática   (suma,   resta,
+  multiplicación o división) utilizando los dos números y llamar a la función callback
+  con el resultado, quien lo mostrará por consola.
+  */
   document.addEventListener('DOMContentLoaded', function() {
     function realizarOperacion(numero1, numero2, funcion){
-	  return funcion(numero1, numero2);
+	    return funcion(numero1, numero2);
     }
 
     function sumar(numero1, numero2){
-        	  alert( numero1 + numero2);
+      alert( numero1 + numero2);
     }
 
     realizarOperacion(5, 3, sumar);

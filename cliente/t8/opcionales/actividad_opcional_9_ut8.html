@@ -7,6 +7,11 @@
 <body>
     <h1>Almacenar array de objetos en indexedDB</h1>
     <script>
+        /*
+        Crea   un   JavaScript   que   almacene   un   array   de   objetos   en   el   almacén   de   objetos
+        “productos” de la base de datos “miBD” en indexedDB. Luego, lee y muestra en la
+        consola todos los objetos almacenados utilizando un cursor.
+        */
         document.addEventListener('DOMContentLoaded', function() {
             const arrayProductos = [
                 {nombre: 'Producto 1', precio: 100},
@@ -68,7 +73,89 @@
                 });
 
             };
+
+            // cuando se temina de guardar todos los datos, hacer un console.log de todos los productos
+
+
         });
     </script>
+
+<script>
+    /*
+    Crea un JavaScript que almacene un array de objetos en el almacén de objetos
+    “productos” de la base de datos “miBD” en indexedDB. Luego, lee y muestra en la
+    consola todos los objetos almacenados utilizando un cursor.
+    */
+    document.addEventListener('DOMContentLoaded', function() {
+        const arrayProductos = [
+            {nombre: 'Producto 1', precio: 100},
+            {nombre: 'Producto 2', precio: 200},
+            {nombre: 'Producto 3', precio: 300},
+            {nombre: 'Producto 4', precio: 400},
+            {nombre: 'Producto 5', precio: 500}
+        ];
+
+        let db;
+        const request = window.indexedDB.open('miBD', 1);
+
+        request.onupgradeneeded = function(event){
+            db = event.target.result;
+            let objectStore = db.createObjectStore('productos', {keyPath: 'id', autoIncrement: true});
+            objectStore.createIndex('nombre', 'nombre', {unique: false});
+            objectStore.createIndex('precio', 'precio', {unique: false});
+        };
+
+        request.onsuccess = function(event) {
+            db = event.target.result;
+            const transaction = db.transaction(['productos'], 'readwrite');
+            const store = transaction.objectStore('productos');
+
+            let promises = arrayProductos.map(producto => {
+                return new Promise((resolve, reject) => {
+                    const peticion = store.add(producto);
+                    peticion.onsuccess = function() {
+                        console.log('Producto añadido:', producto);
+                        resolve();
+                    };
+                    peticion.onerror = function() {
+                        console.log('Error al añadir el producto:', producto);
+                        reject();
+                    };
+                });
+            });
+
+            Promise.all(promises).then(() => {
+                console.log('Todos los productos han sido añadidos.');
+                mostrarProductos(db);
+            }).catch(() => {
+                console.log('Error al añadir algunos productos.');
+            });
+        };
+
+        request.onerror = function(event) {
+            console.log('Error al abrir la base de datos:', event.target.error);
+        };
+
+        function mostrarProductos(db) {
+            const transaction = db.transaction(['productos'], 'readonly');
+            const store = transaction.objectStore('productos');
+            const cursor = store.openCursor();
+
+            cursor.onsuccess = function(event) {
+                const cursor = event.target.result;
+                if(cursor) {
+                    console.log('Producto:', cursor.value);
+                    cursor.continue();
+                } else {
+                    console.log('No hay más productos');
+                }
+            };
+
+            cursor.onerror = function() {
+                console.log('Error al recorrer los productos');
+            };
+        }
+    });
+</script>
 </body>
 </html>

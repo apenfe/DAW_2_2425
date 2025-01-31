@@ -11,9 +11,16 @@
 	<label for="edad">Edad:</label>
 	<input type="text" id="edad">
 	<button id="boton">Guardar</button>
-	<button id="mostrarNombre">Mostrar nombre</button>
-	<button id="mostrarEdad">Mostrar edad</button>
+	
+	<input type="text" id="nombreBorrar">
+	<button id="borrarPorNombre">Borrar nombre</button>
+	
 <script>
+	/*
+	Implementa un JavaScript que almacene varios pares clave-valor en localStorage.
+	Luego, crea botones para eliminar un par específico y para eliminar todos los datos
+	almacenados. Muestra los resultados en la consola.
+	*/
 	document.addEventListener('DOMContentLoaded', function(){
 		
 		document.getElementById('boton').addEventListener('click', function(){
@@ -23,14 +30,9 @@
 			localStorage.setItem('edad', edad);
 		});
 
-		document.getElementById('mostrarNombre').addEventListener('click', function(){
-			let nombre = localStorage.getItem('nombre');
-			alert(nombre);
-		});
-
-        document.getElementById('mostrarEdad').addEventListener('click', function(){
-			let edad = localStorage.getItem('edad');
-			alert(edad);
+		document.getElementById('borrarPorNombre').addEventListener('click', function(){
+			let nombre = document.getElementById('nombreBorrar').value;
+			localStorage.removeItem('nombre');
 		});
 
 	});
