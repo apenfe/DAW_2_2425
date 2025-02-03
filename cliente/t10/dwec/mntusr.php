@@ -1,12 +1,12 @@
 <?php
-    $id=$_GET["id"];
-    $nom=$_GET["nombre"];
-    $apel1=$_GET["apel1"];
-    $apel2=$_GET["apel2"];
-   //Conexion a la base de datos
-   $conn = new mysqli('localhost', 'usuariodwec', 'dwecpwd', 'dwec');
-   // Verificar si hubo un error en la conexión
-   if ($conn->connect_error) {
+$id = $_GET["id"];
+$nom = $_GET["nombre"];
+$apel1 = $_GET["apel1"];
+$apel2 = $_GET["apel2"];
+//Conexion a la base de datos
+$conn = new mysqli('localhost', 'root', '', 'dwec');
+// Verificar si hubo un error en la conexión
+if ($conn->connect_error) {
     die("Error de conexión: " . $conn->connect_error);
 }
 // Consulta para modificar el registro con el ID recibido
@@ -18,4 +18,3 @@ if ($conn->query($sql) === TRUE) {
 }
 // Cerrar la conexión
 $conn->close();
-?>
