@@ -1,0 +1,186 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:wght@400&display=swap');
+
+body {margin: 2%;
+}
+h1{
+	font-family: 'Oswald', sans-serif;
+	font-size: 32px;
+}
+.fila{
+	display: flex;
+	gap: 3%;
+	margin-top:20px;
+	margin-bottom:20px;
+	font-size:18px;
+	font-family: 'Oswald', sans-serif;
+}
+.botones{
+	height: 100%;
+	display: flex;
+	gap:10px
+}
+.camp{
+	box-sizing: border-box;
+	padding: 10px 15px 10px 15px; 
+	border-radius: 6px;
+	width: 100%;
+	font-size:18px;
+	border: 1px solid #cccccc;
+	font-family: 'Roboto', sans-serif;
+	margin-top:8px;
+}
+.boton{
+	float: right;
+	padding: 10px 15px 10px 15px; 
+	border-radius: 6px;
+	width: 15%;
+	font-size:18px;
+	border: 1px solid #cccccc;
+	font-family: 'Roboto', sans-serif;
+	margin: 15px 10px 10px 10px;
+	background-color: lightcyan;
+}
+.botonCancelar{
+	padding: 10px 15px 10px 15px; 
+	border-radius: 6px;
+	width: 15%;
+	font-size:18px;
+	color: #019DF4;
+	border: 1px solid #019DF4;
+	font-family: 'Roboto', sans-serif;
+	margin: 15px 10px 10px 10px;
+	background-color: white;
+	margin-left: auto;
+}
+.botonCancelar:hover{
+	background-color: #019DF4;
+	color:white;
+
+}
+.boton:hover{
+	background-color: #019DF4;
+	color:white;
+}
+.boton:disabled{
+	background-color: lightgray;
+	color:gray;
+}
+.modificarBorrar{
+	margin-top: 10px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	color:black;
+	padding: 5px;
+	
+	display: flex;
+	align-items: center;
+	background-color: white;
+	border: 0px solid white;
+	border-right: 1px solid darkgray;
+}
+.modificarBorrar:hover:enabled{
+	color:#019DF4;
+	outline: #019DF4 solid 1px;
+	cursor: pointer;
+}
+.modificarBorrar:disabled{
+	color: lightgray;
+}
+.material-symbols-outlined{
+	font-size: 20px;
+	padding-top: 5px;
+	margin-right: 5px;
+}
+
+.seccion{
+	font-size:24px;
+	font-family: 'Oswald', sans-serif;
+	color: #019DF4;
+}
+.linea{
+	border-top: 1px solid #019DF4;
+	width: 100%;
+}
+.check{
+	width: 15px;
+	height: 15px;
+}
+#check{
+	width: 99%;
+	text-align: right;
+	font-family: 'Roboto', sans-serif;
+}
+
+#error{
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	font-size: 18px;
+	color:red;
+	margin-bottom: 5px;
+	width: 85%;
+	visibility: hidden;
+}
+#nombre{
+	width: 21%;
+}
+
+#apel1{
+	width: 36%;
+}
+
+#apel2{
+	width: 36%;
+}
+
+
+#noHay{
+	color:#019DF4;
+	text-align: center;
+	margin: 15px;
+}
+
+
+.capaTabla{
+	width: 100%;
+	font-size: 18px;
+	font-family: 'Roboto', sans-serif;
+}
+#tabla{
+	width: 100%;
+	border-collapse: collapse;
+}
+thead{
+	font-size: 18px;
+	font-family: 'Oswald', sans-serif;
+	color:#019DF4;
+}
+td{
+	border: 1px solid #cccccc;
+	padding: 5px 5px 5px 10px;
+	font-family: 'Arial', sans-serif;
+}
+.c0{
+	display:none;
+}
+.c1{
+	width: 3%;
+}
+.c2{
+	width: 11%;
+}
+.c3{
+	width: 20%;
+}
+.c4{
+	width: 20%;
+}
+.c5{
+	width: 11%;
+}
+.c6{
+	width: 25%;
+}
+.c7{
+	width: 10%;
+}

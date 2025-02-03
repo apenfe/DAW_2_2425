@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejercicio 1</title>
+</head>
+<body>
+	<div id="mapa"></div>
+<script>
+/*Crear un programa en JavaScript que obtenga la geolocalización del usuario y
+muestre las coordenadas geográficas (latitud y longitud) en la página.
+*/
+
+document.addEventListener('DOMContentLoaded', function(){
+	var mapa = document.querySelector('#mapa');
+	navigator.geolocation.getCurrentPosition(function(posicion){
+		var latitud = posicion.coords.latitude;
+		var longitud = posicion.coords.longitude;
+		mapa.innerHTML = 'Latitud: ' + latitud + '<br>Longitud: ' + longitud;
+	});
+});
+
+
+
+</script>
+</body>
+</html>

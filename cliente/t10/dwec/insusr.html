@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Alta de usuarios</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,500,0,0" />
+    <link href="usuarios.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Alta de usuarios</h1>
+    <div class="fila">
+        <div id="nombre">
+            Nombre
+            <input type="text" name="nombre" id="inombre" class="camp" maxlength="30" oninput="activar(this)" />
+        </div>
+        <div id="apel1">
+            Primer apellido
+            <input type="text" name="apel1" id="iapel1" class="camp" maxlength="50" oninput="activar(this)" />
+        </div>
+        <div id="apel2">
+            Segundo apellido
+            <input type="text" name="apel2" id="iapel2" class="camp" maxlength="50" oninput="activar(this)" />
+        </div>
+    </div>
+
+    <div class="botones">
+
+        <div id="error">
+            XXXXXXX
+        </div>
+        <button name="cancelar" class="botonCancelar" onclick="window.close();">Cancelar</button>
+        <input type="button" id="grabar" name="grabar" class="boton" value="Aceptar" disabled="true"
+            onclick="grabar()" />
+
+    </div>
+
+    </div>
+
+    <script>
+        function inicializa(){
+            document.getElementById("inombre").value="";
+            document.getElementById("iapel1").value="";
+            document.getElementById("iapel2").value="";
+            document.getElementById("inombre").focus();
+        }
+
+        function grabar() {
+            var nombre = document.getElementById("inombre").value;
+            var apel1 = document.getElementById("iapel1").value;
+            var apel2 = document.getElementById("iapel2").value;
+
+
+            var url = "http://localhost/DWEC/insusr.php?nombre="+nombre+"&apel1="+apel1+"&apel2="+apel2;
+            // Crear una instancia del objeto XMLHttpRequest
+            var xhr = new XMLHttpRequest();
+            // Configurar la solicitud
+            xhr.open("GET", url, true);
+            // Enviar la solicitud
+            xhr.send();
+            // Manejar la respuesta (opcional)
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    console.log("La URL se ejecutó correctamente.");
+                   // inicializa();
+                    window.close();
+                }
+            };
+        }
+
+
+        function activar(ele) {
+            nom = document.getElementById("inombre").value;
+            apel1 = document.getElementById("iapel1").value;
+            apel2 = document.getElementById("iapel2").value;
+            if (nom == "" && apel1 == "" && apel2 == "") {
+                document.getElementById("grabar").disabled = true;
+            }
+            else
+                document.getElementById("grabar").disabled = false;
+        }
+
+
+    </script>
+</body>
+
+</html>

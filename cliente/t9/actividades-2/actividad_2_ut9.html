@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejercicio 2</title>
+</head>
+<body>
+	<div id="mapa"></div>
+<script>
+/*
+Realizar un programa en JavaScript que obtenga la geolocalización del usuario y
+muestre un mapa marcando su posición. Para ello añade un enlace a la página que al
+ser pulsado muestre la posición en el mapa. El enlace apuntará a la siguiente url,
+donde habrá que pasar los valores que aparecen:
+*/
+
+let link = 'https://maps.google.com/?q=';
+
+document.addEventListener('DOMContentLoaded', function(){
+	var mapa = document.querySelector('#mapa');
+	navigator.geolocation.getCurrentPosition(function(posicion){
+		var latitud = posicion.coords.latitude;
+		var longitud = posicion.coords.longitude;
+		mapa.innerHTML = '<a href="'+link+latitud+','+longitud+'" target="_blank">Ver en el mapa</a>';
+	});
+});
+
+
+
+</script>
+</body>
+</html>
