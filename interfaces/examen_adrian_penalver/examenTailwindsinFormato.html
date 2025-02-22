@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Tecnología</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estilos CSS adicionales */
+        #hero{
+            background: url('./ordenadores1.jpg');
+            background-size: cover;
+        }
+
+        .boton-personalizado {
+            color: white;
+            padding: 1rem 1.5rem;
+            background-color: #ebdb25;
+            border-radius: 1.5rem;
+            margin-top: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.8s ease-in-out;
+        }
+
+        .boton-personalizado-form {
+            width: 250px;
+            color: white;
+            padding: 1rem 1.5rem;
+            background-color: #2b8528;
+            border-radius: 1.5rem;
+            margin-top: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.8s ease-in-out;
+        }
+
+        .boton-personalizado-productos {
+            width: 250px;
+            color: white;
+            padding: 1rem 1.5rem;
+            background-color: #2563eb;
+            border-radius: 1.5rem;
+            margin-top: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.8s ease-in-out;
+        }
+
+        .boton-personalizado-productos:hover {
+            background-color: #60a5fa;
+            transform: scale(1.1);
+        }
+
+        .boton-personalizado-form:hover {
+            background-color: #77f36e;
+            transform: scale(1.1);
+        }
+
+        .boton-personalizado:hover {
+            background-color: #c8bf56;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="">
+
+      <!-- Encabezado -->
+    <header class="relative">
+        <div class="w-full p-6 bg-blue-600 text-white flex flex-wrap justify-between items-center shadow-lg fixed top-0">
+            <h1 class="text-white font-extrabold text-2xl">MyShop</h1>
+            <nav class="flex flex-wrap gap-4">
+                <ul class="flex flex-wrap gap-4">
+                    <li><a href="#hero" class="text-lg transition-all duration-300 hover:text-yellow-300">Inicio</a></li>
+                    <li><a href="#producto" class="text-lg transition-all duration-300 hover:text-yellow-300">Productos</a></li>
+                    <li><a href="#galeria" class="text-lg transition-all duration-300 hover:text-yellow-300">Galería</a></li>
+                    <li><a href="#contacto" class="text-lg transition-all duration-300 hover:text-yellow-300">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección Hero -->
+    <section id="hero" class="w-full p-10 mt-6">
+        <div class="m-auto w-1/2 bg-gray-700 p-6 rounded-lg text-center mt-10 bg-opacity-60">
+            <h2 class="text-white text-5xl">Bienvenido a MyShop</h2>
+            <p class="text-gray-100 text-xl mt-4">Descubre los mejores productos tecnológicos.</p>
+            <button class="boton-personalizado">Explorar Productos</button>
+        </div>
+    </section>
+
+    <!-- Video Promocional -->
+    <section class="w-full text-center my-4">
+        <h2 class="text-black font-extrabold text-2xl">Mira Nuestro Video</h2>
+        <video class="m-auto w-1/2 mt-3" controls>
+            <source src='./movie.mp4' type="video/mp4">
+            Tu navegador no soporta video HTML5.
+        </video>
+    </section>
+
+    <!-- Sección de Productos -->
+    <section id="producto" class="w-full bg-gray-100 text-center p-10">
+        <h2 class="font-extrabold text-2xl">Nuestros Productos</h2>
+        <div class="grid grid-cols-1 gap-12 mt-6 md:grid-cols-2 lg:grid-cols-3">
+            <div class="bg-white shadow-sm rounded-xl flex flex-col p-4 items-center transition-all duration-700 ease-in-out hover:shadow-2xl hover:scale-110">
+                <img src='./img5.jpg' class="w-2/3 m-auto">
+                <h3 class="mt-4 font-bold text-2xl">Portátil Gamer</h3>
+                <p class="mt-2 font-light text-gray-600">1.200€</p>
+                <button class="boton-personalizado-productos">Comprar</button>
+            </div>
+            <div class="bg-white shadow-sm rounded-xl flex flex-col p-4 items-center transition-all duration-700 ease-in-out hover:shadow-2xl hover:scale-110">
+                <img src='./portatil.jpg' class="w-2/3 m-auto">
+                <h3 class="mt-4 font-bold text-2xl">Portátil Acer</h3>
+                <p class="mt-2 font-light text-gray-600">900€</p>
+                <button class="boton-personalizado-productos">Comprar</button>
+            </div>
+            <div class="bg-white shadow-sm rounded-xl flex flex-col p-4 items-center transition-all duration-700 ease-in-out hover:shadow-2xl hover:scale-110">
+                <img src='./img1.jpg' class="w-2/3 m-auto">
+                <h3 class="mt-4 font-bold text-2xl">Ordenador sobremesa</h3>
+                <p class="mt-2 font-light text-gray-600">1.300€</p>
+                <button class="boton-personalizado-productos">Comprar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería de Imágenes -->
+    <section id="galeria" class="w-full text-center p-4 bg-gray-100">
+        <h2 class="text-black text-3xl font-extrabold mb-4">Galería</h2>
+        <div class="w-full grid grid-cols-1 gap-4 place-items-center md:grid-cols-2 lg:grid-cols-2">
+            <img src='./img2.jpg' class="shadow-xl rounded-xl transition-all duration-700 hover:opacity-50">
+            <img src='./img3.jpg' class="shadow-xl rounded-xl transition-all duration-700 hover:opacity-50">
+            <img src='./img4.jpg' class="shadow-xl rounded-xl transition-all duration-700 hover:opacity-50">
+            <img src='./img6.jpg' class="shadow-xl rounded-xl transition-all duration-700 hover:opacity-50">
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="w-full text-center p-2 bg-gray-100 content-center">
+        <h2 class="text-black text-3xl font-extrabold">Contáctanos</h2>
+        <form class="bg-white p-4 rounded-lg shadow-md max-w-5xl mx-auto mt-4 flex flex-col text-left min-w-96">
+            <label class="font-bold text-lg">Nombre:</label>
+            <input type="text" class="mb-4 p-2 rounded-lg border-2 border-gray-300 transition-all duration-500 focus:ring ring-blue-300 outline-none">
+
+            <label class="font-bold text-lg">Correo Electrónico:</label>
+            <input type="email" class="mb-4 p-2 rounded-lg border-2 border-gray-300 transition-all duration-500 focus:ring ring-blue-300 outline-none">
+
+            <label class="font-bold text-lg">Mensaje:</label>
+            <textarea class="mb-4 p-2 rounded-lg border-2 border-gray-300 transition-all duration-500 focus:ring ring-blue-300 outline-none" rows="4"></textarea>
+
+            <button class="boton-personalizado-form">Enviar Mensaje</button>
+        </form>
+    </section>
+
+</body>
+</html>
